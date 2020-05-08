@@ -32,7 +32,19 @@ router.get('/sevenday/:lat/:lon', async (req, res) => {
 router.get('/grid/:lat/:lon', async (req, res) => {
   try {
     const { lat, lon } = req.params
-    const data = await nws.getSevenDayForecast({ lat, lon })
+    const data = await nws.getGriddedForecast({ lat, lon })
+    res.json(data)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(404).json({ message })
+  }
+})
+
+router.get('/hourly/:lat/:lon', async (req, res) => {
+  try {
+    const { lat, lon } = req.params
+    const data = await nws.getHourlyForecast({ lat, lon })
     res.json(data)
   } catch (err) {
     console.error(err)

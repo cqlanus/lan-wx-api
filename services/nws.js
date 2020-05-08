@@ -54,6 +54,20 @@ class NWS {
     return properties
   }
 
+  getGriddedForecast = async ({ lat, lon }) => {
+    const points = await this.getPoints({ lat, lon })
+    const { forecastGridData } = points
+    const { properties } = await nwsRequest(forecastGridData)
+    return properties
+  }
+
+  getHourlyForecast = async ({ lat, lon }) => {
+    const points = await this.getPoints({ lat, lon })
+    const { forecastHourly } = points
+    const { properties } = await nwsRequest(forecastHourly)
+    return properties
+  }
+
   getConditions = async ({ lat, lon }) => {
     const points = await this.getPoints({ lat, lon })
     const { observationStations: stationsUrl } = points

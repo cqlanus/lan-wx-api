@@ -29,6 +29,28 @@ router.get('/:zip/forecast', geocodeMiddleware, async (req, res) => {
   }
 })
 
+router.get('/:zip/forecast/grid', geocodeMiddleware, async (req, res) => {
+  try {
+    const data = await nws.getGriddedForecast(req.coords)
+    res.json(data)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(404).json({ message })
+  }
+})
+
+router.get('/:zip/forecast/hourly', geocodeMiddleware, async (req, res) => {
+  try {
+    const data = await nws.getHourlyForecast(req.coords)
+    res.json(data)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(404).json({ message })
+  }
+})
+
 router.get('/:zip/current', geocodeMiddleware, async (req, res) => {
   try {
     const data = await nws.getConditions(req.coords)
