@@ -17,10 +17,22 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.get('/:lat/:lon', async (req, res) => {
+router.get('/sevenday/:lat/:lon', async (req, res) => {
   try {
     const { lat, lon } = req.params
-    const data = await nws.getConditions({ lat, lon })
+    const data = await nws.getSevenDayForecast({ lat, lon })
+    res.json(data)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(404).json({ message })
+  }
+})
+
+router.get('/grid/:lat/:lon', async (req, res) => {
+  try {
+    const { lat, lon } = req.params
+    const data = await nws.getSevenDayForecast({ lat, lon })
     res.json(data)
   } catch (err) {
     console.error(err)

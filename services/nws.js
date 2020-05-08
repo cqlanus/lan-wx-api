@@ -5,7 +5,7 @@ const HEADERS = {
   'User-Agent': 'cqlanus@gmail.com'
 }
 
-const nwsRequest = async (url, opts) => await request(url, { headers: HEADERS, ...opts })
+const nwsRequest = async (url, opts, sendJSON = true) => await request(url, { headers: HEADERS, ...opts }, sendJSON)
 
 class NWS {
 
@@ -13,11 +13,10 @@ class NWS {
   stations = {}
   nearbyStation = {}
   latestConditions = {}
+  forecast = {}
 
   async getData(cacheType, cacheKey, cb) {
-    console.log({ cacheType, cacheKey })
     const existing = this[cacheType][cacheKey]
-    console.log({ here: '?' })
     if (existing) {
       return existing
     }
@@ -48,18 +47,20 @@ class NWS {
     return data
   }
 
+  getSevenDayForecast = async ({ lat, lon }) => {
+    const points = await this.getPoints({ lat, lon })
+    const { forecast } = points
+    const { properties } = await nwsRequest(forecast)
+    return properties
+  }
+
   getConditions = async ({ lat, lon }) => {
-    const coords = `${lat}|${lon}`
-    const data = await this.getData('latestConditions', coords, async () => {
-      const points = await this.getPoints({ lat, lon })
-      const { observationStations: stationsUrl } = points
-      const station = await this.getNearestStation(stationsUrl)
-      console.log({ station })
-      const url = `${station['@id']}/observations/latest`
-      const { properties } = await nwsRequest(url)
-      return properties
-    })
-    return data
+    const points = await this.getPoints({ lat, lon })
+    const { observationStations: stationsUrl } = points
+    const station = await this.getNearestStation(stationsUrl)
+    const url = `${station['@id']}/observations/latest`
+    const { properties } = await nwsRequest(url)
+    return properties
   }
 }
 
