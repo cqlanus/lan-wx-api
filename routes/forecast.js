@@ -53,4 +53,16 @@ router.get('/hourly/:lat/:lon', async (req, res) => {
   }
 })
 
+router.get('/discussion/:lat/:lon', async (req, res) => {
+  try {
+    const { lat, lon } = req.params
+    const data = await nws.getForecastDiscussion({ lat, lon })
+    res.json(data)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(404).json({ message })
+  }
+})
+
 module.exports = router

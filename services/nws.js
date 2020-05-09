@@ -7,6 +7,11 @@ const HEADERS = {
 
 const nwsRequest = async (url, opts, sendJSON = true) => await request(url, { headers: HEADERS, ...opts }, sendJSON)
 
+
+// TODO:
+// 1. get forecast area discussion by way of forecast office: station -> county -> cwa
+// 2. create new service for norms/almanac/astronomy
+
 class NWS {
 
   points = {}
@@ -14,6 +19,7 @@ class NWS {
   nearbyStation = {}
   latestConditions = {}
   forecast = {}
+  forecastOffice = {}
 
   async getData(cacheType, cacheKey, cb) {
     const existing = this[cacheType][cacheKey]
@@ -32,6 +38,7 @@ class NWS {
       const { properties } = await nwsRequest(url)
       return properties;
     })
+    console.log({ points: data })
     return data
   }
 
@@ -76,6 +83,53 @@ class NWS {
     const { properties } = await nwsRequest(url)
     return properties
   }
+
+  getForecastOffice = async ({ lat, lon }) => {
+    const points = await this.getPoints({ lat, lon })
+    const { observationStations: stationsUrl } = points
+    const { stationIdentifier, county: countyUrl } = await this.getNearestStation(stationsUrl)
+    const data = await this.getData('forecastOffice', stationIdentifier, async () => {
+      const { properties } = await nwsRequest(countyUrl)
+      return properties
+    })
+    return data
+  }
+
+  getForecastDiscussion = async ({ lat, lon }) => {
+    const FORECAST_DISCUSSION_CODE = 'AFD'
+    const forecastOffice = await this.getForecastOffice({ lat, lon })
+    const { cwa  } = forecastOffice
+    const url = `${BASE}/products/types/${FORECAST_DISCUSSION_CODE}/locations/${cwa}`
+    const discussionList = await nwsRequest(url)
+    const [ firstItem ] = discussionList['@graph']
+    const discussionUrl = firstItem['@id']
+    const discussion = await nwsRequest(discussionUrl)
+    return processDiscussion(discussion)
+  }
+}
+
+const processDiscussion = ({ productText }) => {
+  const titlePattern = /(\n\..*\.{3})/
+  const [ meta, ...content ] = productText.split(titlePattern)
+  return content.reduce((acc, curr, idx, arr) => {
+    if (titlePattern.test(curr)) {
+      const [ title, content ] = arr.slice(idx, idx + 2)
+      const updatedTitle = title.replace('\n', '').replace(/\.*/g, '')
+      const updatedContent = content.split('\n').map(s => s.trim())
+      const indexes = updatedContent.reduce((acc, curr, idx) => {
+        if (curr === "") {
+          return [ ...acc, idx ]
+        }
+        return acc
+      }, [])
+      const paragraphs = indexes.reduce((acc, curr, idx) => {
+        const part = updatedContent.slice(curr, indexes[idx + 1])
+        return [...acc, part.join('')]
+      }, [])
+      return { ...acc, [updatedTitle]: paragraphs }
+    }
+    return acc
+  }, { meta: meta.split('\n').filter(Boolean) })
 }
 
 const nws = new NWS()
