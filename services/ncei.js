@@ -9,6 +9,10 @@ const nceiRequest = async ({ dataset, dataTypes, stations, startDate, endDate })
   return await request(url)
 }
 
+const DATATYPES_MAP = {
+  d_tmax: 'DLY-TAVG-NORMAL'
+}
+
 class NCEI {
 
   getNormals = async (coords, datatypes = ['DLY-GRDD-BASE45','DLY-TAVG-NORMAL'], retry = false) => {

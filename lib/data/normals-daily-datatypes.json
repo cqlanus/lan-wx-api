@@ -1,0 +1,1952 @@
+{
+    "tags": {
+        "temperature": [
+            {
+                "id": "DLY-TMIN-NORMAL",
+                "name": "Long-term averages of daily minimum temperature",
+                "tags": [
+                    "temperature",
+                    "minimum",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-TAVG-STDDEV",
+                "name": "Long-term standard deviations of daily average temperature",
+                "tags": [
+                    "temperature",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-TMAX-NORMAL",
+                "name": "Long-term averages of daily maximum temperature",
+                "tags": [
+                    "temperature",
+                    "maximum",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-DUTR-NORMAL",
+                "name": "Long-term averages of daily diurnal temperature range",
+                "tags": [
+                    "temperature",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-TAVG-NORMAL",
+                "name": "Long-term averages of daily average temperature",
+                "tags": [
+                    "temperature",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-DUTR-STDDEV",
+                "name": "Long-term standard deviations of daily diurnal temperature range",
+                "tags": [
+                    "temperature"
+                ]
+            },
+            {
+                "id": "DLY-TMAX-STDDEV",
+                "name": "Long-term standard deviations of daily maximum temperature",
+                "tags": [
+                    "temperature",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "DLY-TMIN-STDDEV",
+                "name": "Long-term standard deviations of daily minimum temperature",
+                "tags": [
+                    "temperature",
+                    "minimum"
+                ]
+            }
+        ],
+        "minimum": [
+            {
+                "id": "DLY-TMIN-NORMAL",
+                "name": "Long-term averages of daily minimum temperature",
+                "tags": [
+                    "temperature",
+                    "minimum",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-TMIN-STDDEV",
+                "name": "Long-term standard deviations of daily minimum temperature",
+                "tags": [
+                    "temperature",
+                    "minimum"
+                ]
+            }
+        ],
+        "average": [
+            {
+                "id": "DLY-TMIN-NORMAL",
+                "name": "Long-term averages of daily minimum temperature",
+                "tags": [
+                    "temperature",
+                    "minimum",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-TAVG-STDDEV",
+                "name": "Long-term standard deviations of daily average temperature",
+                "tags": [
+                    "temperature",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-TMAX-NORMAL",
+                "name": "Long-term averages of daily maximum temperature",
+                "tags": [
+                    "temperature",
+                    "maximum",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-NORMAL",
+                "name": "Long-term averages of daily cooling degree days with base 65F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "MTD-PRCP-NORMAL",
+                "name": "Long-term average month-to-date precipitation totals",
+                "tags": [
+                    "precipitation",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE60",
+                "name": "Long-term averages of daily cooling degree days with base 60F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE60",
+                "name": "Long-term averages of daily heating degree days with base 60F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-DUTR-NORMAL",
+                "name": "Long-term averages of daily diurnal temperature range",
+                "tags": [
+                    "temperature",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE60",
+                "name": "Long-term averages of daily growing degree days with base 60F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE65",
+                "name": "Long-term averages of daily growing degree days with base 65F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-TAVG-NORMAL",
+                "name": "Long-term averages of daily average temperature",
+                "tags": [
+                    "temperature",
+                    "average"
+                ]
+            },
+            {
+                "id": "MTD-SNOW-NORMAL",
+                "name": "Long-term average month-to-date snowfall totals",
+                "tags": [
+                    "snow",
+                    "average"
+                ]
+            },
+            {
+                "id": "YTD-PRCP-NORMAL",
+                "name": "Long-term average year-to-date precipitation totals",
+                "tags": [
+                    "precipitation",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-NORMAL",
+                "name": "Long-term averages of daily heating degree days with base 65F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE57",
+                "name": "Long-term averages of daily growing degree days with base 57F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE50",
+                "name": "Long-term averages of daily heating degree days with base 50F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-TB4886",
+                "name": "Long-term averages of daily growing degree days with truncated bases 48F and 86F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE50",
+                "name": "Long-term averages of daily cooling degree days with base 50F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE55",
+                "name": "Long-term averages of daily heating degree days with base 55F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE50",
+                "name": "Long-term averages of daily growing degree days with base 50F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE55",
+                "name": "Long-term averages of daily cooling degree days with base 55F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE57",
+                "name": "Long-term averages of daily cooling degree days with base 57F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE57",
+                "name": "Long-term averages of daily heating degree days with base 57F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE55",
+                "name": "Long-term averages of daily growing degree days with base 55F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-TB5086",
+                "name": "Long-term averages of daily growing degree days with truncated bases 50F and 86F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE40",
+                "name": "Long-term averages of daily heating degree days with base 40F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE45",
+                "name": "Long-term averages of daily growing degree days with base 45F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE45",
+                "name": "Long-term averages of daily heating degree days with base 45F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE40",
+                "name": "Long-term averages of daily growing degree days with base 40F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE45",
+                "name": "Long-term averages of daily cooling degree days with base 45F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE70",
+                "name": "Long-term averages of daily cooling degree days with base 70F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE72",
+                "name": "Long-term averages of daily cooling degree days with base 72F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE72",
+                "name": "Long-term averages of daily growing degree days with base 72F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE70",
+                "name": "Long-term averages of daily growing degree days with base 70F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "YTD-SNOW-NORMAL",
+                "name": "Long-term average year-to-date snowfall totals",
+                "tags": [
+                    "snow",
+                    "average"
+                ]
+            }
+        ],
+        "maximum": [
+            {
+                "id": "DLY-TMAX-NORMAL",
+                "name": "Long-term averages of daily maximum temperature",
+                "tags": [
+                    "temperature",
+                    "maximum",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-TMAX-STDDEV",
+                "name": "Long-term standard deviations of daily maximum temperature",
+                "tags": [
+                    "temperature",
+                    "maximum"
+                ]
+            }
+        ],
+        "degree day": [
+            {
+                "id": "DLY-CLDD-NORMAL",
+                "name": "Long-term averages of daily cooling degree days with base 65F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE60",
+                "name": "Long-term averages of daily cooling degree days with base 60F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE60",
+                "name": "Long-term averages of daily heating degree days with base 60F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE60",
+                "name": "Long-term averages of daily growing degree days with base 60F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE65",
+                "name": "Long-term averages of daily growing degree days with base 65F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-NORMAL",
+                "name": "Long-term averages of daily heating degree days with base 65F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE57",
+                "name": "Long-term averages of daily growing degree days with base 57F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE50",
+                "name": "Long-term averages of daily heating degree days with base 50F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-TB4886",
+                "name": "Long-term averages of daily growing degree days with truncated bases 48F and 86F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE50",
+                "name": "Long-term averages of daily cooling degree days with base 50F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE55",
+                "name": "Long-term averages of daily heating degree days with base 55F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE50",
+                "name": "Long-term averages of daily growing degree days with base 50F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE55",
+                "name": "Long-term averages of daily cooling degree days with base 55F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE57",
+                "name": "Long-term averages of daily cooling degree days with base 57F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE57",
+                "name": "Long-term averages of daily heating degree days with base 57F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE55",
+                "name": "Long-term averages of daily growing degree days with base 55F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-TB5086",
+                "name": "Long-term averages of daily growing degree days with truncated bases 50F and 86F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE40",
+                "name": "Long-term averages of daily heating degree days with base 40F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE45",
+                "name": "Long-term averages of daily growing degree days with base 45F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE45",
+                "name": "Long-term averages of daily heating degree days with base 45F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE40",
+                "name": "Long-term averages of daily growing degree days with base 40F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE45",
+                "name": "Long-term averages of daily cooling degree days with base 45F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE70",
+                "name": "Long-term averages of daily cooling degree days with base 70F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE72",
+                "name": "Long-term averages of daily cooling degree days with base 72F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE72",
+                "name": "Long-term averages of daily growing degree days with base 72F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE70",
+                "name": "Long-term averages of daily growing degree days with base 70F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            }
+        ],
+        "cooling": [
+            {
+                "id": "DLY-CLDD-NORMAL",
+                "name": "Long-term averages of daily cooling degree days with base 65F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE60",
+                "name": "Long-term averages of daily cooling degree days with base 60F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE50",
+                "name": "Long-term averages of daily cooling degree days with base 50F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE55",
+                "name": "Long-term averages of daily cooling degree days with base 55F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE57",
+                "name": "Long-term averages of daily cooling degree days with base 57F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE45",
+                "name": "Long-term averages of daily cooling degree days with base 45F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE70",
+                "name": "Long-term averages of daily cooling degree days with base 70F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            },
+            {
+                "id": "DLY-CLDD-BASE72",
+                "name": "Long-term averages of daily cooling degree days with base 72F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "cooling"
+                ]
+            }
+        ],
+        "wind": [
+            {
+                "id": "DLY-SNOW-25PCTL",
+                "name": "25th percentiles of daily nonzero snowfall totals for 29-day windows centered o",
+                "tags": [
+                    "wind",
+                    "snow"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-50PCTL",
+                "name": "50th percentiles of daily nonzero snowfall totals for 29-day windows centered o",
+                "tags": [
+                    "wind",
+                    "snow"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-PCTALL-GE001TI",
+                "name": "Probability of snowfall >= 0.1 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-PCTALL-GE100HI",
+                "name": "Probability of precipitation >= 1.00 inches for 29-day windows centered on each",
+                "tags": [
+                    "wind",
+                    "precipitation",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-25PCTL",
+                "name": "25th percentiles of daily nonzero precipitation totals for 29-day windows cente",
+                "tags": [
+                    "wind",
+                    "precipitation"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-PCTALL-GE100TI",
+                "name": "Probability of snowfall >= 10 inches for 29-day windows centered on each day of",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-75PCTL",
+                "name": "75th percentiles of daily nonzero precipitation totals for 29-day windows cente",
+                "tags": [
+                    "wind",
+                    "precipitation"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-PCTALL-GE010WI",
+                "name": "Probability of snow depth >= 10 inches for 29-day windows centered on each day ",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-25PCTL",
+                "name": "25th percentiles of daily nonzero snow depth for 29-day windows centered on eac",
+                "tags": [
+                    "wind",
+                    "snow"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-50PCTL",
+                "name": "50th percentiles of daily nonzero precipitation totals for 29-day windows cente",
+                "tags": [
+                    "wind",
+                    "precipitation"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-PCTALL-GE001WI",
+                "name": "Probability of snow depth >= 1 inch for 29-day windows centered on each day of ",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-PCTALL-GE030TI",
+                "name": "Probability of snowfall >= 3.0 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-PCTALL-GE003WI",
+                "name": "Probability of snow depth >= 3 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-PCTALL-GE005WI",
+                "name": "Probability of snow depth >= 5 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-PCTALL-GE001HI",
+                "name": "Probability of precipitation >= 0.01 inches for 29-day windows centered on each",
+                "tags": [
+                    "wind",
+                    "precipitation",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-75PCTL",
+                "name": "75th percentiles of daily nonzero snowfall totals for 29-day windows centered o",
+                "tags": [
+                    "wind",
+                    "snow"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-75PCTL",
+                "name": "75th percentiles of daily nonzero snow depth for 29-day windows centered on eac",
+                "tags": [
+                    "wind",
+                    "snow"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-PCTALL-GE010HI",
+                "name": "Probability of precipitation >= 0.10 inches for 29-day windows centered on each",
+                "tags": [
+                    "wind",
+                    "precipitation",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-PCTALL-GE050HI",
+                "name": "Probability of precipitation >= 0.50 inches for 29-day windows centered on each",
+                "tags": [
+                    "wind",
+                    "precipitation",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-PCTALL-GE010TI",
+                "name": "Probability of snowfall >= 1.0 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-PCTALL-GE050TI",
+                "name": "Probability of snowfall >= 5.0 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-50PCTL",
+                "name": "50th percentiles of daily nonzero snow depth for 29-day windows centered on eac",
+                "tags": [
+                    "wind",
+                    "snow"
+                ]
+            }
+        ],
+        "snow": [
+            {
+                "id": "DLY-SNOW-25PCTL",
+                "name": "25th percentiles of daily nonzero snowfall totals for 29-day windows centered o",
+                "tags": [
+                    "wind",
+                    "snow"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-50PCTL",
+                "name": "50th percentiles of daily nonzero snowfall totals for 29-day windows centered o",
+                "tags": [
+                    "wind",
+                    "snow"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-PCTALL-GE001TI",
+                "name": "Probability of snowfall >= 0.1 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-PCTALL-GE100TI",
+                "name": "Probability of snowfall >= 10 inches for 29-day windows centered on each day of",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-PCTALL-GE010WI",
+                "name": "Probability of snow depth >= 10 inches for 29-day windows centered on each day ",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "MTD-SNOW-NORMAL",
+                "name": "Long-term average month-to-date snowfall totals",
+                "tags": [
+                    "snow",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-25PCTL",
+                "name": "25th percentiles of daily nonzero snow depth for 29-day windows centered on eac",
+                "tags": [
+                    "wind",
+                    "snow"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-PCTALL-GE001WI",
+                "name": "Probability of snow depth >= 1 inch for 29-day windows centered on each day of ",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-PCTALL-GE030TI",
+                "name": "Probability of snowfall >= 3.0 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-PCTALL-GE003WI",
+                "name": "Probability of snow depth >= 3 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-PCTALL-GE005WI",
+                "name": "Probability of snow depth >= 5 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-75PCTL",
+                "name": "75th percentiles of daily nonzero snowfall totals for 29-day windows centered o",
+                "tags": [
+                    "wind",
+                    "snow"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-75PCTL",
+                "name": "75th percentiles of daily nonzero snow depth for 29-day windows centered on eac",
+                "tags": [
+                    "wind",
+                    "snow"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-PCTALL-GE010TI",
+                "name": "Probability of snowfall >= 1.0 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-PCTALL-GE050TI",
+                "name": "Probability of snowfall >= 5.0 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-50PCTL",
+                "name": "50th percentiles of daily nonzero snow depth for 29-day windows centered on eac",
+                "tags": [
+                    "wind",
+                    "snow"
+                ]
+            },
+            {
+                "id": "YTD-SNOW-NORMAL",
+                "name": "Long-term average year-to-date snowfall totals",
+                "tags": [
+                    "snow",
+                    "average"
+                ]
+            }
+        ],
+        "precipitation": [
+            {
+                "id": "MTD-PRCP-NORMAL",
+                "name": "Long-term average month-to-date precipitation totals",
+                "tags": [
+                    "precipitation",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-PCTALL-GE100HI",
+                "name": "Probability of precipitation >= 1.00 inches for 29-day windows centered on each",
+                "tags": [
+                    "wind",
+                    "precipitation",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-25PCTL",
+                "name": "25th percentiles of daily nonzero precipitation totals for 29-day windows cente",
+                "tags": [
+                    "wind",
+                    "precipitation"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-75PCTL",
+                "name": "75th percentiles of daily nonzero precipitation totals for 29-day windows cente",
+                "tags": [
+                    "wind",
+                    "precipitation"
+                ]
+            },
+            {
+                "id": "YTD-PRCP-NORMAL",
+                "name": "Long-term average year-to-date precipitation totals",
+                "tags": [
+                    "precipitation",
+                    "average"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-50PCTL",
+                "name": "50th percentiles of daily nonzero precipitation totals for 29-day windows cente",
+                "tags": [
+                    "wind",
+                    "precipitation"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-PCTALL-GE001HI",
+                "name": "Probability of precipitation >= 0.01 inches for 29-day windows centered on each",
+                "tags": [
+                    "wind",
+                    "precipitation",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-PCTALL-GE010HI",
+                "name": "Probability of precipitation >= 0.10 inches for 29-day windows centered on each",
+                "tags": [
+                    "wind",
+                    "precipitation",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-PCTALL-GE050HI",
+                "name": "Probability of precipitation >= 0.50 inches for 29-day windows centered on each",
+                "tags": [
+                    "wind",
+                    "precipitation",
+                    "probability"
+                ]
+            }
+        ],
+        "heating": [
+            {
+                "id": "DLY-HTDD-BASE60",
+                "name": "Long-term averages of daily heating degree days with base 60F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-NORMAL",
+                "name": "Long-term averages of daily heating degree days with base 65F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE50",
+                "name": "Long-term averages of daily heating degree days with base 50F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE55",
+                "name": "Long-term averages of daily heating degree days with base 55F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE57",
+                "name": "Long-term averages of daily heating degree days with base 57F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE40",
+                "name": "Long-term averages of daily heating degree days with base 40F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            },
+            {
+                "id": "DLY-HTDD-BASE45",
+                "name": "Long-term averages of daily heating degree days with base 45F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "heating"
+                ]
+            }
+        ],
+        "probability": [
+            {
+                "id": "DLY-SNOW-PCTALL-GE001TI",
+                "name": "Probability of snowfall >= 0.1 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-PCTALL-GE100HI",
+                "name": "Probability of precipitation >= 1.00 inches for 29-day windows centered on each",
+                "tags": [
+                    "wind",
+                    "precipitation",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-PCTALL-GE100TI",
+                "name": "Probability of snowfall >= 10 inches for 29-day windows centered on each day of",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-PCTALL-GE010WI",
+                "name": "Probability of snow depth >= 10 inches for 29-day windows centered on each day ",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-PCTALL-GE001WI",
+                "name": "Probability of snow depth >= 1 inch for 29-day windows centered on each day of ",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-PCTALL-GE030TI",
+                "name": "Probability of snowfall >= 3.0 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-PCTALL-GE003WI",
+                "name": "Probability of snow depth >= 3 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNWD-PCTALL-GE005WI",
+                "name": "Probability of snow depth >= 5 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-PCTALL-GE001HI",
+                "name": "Probability of precipitation >= 0.01 inches for 29-day windows centered on each",
+                "tags": [
+                    "wind",
+                    "precipitation",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-PCTALL-GE010HI",
+                "name": "Probability of precipitation >= 0.10 inches for 29-day windows centered on each",
+                "tags": [
+                    "wind",
+                    "precipitation",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-PRCP-PCTALL-GE050HI",
+                "name": "Probability of precipitation >= 0.50 inches for 29-day windows centered on each",
+                "tags": [
+                    "wind",
+                    "precipitation",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-PCTALL-GE010TI",
+                "name": "Probability of snowfall >= 1.0 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            },
+            {
+                "id": "DLY-SNOW-PCTALL-GE050TI",
+                "name": "Probability of snowfall >= 5.0 inches for 29-day windows centered on each day o",
+                "tags": [
+                    "wind",
+                    "snow",
+                    "probability"
+                ]
+            }
+        ],
+        "growing": [
+            {
+                "id": "DLY-GRDD-BASE60",
+                "name": "Long-term averages of daily growing degree days with base 60F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE65",
+                "name": "Long-term averages of daily growing degree days with base 65F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE57",
+                "name": "Long-term averages of daily growing degree days with base 57F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-TB4886",
+                "name": "Long-term averages of daily growing degree days with truncated bases 48F and 86F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE50",
+                "name": "Long-term averages of daily growing degree days with base 50F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE55",
+                "name": "Long-term averages of daily growing degree days with base 55F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-TB5086",
+                "name": "Long-term averages of daily growing degree days with truncated bases 50F and 86F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE45",
+                "name": "Long-term averages of daily growing degree days with base 45F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE40",
+                "name": "Long-term averages of daily growing degree days with base 40F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE72",
+                "name": "Long-term averages of daily growing degree days with base 72F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            },
+            {
+                "id": "DLY-GRDD-BASE70",
+                "name": "Long-term averages of daily growing degree days with base 70F",
+                "tags": [
+                    "degree day",
+                    "average",
+                    "growing"
+                ]
+            }
+        ]
+    },
+    "dataTypes": [
+        {
+            "id": "DLY-TMIN-NORMAL",
+            "name": "Long-term averages of daily minimum temperature",
+            "tags": [
+                "temperature",
+                "minimum",
+                "average"
+            ]
+        },
+        {
+            "id": "DLY-TAVG-STDDEV",
+            "name": "Long-term standard deviations of daily average temperature",
+            "tags": [
+                "temperature",
+                "average"
+            ]
+        },
+        {
+            "id": "DLY-TMAX-NORMAL",
+            "name": "Long-term averages of daily maximum temperature",
+            "tags": [
+                "temperature",
+                "maximum",
+                "average"
+            ]
+        },
+        {
+            "id": "DLY-CLDD-NORMAL",
+            "name": "Long-term averages of daily cooling degree days with base 65F",
+            "tags": [
+                "degree day",
+                "average",
+                "cooling"
+            ]
+        },
+        {
+            "id": "DLY-SNOW-25PCTL",
+            "name": "25th percentiles of daily nonzero snowfall totals for 29-day windows centered o",
+            "tags": [
+                "wind",
+                "snow"
+            ]
+        },
+        {
+            "id": "MTD-PRCP-NORMAL",
+            "name": "Long-term average month-to-date precipitation totals",
+            "tags": [
+                "precipitation",
+                "average"
+            ]
+        },
+        {
+            "id": "DLY-SNOW-50PCTL",
+            "name": "50th percentiles of daily nonzero snowfall totals for 29-day windows centered o",
+            "tags": [
+                "wind",
+                "snow"
+            ]
+        },
+        {
+            "id": "DLY-CLDD-BASE60",
+            "name": "Long-term averages of daily cooling degree days with base 60F",
+            "tags": [
+                "degree day",
+                "average",
+                "cooling"
+            ]
+        },
+        {
+            "id": "DLY-HTDD-BASE60",
+            "name": "Long-term averages of daily heating degree days with base 60F",
+            "tags": [
+                "degree day",
+                "average",
+                "heating"
+            ]
+        },
+        {
+            "id": "DLY-SNOW-PCTALL-GE001TI",
+            "name": "Probability of snowfall >= 0.1 inches for 29-day windows centered on each day o",
+            "tags": [
+                "wind",
+                "snow",
+                "probability"
+            ]
+        },
+        {
+            "id": "DLY-PRCP-PCTALL-GE100HI",
+            "name": "Probability of precipitation >= 1.00 inches for 29-day windows centered on each",
+            "tags": [
+                "wind",
+                "precipitation",
+                "probability"
+            ]
+        },
+        {
+            "id": "DLY-PRCP-25PCTL",
+            "name": "25th percentiles of daily nonzero precipitation totals for 29-day windows cente",
+            "tags": [
+                "wind",
+                "precipitation"
+            ]
+        },
+        {
+            "id": "DLY-DUTR-NORMAL",
+            "name": "Long-term averages of daily diurnal temperature range",
+            "tags": [
+                "temperature",
+                "average"
+            ]
+        },
+        {
+            "id": "DLY-GRDD-BASE60",
+            "name": "Long-term averages of daily growing degree days with base 60F",
+            "tags": [
+                "degree day",
+                "average",
+                "growing"
+            ]
+        },
+        {
+            "id": "DLY-GRDD-BASE65",
+            "name": "Long-term averages of daily growing degree days with base 65F",
+            "tags": [
+                "degree day",
+                "average",
+                "growing"
+            ]
+        },
+        {
+            "id": "DLY-TAVG-NORMAL",
+            "name": "Long-term averages of daily average temperature",
+            "tags": [
+                "temperature",
+                "average"
+            ]
+        },
+        {
+            "id": "DLY-SNOW-PCTALL-GE100TI",
+            "name": "Probability of snowfall >= 10 inches for 29-day windows centered on each day of",
+            "tags": [
+                "wind",
+                "snow",
+                "probability"
+            ]
+        },
+        {
+            "id": "DLY-PRCP-75PCTL",
+            "name": "75th percentiles of daily nonzero precipitation totals for 29-day windows cente",
+            "tags": [
+                "wind",
+                "precipitation"
+            ]
+        },
+        {
+            "id": "DLY-SNWD-PCTALL-GE010WI",
+            "name": "Probability of snow depth >= 10 inches for 29-day windows centered on each day ",
+            "tags": [
+                "wind",
+                "snow",
+                "probability"
+            ]
+        },
+        {
+            "id": "MTD-SNOW-NORMAL",
+            "name": "Long-term average month-to-date snowfall totals",
+            "tags": [
+                "snow",
+                "average"
+            ]
+        },
+        {
+            "id": "YTD-PRCP-NORMAL",
+            "name": "Long-term average year-to-date precipitation totals",
+            "tags": [
+                "precipitation",
+                "average"
+            ]
+        },
+        {
+            "id": "DLY-DUTR-STDDEV",
+            "name": "Long-term standard deviations of daily diurnal temperature range",
+            "tags": [
+                "temperature"
+            ]
+        },
+        {
+            "id": "DLY-SNWD-25PCTL",
+            "name": "25th percentiles of daily nonzero snow depth for 29-day windows centered on eac",
+            "tags": [
+                "wind",
+                "snow"
+            ]
+        },
+        {
+            "id": "DLY-HTDD-NORMAL",
+            "name": "Long-term averages of daily heating degree days with base 65F",
+            "tags": [
+                "degree day",
+                "average",
+                "heating"
+            ]
+        },
+        {
+            "id": "DLY-GRDD-BASE57",
+            "name": "Long-term averages of daily growing degree days with base 57F",
+            "tags": [
+                "degree day",
+                "average",
+                "growing"
+            ]
+        },
+        {
+            "id": "DLY-HTDD-BASE50",
+            "name": "Long-term averages of daily heating degree days with base 50F",
+            "tags": [
+                "degree day",
+                "average",
+                "heating"
+            ]
+        },
+        {
+            "id": "DLY-GRDD-TB4886",
+            "name": "Long-term averages of daily growing degree days with truncated bases 48F and 86F",
+            "tags": [
+                "degree day",
+                "average",
+                "growing"
+            ]
+        },
+        {
+            "id": "DLY-CLDD-BASE50",
+            "name": "Long-term averages of daily cooling degree days with base 50F",
+            "tags": [
+                "degree day",
+                "average",
+                "cooling"
+            ]
+        },
+        {
+            "id": "DLY-HTDD-BASE55",
+            "name": "Long-term averages of daily heating degree days with base 55F",
+            "tags": [
+                "degree day",
+                "average",
+                "heating"
+            ]
+        },
+        {
+            "id": "DLY-PRCP-50PCTL",
+            "name": "50th percentiles of daily nonzero precipitation totals for 29-day windows cente",
+            "tags": [
+                "wind",
+                "precipitation"
+            ]
+        },
+        {
+            "id": "DLY-TMAX-STDDEV",
+            "name": "Long-term standard deviations of daily maximum temperature",
+            "tags": [
+                "temperature",
+                "maximum"
+            ]
+        },
+        {
+            "id": "DLY-GRDD-BASE50",
+            "name": "Long-term averages of daily growing degree days with base 50F",
+            "tags": [
+                "degree day",
+                "average",
+                "growing"
+            ]
+        },
+        {
+            "id": "DLY-SNWD-PCTALL-GE001WI",
+            "name": "Probability of snow depth >= 1 inch for 29-day windows centered on each day of ",
+            "tags": [
+                "wind",
+                "snow",
+                "probability"
+            ]
+        },
+        {
+            "id": "DLY-CLDD-BASE55",
+            "name": "Long-term averages of daily cooling degree days with base 55F",
+            "tags": [
+                "degree day",
+                "average",
+                "cooling"
+            ]
+        },
+        {
+            "id": "DLY-SNOW-PCTALL-GE030TI",
+            "name": "Probability of snowfall >= 3.0 inches for 29-day windows centered on each day o",
+            "tags": [
+                "wind",
+                "snow",
+                "probability"
+            ]
+        },
+        {
+            "id": "DLY-CLDD-BASE57",
+            "name": "Long-term averages of daily cooling degree days with base 57F",
+            "tags": [
+                "degree day",
+                "average",
+                "cooling"
+            ]
+        },
+        {
+            "id": "DLY-HTDD-BASE57",
+            "name": "Long-term averages of daily heating degree days with base 57F",
+            "tags": [
+                "degree day",
+                "average",
+                "heating"
+            ]
+        },
+        {
+            "id": "DLY-SNWD-PCTALL-GE003WI",
+            "name": "Probability of snow depth >= 3 inches for 29-day windows centered on each day o",
+            "tags": [
+                "wind",
+                "snow",
+                "probability"
+            ]
+        },
+        {
+            "id": "DLY-GRDD-BASE55",
+            "name": "Long-term averages of daily growing degree days with base 55F",
+            "tags": [
+                "degree day",
+                "average",
+                "growing"
+            ]
+        },
+        {
+            "id": "DLY-SNWD-PCTALL-GE005WI",
+            "name": "Probability of snow depth >= 5 inches for 29-day windows centered on each day o",
+            "tags": [
+                "wind",
+                "snow",
+                "probability"
+            ]
+        },
+        {
+            "id": "DLY-GRDD-TB5086",
+            "name": "Long-term averages of daily growing degree days with truncated bases 50F and 86F",
+            "tags": [
+                "degree day",
+                "average",
+                "growing"
+            ]
+        },
+        {
+            "id": "DLY-HTDD-BASE40",
+            "name": "Long-term averages of daily heating degree days with base 40F",
+            "tags": [
+                "degree day",
+                "average",
+                "heating"
+            ]
+        },
+        {
+            "id": "DLY-GRDD-BASE45",
+            "name": "Long-term averages of daily growing degree days with base 45F",
+            "tags": [
+                "degree day",
+                "average",
+                "growing"
+            ]
+        },
+        {
+            "id": "DLY-HTDD-BASE45",
+            "name": "Long-term averages of daily heating degree days with base 45F",
+            "tags": [
+                "degree day",
+                "average",
+                "heating"
+            ]
+        },
+        {
+            "id": "DLY-GRDD-BASE40",
+            "name": "Long-term averages of daily growing degree days with base 40F",
+            "tags": [
+                "degree day",
+                "average",
+                "growing"
+            ]
+        },
+        {
+            "id": "DLY-PRCP-PCTALL-GE001HI",
+            "name": "Probability of precipitation >= 0.01 inches for 29-day windows centered on each",
+            "tags": [
+                "wind",
+                "precipitation",
+                "probability"
+            ]
+        },
+        {
+            "id": "DLY-CLDD-BASE45",
+            "name": "Long-term averages of daily cooling degree days with base 45F",
+            "tags": [
+                "degree day",
+                "average",
+                "cooling"
+            ]
+        },
+        {
+            "id": "DLY-SNOW-75PCTL",
+            "name": "75th percentiles of daily nonzero snowfall totals for 29-day windows centered o",
+            "tags": [
+                "wind",
+                "snow"
+            ]
+        },
+        {
+            "id": "DLY-TMIN-STDDEV",
+            "name": "Long-term standard deviations of daily minimum temperature",
+            "tags": [
+                "temperature",
+                "minimum"
+            ]
+        },
+        {
+            "id": "DLY-SNWD-75PCTL",
+            "name": "75th percentiles of daily nonzero snow depth for 29-day windows centered on eac",
+            "tags": [
+                "wind",
+                "snow"
+            ]
+        },
+        {
+            "id": "DLY-CLDD-BASE70",
+            "name": "Long-term averages of daily cooling degree days with base 70F",
+            "tags": [
+                "degree day",
+                "average",
+                "cooling"
+            ]
+        },
+        {
+            "id": "DLY-CLDD-BASE72",
+            "name": "Long-term averages of daily cooling degree days with base 72F",
+            "tags": [
+                "degree day",
+                "average",
+                "cooling"
+            ]
+        },
+        {
+            "id": "DLY-PRCP-PCTALL-GE010HI",
+            "name": "Probability of precipitation >= 0.10 inches for 29-day windows centered on each",
+            "tags": [
+                "wind",
+                "precipitation",
+                "probability"
+            ]
+        },
+        {
+            "id": "DLY-PRCP-PCTALL-GE050HI",
+            "name": "Probability of precipitation >= 0.50 inches for 29-day windows centered on each",
+            "tags": [
+                "wind",
+                "precipitation",
+                "probability"
+            ]
+        },
+        {
+            "id": "DLY-GRDD-BASE72",
+            "name": "Long-term averages of daily growing degree days with base 72F",
+            "tags": [
+                "degree day",
+                "average",
+                "growing"
+            ]
+        },
+        {
+            "id": "DLY-SNOW-PCTALL-GE010TI",
+            "name": "Probability of snowfall >= 1.0 inches for 29-day windows centered on each day o",
+            "tags": [
+                "wind",
+                "snow",
+                "probability"
+            ]
+        },
+        {
+            "id": "DLY-GRDD-BASE70",
+            "name": "Long-term averages of daily growing degree days with base 70F",
+            "tags": [
+                "degree day",
+                "average",
+                "growing"
+            ]
+        },
+        {
+            "id": "DLY-SNOW-PCTALL-GE050TI",
+            "name": "Probability of snowfall >= 5.0 inches for 29-day windows centered on each day o",
+            "tags": [
+                "wind",
+                "snow",
+                "probability"
+            ]
+        },
+        {
+            "id": "DLY-SNWD-50PCTL",
+            "name": "50th percentiles of daily nonzero snow depth for 29-day windows centered on eac",
+            "tags": [
+                "wind",
+                "snow"
+            ]
+        },
+        {
+            "id": "YTD-SNOW-NORMAL",
+            "name": "Long-term average year-to-date snowfall totals",
+            "tags": [
+                "snow",
+                "average"
+            ]
+        }
+    ]
+}

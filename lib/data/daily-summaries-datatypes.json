@@ -1,0 +1,1452 @@
+{
+    "tags": {
+        "evap": [
+            {
+                "id": "EVAP",
+                "name": "Evaporation of water from evaporation pan",
+                "tags": [
+                    "evap"
+                ]
+            },
+            {
+                "id": "MDEV",
+                "name": "Multiday evaporation total (use with DAEV)",
+                "tags": [
+                    "evap"
+                ]
+            },
+            {
+                "id": "MXPN",
+                "name": "Daily maximum temperature of water in an evaporation pan (tenths of degrees C)",
+                "tags": [
+                    "temperature",
+                    "evap",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "DAEV",
+                "name": "Number of days included in the multiday evaporation total (MDEV)",
+                "tags": [
+                    "evap"
+                ]
+            },
+            {
+                "id": "MNPN",
+                "name": "Daily minimum temperature of water in an evaporation pan (tenths of degrees C)",
+                "tags": [
+                    "temperature",
+                    "evap",
+                    "minimum"
+                ]
+            }
+        ],
+        "temperature": [
+            {
+                "id": "SX02",
+                "name": "Maximum soil temperature with unknown cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SN52",
+                "name": "Minimum soil temperature with sod cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "TOBS",
+                "name": "Temperature at the time of observation (tenths of degrees C)",
+                "tags": [
+                    "temperature"
+                ]
+            },
+            {
+                "id": "SN02",
+                "name": "Minimum soil temperature with unknown cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "MXPN",
+                "name": "Daily maximum temperature of water in an evaporation pan (tenths of degrees C)",
+                "tags": [
+                    "temperature",
+                    "evap",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "TMAX",
+                "name": "Maximum temperature (tenths of degrees C)",
+                "tags": [
+                    "temperature",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SX52",
+                "name": "Maximum soil temperature with sod cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "TMIN",
+                "name": "Minimum temperature (tenths of degrees C)",
+                "tags": [
+                    "temperature",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "TAVG",
+                "name": "Average temperature",
+                "tags": [
+                    "temperature",
+                    "average"
+                ]
+            },
+            {
+                "id": "MNPN",
+                "name": "Daily minimum temperature of water in an evaporation pan (tenths of degrees C)",
+                "tags": [
+                    "temperature",
+                    "evap",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SN12",
+                "name": "Minimum soil temperature with grass cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SX32",
+                "name": "Maximum soil temperature with bare ground cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SN32",
+                "name": "Minimum soil temperature with bare ground cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SX12",
+                "name": "Maximum soil temperature with grass cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SX03",
+                "name": "Maximum soil temperature with unknown cover at 20 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SN53",
+                "name": "Minimum soil temperature with sod cover at 20 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SN03",
+                "name": "Minimum soil temperature with unknown cover at 20 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SX53",
+                "name": "Maximum soil temperature with sod cover at 20 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            }
+        ],
+        "soil": [
+            {
+                "id": "SX02",
+                "name": "Maximum soil temperature with unknown cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SN52",
+                "name": "Minimum soil temperature with sod cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SN02",
+                "name": "Minimum soil temperature with unknown cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SX52",
+                "name": "Maximum soil temperature with sod cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SN12",
+                "name": "Minimum soil temperature with grass cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SX32",
+                "name": "Maximum soil temperature with bare ground cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SN32",
+                "name": "Minimum soil temperature with bare ground cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SX12",
+                "name": "Maximum soil temperature with grass cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SX03",
+                "name": "Maximum soil temperature with unknown cover at 20 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SN53",
+                "name": "Minimum soil temperature with sod cover at 20 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SN03",
+                "name": "Minimum soil temperature with unknown cover at 20 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SX53",
+                "name": "Maximum soil temperature with sod cover at 20 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            }
+        ],
+        "maximum": [
+            {
+                "id": "SX02",
+                "name": "Maximum soil temperature with unknown cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "MXPN",
+                "name": "Daily maximum temperature of water in an evaporation pan (tenths of degrees C)",
+                "tags": [
+                    "temperature",
+                    "evap",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "TMAX",
+                "name": "Maximum temperature (tenths of degrees C)",
+                "tags": [
+                    "temperature",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SX52",
+                "name": "Maximum soil temperature with sod cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SX32",
+                "name": "Maximum soil temperature with bare ground cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SX12",
+                "name": "Maximum soil temperature with grass cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SX03",
+                "name": "Maximum soil temperature with unknown cover at 20 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            },
+            {
+                "id": "SX53",
+                "name": "Maximum soil temperature with sod cover at 20 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "maximum"
+                ]
+            }
+        ],
+        "snow": [
+            {
+                "id": "WT04",
+                "name": "Ice pellets, sleet, snow pellets, or small hail",
+                "tags": [
+                    "snow",
+                    "hail",
+                    "ice"
+                ]
+            },
+            {
+                "id": "WT09",
+                "name": "Blowing or drifting snow",
+                "tags": [
+                    "snow"
+                ]
+            },
+            {
+                "id": "SNOW",
+                "name": "Snowfall (mm)",
+                "tags": [
+                    "snow"
+                ]
+            },
+            {
+                "id": "WESD",
+                "name": "Water equivalent of snow on the ground",
+                "tags": [
+                    "snow"
+                ]
+            },
+            {
+                "id": "SNWD",
+                "name": "Snow depth (mm)",
+                "tags": [
+                    "snow"
+                ]
+            },
+            {
+                "id": "WT18",
+                "name": "Snow, snow pellets, snow grains, or ice crystals",
+                "tags": [
+                    "snow",
+                    "ice"
+                ]
+            },
+            {
+                "id": "WV20",
+                "name": "Rain or snow shower",
+                "tags": [
+                    "snow"
+                ]
+            },
+            {
+                "id": "MDSF",
+                "name": "Multiday snowfall total",
+                "tags": [
+                    "snow"
+                ]
+            },
+            {
+                "id": "DASF",
+                "name": "Number of days included in the multiday snow fall total (MDSF)",
+                "tags": [
+                    "snow"
+                ]
+            }
+        ],
+        "hail": [
+            {
+                "id": "WT04",
+                "name": "Ice pellets, sleet, snow pellets, or small hail",
+                "tags": [
+                    "snow",
+                    "hail",
+                    "ice"
+                ]
+            },
+            {
+                "id": "WT05",
+                "name": "Hail (may include small hail)",
+                "tags": [
+                    "hail"
+                ]
+            }
+        ],
+        "ice": [
+            {
+                "id": "WT04",
+                "name": "Ice pellets, sleet, snow pellets, or small hail",
+                "tags": [
+                    "snow",
+                    "hail",
+                    "ice"
+                ]
+            },
+            {
+                "id": "THIC",
+                "name": "Thickness of ice on water",
+                "tags": [
+                    "ice"
+                ]
+            },
+            {
+                "id": "WT01",
+                "name": "Fog, ice fog, or freezing fog (may include heavy fog)",
+                "tags": [
+                    "fog",
+                    "freezing",
+                    "ice"
+                ]
+            },
+            {
+                "id": "WT18",
+                "name": "Snow, snow pellets, snow grains, or ice crystals",
+                "tags": [
+                    "snow",
+                    "ice"
+                ]
+            },
+            {
+                "id": "WT22",
+                "name": "Ice fog or freezing fog",
+                "tags": [
+                    "fog",
+                    "freezing",
+                    "ice"
+                ]
+            },
+            {
+                "id": "WV01",
+                "name": "Fog, ice fog, or freezing fog (may include heavy fog)",
+                "tags": [
+                    "fog",
+                    "freezing",
+                    "ice"
+                ]
+            }
+        ],
+        "wind": [
+            {
+                "id": "MDWM",
+                "name": "Multiday wind movement",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "DAWM",
+                "name": "Number of days included in the multiday wind movement (MDWM)",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "WDF1",
+                "name": "Direction of fastest 1-minute wind (degrees)",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "WDF2",
+                "name": "Direction of fastest 2-minute wind (degrees)",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "WDF5",
+                "name": "Direction of fastest 5-second wind (degrees)",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "WT11",
+                "name": "High or damaging winds",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "WDMV",
+                "name": "24-hour wind movement",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "FMTM",
+                "name": "Time of fastest mile or fastest 1-minute wind",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "WSF2",
+                "name": "Fastest 2-minute wind speed",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "WSF5",
+                "name": "Fastest 5-second wind speed",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "WSF1",
+                "name": "Fastest 1-minute wind speed",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "WSFG",
+                "name": "Peak guest wind speed",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "WDFG",
+                "name": "Direction of peak wind gust (degrees)",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "AWND",
+                "name": "Average daily wind speed",
+                "tags": [
+                    "wind",
+                    "average"
+                ]
+            },
+            {
+                "id": "WSFM",
+                "name": "Fastest mile wind speed",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "WSFI",
+                "name": "Highest instantaneous wind speed",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "WDFI",
+                "name": "Direction of highest instantaneous wind (degrees)",
+                "tags": [
+                    "wind"
+                ]
+            },
+            {
+                "id": "WDFM",
+                "name": "Fastest mile wind direction (degrees)",
+                "tags": [
+                    "wind"
+                ]
+            }
+        ],
+        "minimum": [
+            {
+                "id": "SN52",
+                "name": "Minimum soil temperature with sod cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SN02",
+                "name": "Minimum soil temperature with unknown cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "TMIN",
+                "name": "Minimum temperature (tenths of degrees C)",
+                "tags": [
+                    "temperature",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "MNPN",
+                "name": "Daily minimum temperature of water in an evaporation pan (tenths of degrees C)",
+                "tags": [
+                    "temperature",
+                    "evap",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SN12",
+                "name": "Minimum soil temperature with grass cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SN32",
+                "name": "Minimum soil temperature with bare ground cover at 10 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SN53",
+                "name": "Minimum soil temperature with sod cover at 20 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            },
+            {
+                "id": "SN03",
+                "name": "Minimum soil temperature with unknown cover at 20 cm depth",
+                "tags": [
+                    "temperature",
+                    "soil",
+                    "minimum"
+                ]
+            }
+        ],
+        "fog": [
+            {
+                "id": "WT01",
+                "name": "Fog, ice fog, or freezing fog (may include heavy fog)",
+                "tags": [
+                    "fog",
+                    "freezing",
+                    "ice"
+                ]
+            },
+            {
+                "id": "WT02",
+                "name": "Heavy fog or heaving freezing fog (not always distinguished from fog)",
+                "tags": [
+                    "fog",
+                    "freezing"
+                ]
+            },
+            {
+                "id": "WT21",
+                "name": "Ground fog",
+                "tags": [
+                    "fog"
+                ]
+            },
+            {
+                "id": "WT22",
+                "name": "Ice fog or freezing fog",
+                "tags": [
+                    "fog",
+                    "freezing",
+                    "ice"
+                ]
+            },
+            {
+                "id": "WV01",
+                "name": "Fog, ice fog, or freezing fog (may include heavy fog)",
+                "tags": [
+                    "fog",
+                    "freezing",
+                    "ice"
+                ]
+            }
+        ],
+        "freezing": [
+            {
+                "id": "WT01",
+                "name": "Fog, ice fog, or freezing fog (may include heavy fog)",
+                "tags": [
+                    "fog",
+                    "freezing",
+                    "ice"
+                ]
+            },
+            {
+                "id": "WT02",
+                "name": "Heavy fog or heaving freezing fog (not always distinguished from fog)",
+                "tags": [
+                    "fog",
+                    "freezing"
+                ]
+            },
+            {
+                "id": "WT15",
+                "name": "Freezing drizzle",
+                "tags": [
+                    "freezing"
+                ]
+            },
+            {
+                "id": "WT16",
+                "name": "Rain (may include freezing rain, drizzle, and freezing drizzle)",
+                "tags": [
+                    "freezing"
+                ]
+            },
+            {
+                "id": "WT17",
+                "name": "Freezing rain",
+                "tags": [
+                    "freezing"
+                ]
+            },
+            {
+                "id": "WT22",
+                "name": "Ice fog or freezing fog",
+                "tags": [
+                    "fog",
+                    "freezing",
+                    "ice"
+                ]
+            },
+            {
+                "id": "WV01",
+                "name": "Fog, ice fog, or freezing fog (may include heavy fog)",
+                "tags": [
+                    "fog",
+                    "freezing",
+                    "ice"
+                ]
+            }
+        ],
+        "precipitation": [
+            {
+                "id": "PRCP",
+                "name": "Precipitation",
+                "tags": [
+                    "precipitation"
+                ]
+            },
+            {
+                "id": "WT19",
+                "name": "Unknown source of precipitation",
+                "tags": [
+                    "precipitation"
+                ]
+            },
+            {
+                "id": "DAPR",
+                "name": "Number of days included in the multiday precipitation total (MDPR)",
+                "tags": [
+                    "precipitation"
+                ]
+            },
+            {
+                "id": "MDPR",
+                "name": "Multiday precipitation total (use with DAPR and DWPR, if available)",
+                "tags": [
+                    "precipitation"
+                ]
+            }
+        ],
+        "average": [
+            {
+                "id": "ACSH",
+                "name": "Average cloudiness sunrise to sunset from manual observations",
+                "tags": [
+                    "average"
+                ]
+            },
+            {
+                "id": "AWND",
+                "name": "Average daily wind speed",
+                "tags": [
+                    "wind",
+                    "average"
+                ]
+            },
+            {
+                "id": "TAVG",
+                "name": "Average temperature",
+                "tags": [
+                    "temperature",
+                    "average"
+                ]
+            },
+            {
+                "id": "ACMH",
+                "name": "Average cloudiness midnight to midnight from manual observations",
+                "tags": [
+                    "average"
+                ]
+            }
+        ]
+    },
+    "dataTypes": [
+        {
+            "id": "EVAP",
+            "name": "Evaporation of water from evaporation pan",
+            "tags": [
+                "evap"
+            ]
+        },
+        {
+            "id": "SX02",
+            "name": "Maximum soil temperature with unknown cover at 10 cm depth",
+            "tags": [
+                "temperature",
+                "soil",
+                "maximum"
+            ]
+        },
+        {
+            "id": "FRGB",
+            "name": "Base of frozen ground layer"
+        },
+        {
+            "id": "WT03",
+            "name": "Thunder"
+        },
+        {
+            "id": "WT04",
+            "name": "Ice pellets, sleet, snow pellets, or small hail",
+            "tags": [
+                "snow",
+                "hail",
+                "ice"
+            ]
+        },
+        {
+            "id": "MDWM",
+            "name": "Multiday wind movement",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "WT05",
+            "name": "Hail (may include small hail)",
+            "tags": [
+                "hail"
+            ]
+        },
+        {
+            "id": "WV03",
+            "name": "Thunder"
+        },
+        {
+            "id": "WT06",
+            "name": "Glaze or rime"
+        },
+        {
+            "id": "DAWM",
+            "name": "Number of days included in the multiday wind movement (MDWM)",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "WT07",
+            "name": "Dust, volcanic ash, blowing dust, blowing sand, or blowing obstruction"
+        },
+        {
+            "id": "WT08",
+            "name": "Smoke or haze"
+        },
+        {
+            "id": "WT09",
+            "name": "Blowing or drifting snow",
+            "tags": [
+                "snow"
+            ]
+        },
+        {
+            "id": "WDF1",
+            "name": "Direction of fastest 1-minute wind (degrees)",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "WDF2",
+            "name": "Direction of fastest 2-minute wind (degrees)",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "WT10",
+            "name": "Tornado, waterspout, or funnel cloud"
+        },
+        {
+            "id": "WDF5",
+            "name": "Direction of fastest 5-second wind (degrees)",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "WT11",
+            "name": "High or damaging winds",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "PGTM",
+            "name": "Peak gust time (hours and minutes, i.e., HHMM)"
+        },
+        {
+            "id": "WT12",
+            "name": "Blowing spray"
+        },
+        {
+            "id": "WT13",
+            "name": "Mist"
+        },
+        {
+            "id": "FRGT",
+            "name": "Top of frozen ground layer"
+        },
+        {
+            "id": "WDMV",
+            "name": "24-hour wind movement",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "SN52",
+            "name": "Minimum soil temperature with sod cover at 10 cm depth",
+            "tags": [
+                "temperature",
+                "soil",
+                "minimum"
+            ]
+        },
+        {
+            "id": "FMTM",
+            "name": "Time of fastest mile or fastest 1-minute wind",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "WSF2",
+            "name": "Fastest 2-minute wind speed",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "WSF5",
+            "name": "Fastest 5-second wind speed",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "SNOW",
+            "name": "Snowfall (mm)",
+            "tags": [
+                "snow"
+            ]
+        },
+        {
+            "id": "THIC",
+            "name": "Thickness of ice on water",
+            "tags": [
+                "ice"
+            ]
+        },
+        {
+            "id": "TOBS",
+            "name": "Temperature at the time of observation (tenths of degrees C)",
+            "tags": [
+                "temperature"
+            ]
+        },
+        {
+            "id": "MDEV",
+            "name": "Multiday evaporation total (use with DAEV)",
+            "tags": [
+                "evap"
+            ]
+        },
+        {
+            "id": "WSF1",
+            "name": "Fastest 1-minute wind speed",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "WSFG",
+            "name": "Peak guest wind speed",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "WT01",
+            "name": "Fog, ice fog, or freezing fog (may include heavy fog)",
+            "tags": [
+                "fog",
+                "freezing",
+                "ice"
+            ]
+        },
+        {
+            "id": "WESD",
+            "name": "Water equivalent of snow on the ground",
+            "tags": [
+                "snow"
+            ]
+        },
+        {
+            "id": "WT02",
+            "name": "Heavy fog or heaving freezing fog (not always distinguished from fog)",
+            "tags": [
+                "fog",
+                "freezing"
+            ]
+        },
+        {
+            "id": "SN02",
+            "name": "Minimum soil temperature with unknown cover at 10 cm depth",
+            "tags": [
+                "temperature",
+                "soil",
+                "minimum"
+            ]
+        },
+        {
+            "id": "GAHT",
+            "name": "Difference between river and gauge height"
+        },
+        {
+            "id": "PRCP",
+            "name": "Precipitation",
+            "tags": [
+                "precipitation"
+            ]
+        },
+        {
+            "id": "MXPN",
+            "name": "Daily maximum temperature of water in an evaporation pan (tenths of degrees C)",
+            "tags": [
+                "temperature",
+                "evap",
+                "maximum"
+            ]
+        },
+        {
+            "id": "SNWD",
+            "name": "Snow depth (mm)",
+            "tags": [
+                "snow"
+            ]
+        },
+        {
+            "id": "TMAX",
+            "name": "Maximum temperature (tenths of degrees C)",
+            "tags": [
+                "temperature",
+                "maximum"
+            ]
+        },
+        {
+            "id": "FRTH",
+            "name": "Thickness of frozen ground layer"
+        },
+        {
+            "id": "SX52",
+            "name": "Maximum soil temperature with sod cover at 10 cm depth",
+            "tags": [
+                "temperature",
+                "soil",
+                "maximum"
+            ]
+        },
+        {
+            "id": "WDFG",
+            "name": "Direction of peak wind gust (degrees)",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "WT14",
+            "name": "Drizzle"
+        },
+        {
+            "id": "ACSH",
+            "name": "Average cloudiness sunrise to sunset from manual observations",
+            "tags": [
+                "average"
+            ]
+        },
+        {
+            "id": "WT15",
+            "name": "Freezing drizzle",
+            "tags": [
+                "freezing"
+            ]
+        },
+        {
+            "id": "WT16",
+            "name": "Rain (may include freezing rain, drizzle, and freezing drizzle)",
+            "tags": [
+                "freezing"
+            ]
+        },
+        {
+            "id": "WT17",
+            "name": "Freezing rain",
+            "tags": [
+                "freezing"
+            ]
+        },
+        {
+            "id": "WT18",
+            "name": "Snow, snow pellets, snow grains, or ice crystals",
+            "tags": [
+                "snow",
+                "ice"
+            ]
+        },
+        {
+            "id": "WT19",
+            "name": "Unknown source of precipitation",
+            "tags": [
+                "precipitation"
+            ]
+        },
+        {
+            "id": "DAEV",
+            "name": "Number of days included in the multiday evaporation total (MDEV)",
+            "tags": [
+                "evap"
+            ]
+        },
+        {
+            "id": "AWND",
+            "name": "Average daily wind speed",
+            "tags": [
+                "wind",
+                "average"
+            ]
+        },
+        {
+            "id": "WT21",
+            "name": "Ground fog",
+            "tags": [
+                "fog"
+            ]
+        },
+        {
+            "id": "WV20",
+            "name": "Rain or snow shower",
+            "tags": [
+                "snow"
+            ]
+        },
+        {
+            "id": "WT22",
+            "name": "Ice fog or freezing fog",
+            "tags": [
+                "fog",
+                "freezing",
+                "ice"
+            ]
+        },
+        {
+            "id": "TMIN",
+            "name": "Minimum temperature (tenths of degrees C)",
+            "tags": [
+                "temperature",
+                "minimum"
+            ]
+        },
+        {
+            "id": "TAVG",
+            "name": "Average temperature",
+            "tags": [
+                "temperature",
+                "average"
+            ]
+        },
+        {
+            "id": "PSUN",
+            "name": "Daily percent of possible sunshine"
+        },
+        {
+            "id": "MNPN",
+            "name": "Daily minimum temperature of water in an evaporation pan (tenths of degrees C)",
+            "tags": [
+                "temperature",
+                "evap",
+                "minimum"
+            ]
+        },
+        {
+            "id": "TSUN",
+            "name": "Daily total sunshine (minutes)"
+        },
+        {
+            "id": "WSFM",
+            "name": "Fastest mile wind speed",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "SN12",
+            "name": "Minimum soil temperature with grass cover at 10 cm depth",
+            "tags": [
+                "temperature",
+                "soil",
+                "minimum"
+            ]
+        },
+        {
+            "id": "ACMH",
+            "name": "Average cloudiness midnight to midnight from manual observations",
+            "tags": [
+                "average"
+            ]
+        },
+        {
+            "id": "SX32",
+            "name": "Maximum soil temperature with bare ground cover at 10 cm depth",
+            "tags": [
+                "temperature",
+                "soil",
+                "maximum"
+            ]
+        },
+        {
+            "id": "WSFI",
+            "name": "Highest instantaneous wind speed",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "SN32",
+            "name": "Minimum soil temperature with bare ground cover at 10 cm depth",
+            "tags": [
+                "temperature",
+                "soil",
+                "minimum"
+            ]
+        },
+        {
+            "id": "SX12",
+            "name": "Maximum soil temperature with grass cover at 10 cm depth",
+            "tags": [
+                "temperature",
+                "soil",
+                "maximum"
+            ]
+        },
+        {
+            "id": "WDFI",
+            "name": "Direction of highest instantaneous wind (degrees)",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "WDFM",
+            "name": "Fastest mile wind direction (degrees)",
+            "tags": [
+                "wind"
+            ]
+        },
+        {
+            "id": "WV01",
+            "name": "Fog, ice fog, or freezing fog (may include heavy fog)",
+            "tags": [
+                "fog",
+                "freezing",
+                "ice"
+            ]
+        },
+        {
+            "id": "WV07",
+            "name": "Ash, dust, sand, or other blowing obstruction"
+        },
+        {
+            "id": "DAPR",
+            "name": "Number of days included in the multiday precipitation total (MDPR)",
+            "tags": [
+                "precipitation"
+            ]
+        },
+        {
+            "id": "MDPR",
+            "name": "Multiday precipitation total (use with DAPR and DWPR, if available)",
+            "tags": [
+                "precipitation"
+            ]
+        },
+        {
+            "id": "MDSF",
+            "name": "Multiday snowfall total",
+            "tags": [
+                "snow"
+            ]
+        },
+        {
+            "id": "DASF",
+            "name": "Number of days included in the multiday snow fall total (MDSF)",
+            "tags": [
+                "snow"
+            ]
+        },
+        {
+            "id": "SX03",
+            "name": "Maximum soil temperature with unknown cover at 20 cm depth",
+            "tags": [
+                "temperature",
+                "soil",
+                "maximum"
+            ]
+        },
+        {
+            "id": "SN53",
+            "name": "Minimum soil temperature with sod cover at 20 cm depth",
+            "tags": [
+                "temperature",
+                "soil",
+                "minimum"
+            ]
+        },
+        {
+            "id": "SN03",
+            "name": "Minimum soil temperature with unknown cover at 20 cm depth",
+            "tags": [
+                "temperature",
+                "soil",
+                "minimum"
+            ]
+        },
+        {
+            "id": "SX53",
+            "name": "Maximum soil temperature with sod cover at 20 cm depth",
+            "tags": [
+                "temperature",
+                "soil",
+                "maximum"
+            ]
+        }
+    ]
+}

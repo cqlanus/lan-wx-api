@@ -76,7 +76,9 @@ router.get('/:zip/current', geocodeMiddleware, async (req, res) => {
 
 router.get('/:zip/norms', geocodeMiddleware, async (req, res) => {
   try {
-    const data = await ncei.getNormals(req.coords)
+    console.log({ query: req.query })
+    const { datatypes } = req.query
+    const data = await ncei.getNormals(req.coords, datatypes.split(','))
     res.json(data)
   } catch (err) {
     console.error(err)
