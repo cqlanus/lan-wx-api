@@ -9,6 +9,7 @@ const errorHandler = require('./lib/errorHandler')
 const currentRouter = require('./routes/current')
 const forecastRouter = require('./routes/forecast')
 const zipRouter = require('./routes/zip')
+const normsRouter = require('./routes/norms')
 
 require('dotenv').config()
 
@@ -22,6 +23,7 @@ app.use(bodyParser.json())
 // Routers
 app.use('/current', currentRouter)
 app.use('/forecast', forecastRouter)
+app.use('/norms', normsRouter)
 app.use('/zip', zipRouter)
 app.use('*', () => {
   throw new Error('wrong')

@@ -5,6 +5,8 @@ const ncei = require('../services/ncei')
 const geocodeMiddleware = require('../lib/geocode')
 const router = express.Router()
 
+const normalsDailyDatatypes = require('../lib/data/normals-daily-datatypes.json')
+
 router.get('/', async (req, res) => {
   try {
     const query = {
@@ -77,8 +79,14 @@ router.get('/:zip/current', geocodeMiddleware, async (req, res) => {
 router.get('/:zip/norms', geocodeMiddleware, async (req, res) => {
   try {
     console.log({ query: req.query })
-    const { datatypes } = req.query
-    const data = await ncei.getNormals(req.coords, datatypes.split(','))
+    const { tag } = req.query
+    let types = tag.includes('all')
+      ? []
+      : tag.split(',').reduce((acc, t) => {
+            const tags = normalsDailyDatatypes.tags[t] || []
+            return [ ...acc, ...tags ]
+          }, [])
+    const data = await ncei.getNormals(req.coords, types.map(t => t.id))
     res.json(data)
   } catch (err) {
     console.error(err)
