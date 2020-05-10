@@ -14,7 +14,8 @@ class Location {
       return existingQuery
     }
     const url = `${BASE}/search?${query}&format=json`
-    const [ firstResult ] = await request(url)
+    const results = await request(url)
+    const [ firstResult ] = results
     if (firstResult) {
       this.queries[query] = firstResult
       return firstResult;

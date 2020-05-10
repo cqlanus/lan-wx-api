@@ -38,17 +38,17 @@ class NWS {
       const { properties } = await nwsRequest(url)
       return properties;
     })
-    console.log({ points: data })
     return data
   }
 
   getNearbyStations = async (url) => await this.getData('stations', url, async () => await nwsRequest(url))
 
-  getNearestStation = async (url) => {
-      const { observationStations } = await this.getNearbyStations(url)
-      const [ firstStationUrl ] = observationStations
-    const data = await this.getData('nearbyStation', firstStationUrl, async () => {
-      const { properties } = await nwsRequest(firstStationUrl)
+  getNearestStation = async (url, retry = false) => {
+    const { observationStations } = await this.getNearbyStations(url)
+    const [ firstStationUrl, secondStationUrl ] = observationStations
+    const stationUrl = retry ? secondStationUrl : firstStationUrl
+    const data = await this.getData('nearbyStation', stationUrl, async () => {
+      const { properties } = await nwsRequest(stationUrl)
       return properties
     })
     return data

@@ -1,6 +1,7 @@
 const express = require('express')
 const nws = require('../services/nws')
 const location = require('../services/location')
+const ncei = require('../services/ncei')
 const geocodeMiddleware = require('../lib/geocode')
 const router = express.Router()
 
@@ -65,6 +66,17 @@ router.get('/:zip/forecast/discussion', geocodeMiddleware, async (req, res) => {
 router.get('/:zip/current', geocodeMiddleware, async (req, res) => {
   try {
     const data = await nws.getConditions(req.coords)
+    res.json(data)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(404).json({ message })
+  }
+})
+
+router.get('/:zip/norms', geocodeMiddleware, async (req, res) => {
+  try {
+    const data = await ncei.getNormals(req.coords)
     res.json(data)
   } catch (err) {
     console.error(err)
