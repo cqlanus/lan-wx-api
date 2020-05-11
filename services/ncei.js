@@ -9,10 +9,6 @@ const nceiRequest = async ({ dataset, dataTypes, stations, startDate, endDate })
   return await request(url)
 }
 
-const DATATYPES_MAP = {
-  d_tmax: 'DLY-TAVG-NORMAL'
-}
-
 class NCEI {
 
   getNormals = async (coords, datatypes = ['DLY-GRDD-BASE45','DLY-TAVG-NORMAL'], retry = false) => {
@@ -27,6 +23,22 @@ class NCEI {
     const norms = await nceiRequest(query)
     if (norms.length === 0) {
       return this.getNormals(coords, datatypes, true)
+    }
+    return norms
+  }
+
+  getDailySummaries = async (coords, datatypes = [], start = '2020-05-01', end = '2020-04-01', retry = false) => {
+    const wban = await this.getAssociatedStationId(coords, retry)
+    const query = {
+      dataset: 'daily-summaries',
+      dataTypes: datatypes.join(),
+      stations: `USW000${wban}`,
+      startDate: start,
+      endDate: end,
+    }
+    const norms = await nceiRequest(query)
+    if (norms.length === 0) {
+      return this.getDailySummaries(coords, datatypes, start, end, true)
     }
     return norms
   }

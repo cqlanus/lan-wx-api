@@ -1,0 +1,1764 @@
+{
+    "byState": {
+        "AZ": [
+            {
+                "region": "AZ",
+                "city": "Yuma|Noah",
+                "icao": "",
+                "wban": "3125",
+                "lat_prp": "32.87083333",
+                "lon_prp": "-114.335",
+                "station_name_current": "Proving Grounds",
+                "special": "NWS/YPGA3",
+                "name": null,
+                "national_id": ""
+            },
+            {
+                "region": "AZ",
+                "city": "Flagstaff|Bellemont",
+                "icao": "KFGZ",
+                "wban": null,
+                "lat_prp": "35.23",
+                "lon_prp": "-111.8216667",
+                "station_name_current": "WFO",
+                "special": "",
+                "name": "Flagstaff, AZ",
+                "national_id": "FGZ"
+            },
+            {
+                "region": "AZ",
+                "city": "Tucson|Polo Village",
+                "icao": "KTWC",
+                "wban": null,
+                "lat_prp": "32.2333",
+                "lon_prp": "-110.95",
+                "station_name_current": "WFO",
+                "special": "",
+                "name": "NWS Tucson Arizona",
+                "national_id": "TWC"
+            }
+        ],
+        "IA": [
+            {
+                "region": "IA",
+                "city": "Paullina",
+                "icao": "K1Y9",
+                "wban": null,
+                "lat_prp": "42.98788889",
+                "lon_prp": "-95.66447222",
+                "station_name_current": "Paullina Muni",
+                "special": "",
+                "name": null,
+                "national_id": "1Y9"
+            },
+            {
+                "region": "IA",
+                "city": "Davenport|Mount Joy",
+                "icao": "KDVN",
+                "wban": "94982",
+                "lat_prp": "41.610278",
+                "lon_prp": "-90.588361",
+                "station_name_current": "Municipal Airport",
+                "special": "",
+                "name": "Quad Cities, IA/IL",
+                "national_id": "DVN"
+            }
+        ],
+        "NM": [
+            {
+                "region": "NM",
+                "city": "Albuquerque|Kirtland Addition",
+                "icao": "KABQ",
+                "wban": "23050",
+                "lat_prp": "35.038931",
+                "lon_prp": "-106.608261",
+                "station_name_current": "International Airport|Kirtland AFB",
+                "special": "",
+                "name": "Albuquerque, NM",
+                "national_id": "ABQ"
+            },
+            {
+                "region": "NM",
+                "city": "Santa Teresa|Strauss",
+                "icao": "",
+                "wban": "3020",
+                "lat_prp": "31.87277778",
+                "lon_prp": "-106.6980556",
+                "station_name_current": "El Paso NEXRAD | El Paso NWS",
+                "special": "NEXRAD/KEPZ/357",
+                "name": "El Paso, TX",
+                "national_id": ""
+            }
+        ],
+        "SD": [
+            {
+                "region": "SD",
+                "city": "Aberdeen|Jobee Acres",
+                "icao": "KABR",
+                "wban": "14929",
+                "lat_prp": "45.446797",
+                "lon_prp": "-98.422442",
+                "station_name_current": "Regional",
+                "special": "",
+                "name": "Aberdeen, SD",
+                "national_id": "ABR"
+            },
+            {
+                "region": "SD",
+                "city": "Rapid City",
+                "icao": "",
+                "wban": null,
+                "lat_prp": "44.0729",
+                "lon_prp": "-103.2111",
+                "station_name_current": "WSFO",
+                "special": "NWS/UNR",
+                "name": "Rapid City, SD",
+                "national_id": ""
+            }
+        ],
+        "NY": [
+            {
+                "region": "NY",
+                "city": "Albany|Colonie",
+                "icao": "",
+                "wban": null,
+                "lat_prp": "42.7",
+                "lon_prp": "-73.8333",
+                "station_name_current": "NWSFO",
+                "special": "NWS/ALY",
+                "name": "Albany, NY",
+                "national_id": ""
+            },
+            {
+                "region": "NY",
+                "city": "Buffalo|Williamsville",
+                "icao": "KBUF",
+                "wban": "14733",
+                "lat_prp": "42.940417",
+                "lon_prp": "-78.730583",
+                "station_name_current": "Cheektowaga/Intl",
+                "special": "",
+                "name": "Buffalo, NY",
+                "national_id": "BUF"
+            },
+            {
+                "region": "NY",
+                "city": "New York City|Upton",
+                "icao": "KOKX",
+                "wban": "94703",
+                "lat_prp": "40.865",
+                "lon_prp": "-72.86277778",
+                "station_name_current": "Brookhaven",
+                "special": "NEXRAD/KOKX/515",
+                "name": "New York, NY",
+                "national_id": "OKX"
+            }
+        ],
+        "TX": [
+            {
+                "region": "TX",
+                "city": "Amarillo|Folsom",
+                "icao": "KAMA",
+                "wban": "23047",
+                "lat_prp": "35.219361",
+                "lon_prp": "-101.705917",
+                "station_name_current": "Rick Husband Amarillo International Airport|Amarillo Air Terminal|Amarillo AAF  | English Field",
+                "special": "",
+                "name": "Amarillo, TX",
+                "national_id": "AMA"
+            },
+            {
+                "region": "TX",
+                "city": "Brownsville|Betty Acres Colonia",
+                "icao": "KBRO",
+                "wban": "12919",
+                "lat_prp": "25.906139",
+                "lon_prp": "-97.426",
+                "station_name_current": "International Airport",
+                "special": "",
+                "name": "Brownsville/Rio Grande Valley, TX",
+                "national_id": "BRO"
+            },
+            {
+                "region": "TX",
+                "city": "Corpus Christi|Flour Bluff Junction",
+                "icao": "KCRP",
+                "wban": "12924",
+                "lat_prp": "27.7842",
+                "lon_prp": "-97.5111",
+                "station_name_current": "NEXRAD Site",
+                "special": "NEXRAD/KCRP/343",
+                "name": "Corpus Christi, TX",
+                "national_id": "CRP"
+            },
+            {
+                "region": "TX",
+                "city": "Del Rio|Owens Addition Number 2 Colonia",
+                "icao": "KDRT",
+                "wban": "22010",
+                "lat_prp": "29.374208",
+                "lon_prp": "-100.927158",
+                "station_name_current": "International Airport | Val Verde County Airport",
+                "special": "",
+                "name": null,
+                "national_id": "DRT"
+            },
+            {
+                "region": "TX",
+                "city": "Fort Worth|Melody Hills",
+                "icao": "",
+                "wban": null,
+                "lat_prp": "32.835",
+                "lon_prp": "-97.29861111",
+                "station_name_current": "North/WFO",
+                "special": "NWS/FWD",
+                "name": "Fort Worth/Dallas, TX",
+                "national_id": ""
+            },
+            {
+                "region": "TX",
+                "city": "Midland-Odessa|Warfield",
+                "icao": "KMAF",
+                "wban": "23023",
+                "lat_prp": "31.942528",
+                "lon_prp": "-102.201917",
+                "station_name_current": "Midland International Airport | Midland Air Terminal",
+                "special": "",
+                "name": "Midland/Odessa",
+                "national_id": "MAF"
+            }
+        ],
+        "MI": [
+            {
+                "region": "MI",
+                "city": "Gaylord|Otsego Lake",
+                "icao": "",
+                "wban": "4837",
+                "lat_prp": "44.9075",
+                "lon_prp": "-84.71888889",
+                "station_name_current": "WFO/NEXRAD Site",
+                "special": "NEXRAD/KAPX/312",
+                "name": "Gaylord, MI",
+                "national_id": ""
+            }
+        ],
+        "ND": [
+            {
+                "region": "ND",
+                "city": "Bismarck|Colonial Estates",
+                "icao": "KBIS",
+                "wban": "24011",
+                "lat_prp": "46.772722",
+                "lon_prp": "-100.74575",
+                "station_name_current": "Municipal Airport",
+                "special": "",
+                "name": "Bismarck, ND",
+                "national_id": "BIS"
+            }
+        ],
+        "AL": [
+            {
+                "region": "AL",
+                "city": "Birmingham|Varnons",
+                "icao": "KBMX",
+                "wban": "53864",
+                "lat_prp": "33.17888889",
+                "lon_prp": "-86.78222222",
+                "station_name_current": "Shelby",
+                "special": "",
+                "name": "NWS Birmingham, Alabama",
+                "national_id": "BMX"
+            }
+        ],
+        "ID": [
+            {
+                "region": "ID",
+                "city": "Boise|Hillcrest",
+                "icao": "KBOI",
+                "wban": "24131",
+                "lat_prp": "43.564361",
+                "lon_prp": "-116.222861",
+                "station_name_current": "Municipal Airport",
+                "special": "",
+                "name": "Boise, ID",
+                "national_id": "BOI"
+            }
+        ],
+        "ME": [
+            {
+                "region": "ME",
+                "city": "Caribou",
+                "icao": "KCAR",
+                "wban": "14607",
+                "lat_prp": "46.871639",
+                "lon_prp": "-68.018194",
+                "station_name_current": "Municipal Airport",
+                "special": "",
+                "name": "Caribou, ME",
+                "national_id": "CAR"
+            },
+            {
+                "region": "ME",
+                "city": "Portland|West Pownal",
+                "icao": "KGYX",
+                "wban": null,
+                "lat_prp": "43.8925",
+                "lon_prp": "-70.25722222",
+                "station_name_current": "Gray/WSFO",
+                "special": "",
+                "name": "Gray - Portland, ME",
+                "national_id": "GYX"
+            }
+        ],
+        "SC": [
+            {
+                "region": "SC",
+                "city": "Charleston|Wildwood",
+                "icao": "KCHS",
+                "wban": "13880",
+                "lat_prp": "32.898647",
+                "lon_prp": "-80.040528",
+                "station_name_current": "Municipal Airport",
+                "special": "",
+                "name": "Charleston, SC",
+                "national_id": "CHS"
+            }
+        ],
+        "KS": [
+            {
+                "region": "KS",
+                "city": "Dodge City|Happy Homes Park",
+                "icao": "KDDC",
+                "wban": "13985",
+                "lat_prp": "37.763111",
+                "lon_prp": "-99.965417",
+                "station_name_current": "Airport",
+                "special": "",
+                "name": "Dodge City, KS",
+                "national_id": "DDC"
+            },
+            {
+                "region": "KS",
+                "city": "Topeka|Oakland",
+                "icao": "KTOP",
+                "wban": "13996",
+                "lat_prp": "39.068667",
+                "lon_prp": "-95.6225",
+                "station_name_current": "Phillip Billard Municipal Airport",
+                "special": "",
+                "name": "Topeka, KS",
+                "national_id": "TOP"
+            }
+        ],
+        "CO": [
+            {
+                "region": "CO",
+                "city": "Denver|Boston Heights",
+                "icao": "KDNR",
+                "wban": null,
+                "lat_prp": "39.7675",
+                "lon_prp": "-104.8694444",
+                "station_name_current": "(Abandoned) Stapleton Airport",
+                "special": "",
+                "name": null,
+                "national_id": "DNR"
+            },
+            {
+                "region": "CO",
+                "city": "Grand Junction|Galveston [IGNORE]|Johnsons Corner",
+                "icao": "KGJT",
+                "wban": "23066",
+                "lat_prp": "39.122417",
+                "lon_prp": "-108.52675",
+                "station_name_current": "Walker Field/ASOS",
+                "special": "",
+                "name": "Grand Junction, CO",
+                "national_id": "GJT"
+            }
+        ],
+        "GA": [
+            {
+                "region": "GA",
+                "city": "Atlanta|Clover",
+                "icao": "KFFC",
+                "wban": "53819",
+                "lat_prp": "33.357722",
+                "lon_prp": "-84.572528",
+                "station_name_current": "Peachtree",
+                "special": "",
+                "name": "Peachtree City, GA",
+                "national_id": "FFC"
+            }
+        ],
+        "MT": [
+            {
+                "region": "MT",
+                "city": "Glasgow|Whately",
+                "icao": "KGGW",
+                "wban": "94008",
+                "lat_prp": "48.212444",
+                "lon_prp": "-106.614806",
+                "station_name_current": "Glasgow Intl Airport | Wokal Field",
+                "special": "",
+                "name": "Glasgow, MT",
+                "national_id": "GGW"
+            },
+            {
+                "region": "MT",
+                "city": "Great Falls|Garrett Mobile Home Park",
+                "icao": "KTFX",
+                "wban": "4102",
+                "lat_prp": "47.46138889",
+                "lon_prp": "-111.3847222",
+                "station_name_current": "NWS",
+                "special": "",
+                "name": "Great Falls, MT",
+                "national_id": "TFX"
+            }
+        ],
+        "WI": [
+            {
+                "region": "WI",
+                "city": "Green Bay|Greenbay [MISSPELLING]|Oneida",
+                "icao": "KGRB",
+                "wban": "14898",
+                "lat_prp": "44.484633",
+                "lon_prp": "-88.129714",
+                "station_name_current": "Austin Straubel International Airport [Brown County Airport]",
+                "special": "",
+                "name": "Green Bay, WI",
+                "national_id": "GRB"
+            }
+        ],
+        "NC": [
+            {
+                "region": "NC",
+                "city": "Greensboro|Friendship",
+                "icao": "KGSO",
+                "wban": "13723",
+                "lat_prp": "36.101325",
+                "lon_prp": "-79.941122",
+                "station_name_current": "Piedmont",
+                "special": "",
+                "name": null,
+                "national_id": "GSO"
+            },
+            {
+                "region": "NC",
+                "city": "Morehead City|Newport",
+                "icao": "KMHX",
+                "wban": "93768",
+                "lat_prp": "34.77611111",
+                "lon_prp": "-76.87666667",
+                "station_name_current": "Newport",
+                "special": "",
+                "name": "Newport/Morehead City, NC",
+                "national_id": "MHX"
+            }
+        ],
+        "VA": [
+            {
+                "region": "VA",
+                "city": "Washington|Carters",
+                "icao": "KIAD",
+                "wban": "93738",
+                "lat_prp": "38.947444",
+                "lon_prp": "-77.459944",
+                "station_name_current": "Dulles",
+                "special": "",
+                "name": null,
+                "national_id": "IAD"
+            },
+            {
+                "region": "VA",
+                "city": "Roanoke|Ramble Ridge",
+                "icao": "KRNK",
+                "wban": null,
+                "lat_prp": "37.20388889",
+                "lon_prp": "-80.41416667",
+                "station_name_current": "Blacksburg/WFO",
+                "special": "",
+                "name": "Blacksburg, VA",
+                "national_id": "RNK"
+            },
+            {
+                "region": "VA",
+                "city": "Chincoteague|Wattsville",
+                "icao": "KWAL",
+                "wban": "93739",
+                "lat_prp": "37.940194",
+                "lon_prp": "-75.466389",
+                "station_name_current": "Wallops Flight Facility & Wallops Island | Chincoteague NAS",
+                "special": "",
+                "name": null,
+                "national_id": "WAL"
+            }
+        ],
+        "OH": [
+            {
+                "region": "OH",
+                "city": "Wilmington|McMahan's Mobile Home Park",
+                "icao": "KILN",
+                "wban": "13841",
+                "lat_prp": "39.427917",
+                "lon_prp": "-83.792111",
+                "station_name_current": "Airborne Airpark | Clinton County AFB",
+                "special": "",
+                "name": "Wilmington, OH",
+                "national_id": "ILN"
+            }
+        ],
+        "IL": [
+            {
+                "region": "IL",
+                "city": "Lincoln, Il.",
+                "icao": "KILX",
+                "wban": null,
+                "lat_prp": "40.15166667",
+                "lon_prp": "-89.33833333",
+                "station_name_current": "Lincoln, Il.",
+                "special": "",
+                "name": "Central Illinois",
+                "national_id": "ILX"
+            }
+        ],
+        "MN": [
+            {
+                "region": "MN",
+                "city": "International Falls|Crescent Drive Mobile Village",
+                "icao": "KINL",
+                "wban": "14918",
+                "lat_prp": "48.565583",
+                "lon_prp": "-93.402167",
+                "station_name_current": "",
+                "special": "",
+                "name": null,
+                "national_id": "INL"
+            },
+            {
+                "region": "MN",
+                "city": "Minneapolis|Chanhassen",
+                "icao": "",
+                "wban": "94983",
+                "lat_prp": "44.84972222",
+                "lon_prp": "-93.56472222",
+                "station_name_current": "Chanhaussen/NEXRAD Site",
+                "special": "NEXRAD/KMPX/506",
+                "name": "Twin Cities, MN",
+                "national_id": ""
+            }
+        ],
+        "MS": [
+            {
+                "region": "MS",
+                "city": "Jackson|Wells",
+                "icao": "KJAN",
+                "wban": "3940",
+                "lat_prp": "32.311167",
+                "lon_prp": "-90.075889",
+                "station_name_current": "Allen C Thompson Field",
+                "special": "",
+                "name": "Jackson, Mississippi",
+                "national_id": "JAN"
+            }
+        ],
+        "FL": [
+            {
+                "region": "FL",
+                "city": "Jacksonville|Beeghly Heights",
+                "icao": "KJAX",
+                "wban": "13889",
+                "lat_prp": "30.494056",
+                "lon_prp": "-81.687833",
+                "station_name_current": "International Airport",
+                "special": "",
+                "name": "Jacksonville, FL",
+                "national_id": "JAX"
+            },
+            {
+                "region": "FL",
+                "city": "Miami|Sweetwater",
+                "icao": "KMFL",
+                "wban": null,
+                "lat_prp": "25.75444444",
+                "lon_prp": "-80.38305556",
+                "station_name_current": "WFO",
+                "special": "",
+                "name": "Miami - South Florida",
+                "national_id": "MFL"
+            },
+            {
+                "region": "FL",
+                "city": "Tallahassee|Lakeside",
+                "icao": "KTAE",
+                "wban": null,
+                "lat_prp": "30.3833",
+                "lon_prp": "-84.35",
+                "station_name_current": "WFO",
+                "special": "",
+                "name": "Tallahassee, FL",
+                "national_id": "TAE"
+            },
+            {
+                "region": "FL",
+                "city": "Tampa|Shooks Folly",
+                "icao": "KTBW",
+                "wban": "92801",
+                "lat_prp": "27.70527778",
+                "lon_prp": "-82.40055556",
+                "station_name_current": "Ruskin",
+                "special": "",
+                "name": "Tampa Bay Area, FL",
+                "national_id": "TBW"
+            }
+        ],
+        "NE": [
+            {
+                "region": "NE",
+                "city": "North Platte|Beck",
+                "icao": "KLBF",
+                "wban": "24023",
+                "lat_prp": "41.126222",
+                "lon_prp": "-100.683667",
+                "station_name_current": "Lee Bird Field/NWSFO/ASO",
+                "special": "",
+                "name": "North Platte, NE",
+                "national_id": "LBF"
+            },
+            {
+                "region": "NE",
+                "city": "Omaha|Valley",
+                "icao": "",
+                "wban": "94980",
+                "lat_prp": "41.32",
+                "lon_prp": "-96.36694444",
+                "station_name_current": "Valley/NEXRAD Site",
+                "special": "NEXRAD/KOAX/519",
+                "name": "Omaha/Valley, NE",
+                "national_id": ""
+            }
+        ],
+        "LA": [
+            {
+                "region": "LA",
+                "city": "Lake Charles|Prairieland",
+                "icao": "KLCH",
+                "wban": "3937",
+                "lat_prp": "30.126097",
+                "lon_prp": "-93.223403",
+                "station_name_current": "Regional Airport [LCH WSFO]",
+                "special": "",
+                "name": "Lake Charles, LA",
+                "national_id": "LCH"
+            },
+            {
+                "region": "LA",
+                "city": "Slidell|Amos",
+                "icao": "KLIX",
+                "wban": "53813",
+                "lat_prp": "30.33694444",
+                "lon_prp": "-89.825",
+                "station_name_current": "NWS",
+                "special": "",
+                "name": "New Orleans/Baton Rouge",
+                "national_id": "LIX"
+            },
+            {
+                "region": "LA",
+                "city": "Shreveport|Cut-off Junction",
+                "icao": "KSHV",
+                "wban": "13957",
+                "lat_prp": "32.446611",
+                "lon_prp": "-93.825611",
+                "station_name_current": "Regional Airport | Shreveport Airport",
+                "special": "",
+                "name": "Shreveport, LA",
+                "national_id": "SHV"
+            }
+        ],
+        "HI": [
+            {
+                "region": "HI",
+                "city": "Kahului",
+                "icao": "KLIH",
+                "wban": null,
+                "lat_prp": "20.9",
+                "lon_prp": "-156.467",
+                "station_name_current": "",
+                "special": "",
+                "name": null,
+                "national_id": ""
+            }
+        ],
+        "NV": [
+            {
+                "region": "NV",
+                "city": "Elko|Coin",
+                "icao": "KLKN",
+                "wban": null,
+                "lat_prp": "40.86",
+                "lon_prp": "-115.7422222",
+                "station_name_current": "WSFO",
+                "special": "NWS/LKN",
+                "name": "Elko, NV",
+                "national_id": "LKN"
+            },
+            {
+                "region": "NV",
+                "city": "Reno|Panther Valley",
+                "icao": "KREV",
+                "wban": null,
+                "lat_prp": "39.56805556",
+                "lon_prp": "-119.7966667",
+                "station_name_current": "WSFO",
+                "special": "NWS/REV",
+                "name": "Reno, NV",
+                "national_id": "REV"
+            },
+            {
+                "region": "NV",
+                "city": "Las Vegas|Boulder Junction",
+                "icao": "",
+                "wban": null,
+                "lat_prp": "36.0468",
+                "lon_prp": "-115.1843",
+                "station_name_current": "WFO",
+                "special": "NWS/VEF",
+                "name": "Las Vegas, NV",
+                "national_id": ""
+            }
+        ],
+        "AR": [
+            {
+                "region": "AR",
+                "city": "North Little Rock|Sylvan Hills",
+                "icao": "KLZK",
+                "wban": "3952",
+                "lat_prp": "34.835",
+                "lon_prp": "-92.25944444",
+                "station_name_current": "North Little Rock NWSFO",
+                "special": "",
+                "name": "Little Rock, AR",
+                "national_id": "LZK"
+            }
+        ],
+        "OR": [
+            {
+                "region": "OR",
+                "city": "Medford|Four Corners",
+                "icao": "KMFR",
+                "wban": "24225",
+                "lat_prp": "42.374228",
+                "lon_prp": "-122.873497",
+                "station_name_current": "Jackson County",
+                "special": "",
+                "name": "Medford, OR",
+                "national_id": "MFR"
+            },
+            {
+                "region": "OR",
+                "city": "Salem|Four Corners",
+                "icao": "KSLE",
+                "wban": "24232",
+                "lat_prp": "44.909528",
+                "lon_prp": "-123.0025",
+                "station_name_current": "McNary Field",
+                "special": "",
+                "name": null,
+                "national_id": "SLE"
+            }
+        ],
+        "CA": [
+            {
+                "region": "CA",
+                "city": "San Diego|Miramar",
+                "icao": "KNKX",
+                "wban": "93107",
+                "lat_prp": "32.868528",
+                "lon_prp": "-117.143189",
+                "station_name_current": "Mirimar MCAS",
+                "special": "",
+                "name": null,
+                "national_id": "NKX"
+            },
+            {
+                "region": "CA",
+                "city": "Oakland|Mulford",
+                "icao": "KOAK",
+                "wban": "23230",
+                "lat_prp": "37.72125",
+                "lon_prp": "-122.221139",
+                "station_name_current": "International Airport | Metropolitan Oakland International Airport | Oakland Airport",
+                "special": "",
+                "name": null,
+                "national_id": "OAK"
+            }
+        ],
+        "TN": [
+            {
+                "region": "TN",
+                "city": "Old Hickory|Greenlawn",
+                "icao": "",
+                "wban": "53833",
+                "lat_prp": "36.2472",
+                "lon_prp": "-86.5625",
+                "station_name_current": "Nashville NEXRAD Site",
+                "special": "NEXRAD/KOHX/512",
+                "name": "Nashville, TN",
+                "national_id": ""
+            }
+        ],
+        "WA": [
+            {
+                "region": "WA",
+                "city": "Spokane|Lyons",
+                "icao": "KOTX",
+                "wban": "4106",
+                "lat_prp": "47.68055556",
+                "lon_prp": "-117.6266667",
+                "station_name_current": "NWS",
+                "special": "",
+                "name": "Spokane, WA",
+                "national_id": "OTX"
+            },
+            {
+                "region": "WA",
+                "city": "Quillayute",
+                "icao": "KUIL",
+                "wban": "94240",
+                "lat_prp": "47.936583",
+                "lon_prp": "-124.562633",
+                "station_name_current": "Airport | Quillayute State Airport",
+                "special": "",
+                "name": null,
+                "national_id": "UIL"
+            }
+        ],
+        "OK": [
+            {
+                "region": "OK",
+                "city": "Norman",
+                "icao": "KOUN",
+                "wban": "93908",
+                "lat_prp": "35.245556",
+                "lon_prp": "-97.472139",
+                "station_name_current": "Westheimer Field | Norman NAS",
+                "special": "",
+                "name": "Norman, OK",
+                "national_id": "OUN"
+            }
+        ],
+        "PA": [
+            {
+                "region": "PA",
+                "city": "Pittsburgh|Carnot-Moon",
+                "icao": "",
+                "wban": "4832",
+                "lat_prp": "40.5317",
+                "lon_prp": "-80.2181",
+                "station_name_current": "Coraopolis/NEXRAD Site",
+                "special": "NEXRAD/KPBZ/526",
+                "name": "Pittsburgh, PA",
+                "national_id": ""
+            }
+        ],
+        "AS": [
+            {
+                "region": "AS",
+                "city": "Pago Pago|T?funa",
+                "icao": "KPPG",
+                "wban": null,
+                "lat_prp": "-14.33166",
+                "lon_prp": "-170.7115031",
+                "station_name_current": "Pago Pago Intl",
+                "special": "",
+                "name": "WSO Pago Pago",
+                "national_id": "PPG"
+            }
+        ],
+        "WY": [
+            {
+                "region": "WY",
+                "city": "Riverton",
+                "icao": "KRIW",
+                "wban": "24061",
+                "lat_prp": "43.06425",
+                "lon_prp": "-108.459833",
+                "station_name_current": "Municipal Airport",
+                "special": "",
+                "name": "Western and Central Wyoming",
+                "national_id": "RIW"
+            }
+        ],
+        "MO": [
+            {
+                "region": "MO",
+                "city": "Springfield|Ritter",
+                "icao": "KSGF",
+                "wban": "13995",
+                "lat_prp": "37.245667",
+                "lon_prp": "-93.388639",
+                "station_name_current": "Branson Regional Airport | Springfield New Airport",
+                "special": "",
+                "name": "Springfield, MO",
+                "national_id": "SGF"
+            }
+        ],
+        "UT": [
+            {
+                "region": "UT",
+                "city": "Salt Lake City|Buena Vista",
+                "icao": "KSLC",
+                "wban": "24127",
+                "lat_prp": "40.788394",
+                "lon_prp": "-111.977772",
+                "station_name_current": "International Airport | Salt Lake City Airport #1",
+                "special": "",
+                "name": "Salt Lake City, UT",
+                "national_id": "SLC"
+            }
+        ]
+    },
+    "stations": [
+        {
+            "region": "AZ",
+            "city": "Yuma|Noah",
+            "icao": "",
+            "wban": "3125",
+            "lat_prp": "32.87083333",
+            "lon_prp": "-114.335",
+            "station_name_current": "Proving Grounds",
+            "special": "NWS/YPGA3",
+            "name": null,
+            "national_id": ""
+        },
+        {
+            "region": "IA",
+            "city": "Paullina",
+            "icao": "K1Y9",
+            "wban": null,
+            "lat_prp": "42.98788889",
+            "lon_prp": "-95.66447222",
+            "station_name_current": "Paullina Muni",
+            "special": "",
+            "name": null,
+            "national_id": "1Y9"
+        },
+        {
+            "region": "NM",
+            "city": "Albuquerque|Kirtland Addition",
+            "icao": "KABQ",
+            "wban": "23050",
+            "lat_prp": "35.038931",
+            "lon_prp": "-106.608261",
+            "station_name_current": "International Airport|Kirtland AFB",
+            "special": "",
+            "name": "Albuquerque, NM",
+            "national_id": "ABQ"
+        },
+        {
+            "region": "SD",
+            "city": "Aberdeen|Jobee Acres",
+            "icao": "KABR",
+            "wban": "14929",
+            "lat_prp": "45.446797",
+            "lon_prp": "-98.422442",
+            "station_name_current": "Regional",
+            "special": "",
+            "name": "Aberdeen, SD",
+            "national_id": "ABR"
+        },
+        {
+            "region": "NY",
+            "city": "Albany|Colonie",
+            "icao": "",
+            "wban": null,
+            "lat_prp": "42.7",
+            "lon_prp": "-73.8333",
+            "station_name_current": "NWSFO",
+            "special": "NWS/ALY",
+            "name": "Albany, NY",
+            "national_id": ""
+        },
+        {
+            "region": "TX",
+            "city": "Amarillo|Folsom",
+            "icao": "KAMA",
+            "wban": "23047",
+            "lat_prp": "35.219361",
+            "lon_prp": "-101.705917",
+            "station_name_current": "Rick Husband Amarillo International Airport|Amarillo Air Terminal|Amarillo AAF  | English Field",
+            "special": "",
+            "name": "Amarillo, TX",
+            "national_id": "AMA"
+        },
+        {
+            "region": "MI",
+            "city": "Gaylord|Otsego Lake",
+            "icao": "",
+            "wban": "4837",
+            "lat_prp": "44.9075",
+            "lon_prp": "-84.71888889",
+            "station_name_current": "WFO/NEXRAD Site",
+            "special": "NEXRAD/KAPX/312",
+            "name": "Gaylord, MI",
+            "national_id": ""
+        },
+        {
+            "region": "ND",
+            "city": "Bismarck|Colonial Estates",
+            "icao": "KBIS",
+            "wban": "24011",
+            "lat_prp": "46.772722",
+            "lon_prp": "-100.74575",
+            "station_name_current": "Municipal Airport",
+            "special": "",
+            "name": "Bismarck, ND",
+            "national_id": "BIS"
+        },
+        {
+            "region": "AL",
+            "city": "Birmingham|Varnons",
+            "icao": "KBMX",
+            "wban": "53864",
+            "lat_prp": "33.17888889",
+            "lon_prp": "-86.78222222",
+            "station_name_current": "Shelby",
+            "special": "",
+            "name": "NWS Birmingham, Alabama",
+            "national_id": "BMX"
+        },
+        {
+            "region": "ID",
+            "city": "Boise|Hillcrest",
+            "icao": "KBOI",
+            "wban": "24131",
+            "lat_prp": "43.564361",
+            "lon_prp": "-116.222861",
+            "station_name_current": "Municipal Airport",
+            "special": "",
+            "name": "Boise, ID",
+            "national_id": "BOI"
+        },
+        {
+            "region": "TX",
+            "city": "Brownsville|Betty Acres Colonia",
+            "icao": "KBRO",
+            "wban": "12919",
+            "lat_prp": "25.906139",
+            "lon_prp": "-97.426",
+            "station_name_current": "International Airport",
+            "special": "",
+            "name": "Brownsville/Rio Grande Valley, TX",
+            "national_id": "BRO"
+        },
+        {
+            "region": "NY",
+            "city": "Buffalo|Williamsville",
+            "icao": "KBUF",
+            "wban": "14733",
+            "lat_prp": "42.940417",
+            "lon_prp": "-78.730583",
+            "station_name_current": "Cheektowaga/Intl",
+            "special": "",
+            "name": "Buffalo, NY",
+            "national_id": "BUF"
+        },
+        {
+            "region": "ME",
+            "city": "Caribou",
+            "icao": "KCAR",
+            "wban": "14607",
+            "lat_prp": "46.871639",
+            "lon_prp": "-68.018194",
+            "station_name_current": "Municipal Airport",
+            "special": "",
+            "name": "Caribou, ME",
+            "national_id": "CAR"
+        },
+        {
+            "region": "SC",
+            "city": "Charleston|Wildwood",
+            "icao": "KCHS",
+            "wban": "13880",
+            "lat_prp": "32.898647",
+            "lon_prp": "-80.040528",
+            "station_name_current": "Municipal Airport",
+            "special": "",
+            "name": "Charleston, SC",
+            "national_id": "CHS"
+        },
+        {
+            "region": "TX",
+            "city": "Corpus Christi|Flour Bluff Junction",
+            "icao": "KCRP",
+            "wban": "12924",
+            "lat_prp": "27.7842",
+            "lon_prp": "-97.5111",
+            "station_name_current": "NEXRAD Site",
+            "special": "NEXRAD/KCRP/343",
+            "name": "Corpus Christi, TX",
+            "national_id": "CRP"
+        },
+        {
+            "region": "KS",
+            "city": "Dodge City|Happy Homes Park",
+            "icao": "KDDC",
+            "wban": "13985",
+            "lat_prp": "37.763111",
+            "lon_prp": "-99.965417",
+            "station_name_current": "Airport",
+            "special": "",
+            "name": "Dodge City, KS",
+            "national_id": "DDC"
+        },
+        {
+            "region": "CO",
+            "city": "Denver|Boston Heights",
+            "icao": "KDNR",
+            "wban": null,
+            "lat_prp": "39.7675",
+            "lon_prp": "-104.8694444",
+            "station_name_current": "(Abandoned) Stapleton Airport",
+            "special": "",
+            "name": null,
+            "national_id": "DNR"
+        },
+        {
+            "region": "TX",
+            "city": "Del Rio|Owens Addition Number 2 Colonia",
+            "icao": "KDRT",
+            "wban": "22010",
+            "lat_prp": "29.374208",
+            "lon_prp": "-100.927158",
+            "station_name_current": "International Airport | Val Verde County Airport",
+            "special": "",
+            "name": null,
+            "national_id": "DRT"
+        },
+        {
+            "region": "IA",
+            "city": "Davenport|Mount Joy",
+            "icao": "KDVN",
+            "wban": "94982",
+            "lat_prp": "41.610278",
+            "lon_prp": "-90.588361",
+            "station_name_current": "Municipal Airport",
+            "special": "",
+            "name": "Quad Cities, IA/IL",
+            "national_id": "DVN"
+        },
+        {
+            "region": "NM",
+            "city": "Santa Teresa|Strauss",
+            "icao": "",
+            "wban": "3020",
+            "lat_prp": "31.87277778",
+            "lon_prp": "-106.6980556",
+            "station_name_current": "El Paso NEXRAD | El Paso NWS",
+            "special": "NEXRAD/KEPZ/357",
+            "name": "El Paso, TX",
+            "national_id": ""
+        },
+        {
+            "region": "GA",
+            "city": "Atlanta|Clover",
+            "icao": "KFFC",
+            "wban": "53819",
+            "lat_prp": "33.357722",
+            "lon_prp": "-84.572528",
+            "station_name_current": "Peachtree",
+            "special": "",
+            "name": "Peachtree City, GA",
+            "national_id": "FFC"
+        },
+        {
+            "region": "AZ",
+            "city": "Flagstaff|Bellemont",
+            "icao": "KFGZ",
+            "wban": null,
+            "lat_prp": "35.23",
+            "lon_prp": "-111.8216667",
+            "station_name_current": "WFO",
+            "special": "",
+            "name": "Flagstaff, AZ",
+            "national_id": "FGZ"
+        },
+        {
+            "region": "TX",
+            "city": "Fort Worth|Melody Hills",
+            "icao": "",
+            "wban": null,
+            "lat_prp": "32.835",
+            "lon_prp": "-97.29861111",
+            "station_name_current": "North/WFO",
+            "special": "NWS/FWD",
+            "name": "Fort Worth/Dallas, TX",
+            "national_id": ""
+        },
+        {
+            "region": "MT",
+            "city": "Glasgow|Whately",
+            "icao": "KGGW",
+            "wban": "94008",
+            "lat_prp": "48.212444",
+            "lon_prp": "-106.614806",
+            "station_name_current": "Glasgow Intl Airport | Wokal Field",
+            "special": "",
+            "name": "Glasgow, MT",
+            "national_id": "GGW"
+        },
+        {
+            "region": "CO",
+            "city": "Grand Junction|Galveston [IGNORE]|Johnsons Corner",
+            "icao": "KGJT",
+            "wban": "23066",
+            "lat_prp": "39.122417",
+            "lon_prp": "-108.52675",
+            "station_name_current": "Walker Field/ASOS",
+            "special": "",
+            "name": "Grand Junction, CO",
+            "national_id": "GJT"
+        },
+        {
+            "region": "WI",
+            "city": "Green Bay|Greenbay [MISSPELLING]|Oneida",
+            "icao": "KGRB",
+            "wban": "14898",
+            "lat_prp": "44.484633",
+            "lon_prp": "-88.129714",
+            "station_name_current": "Austin Straubel International Airport [Brown County Airport]",
+            "special": "",
+            "name": "Green Bay, WI",
+            "national_id": "GRB"
+        },
+        {
+            "region": "NC",
+            "city": "Greensboro|Friendship",
+            "icao": "KGSO",
+            "wban": "13723",
+            "lat_prp": "36.101325",
+            "lon_prp": "-79.941122",
+            "station_name_current": "Piedmont",
+            "special": "",
+            "name": null,
+            "national_id": "GSO"
+        },
+        {
+            "region": "ME",
+            "city": "Portland|West Pownal",
+            "icao": "KGYX",
+            "wban": null,
+            "lat_prp": "43.8925",
+            "lon_prp": "-70.25722222",
+            "station_name_current": "Gray/WSFO",
+            "special": "",
+            "name": "Gray - Portland, ME",
+            "national_id": "GYX"
+        },
+        {
+            "region": "VA",
+            "city": "Washington|Carters",
+            "icao": "KIAD",
+            "wban": "93738",
+            "lat_prp": "38.947444",
+            "lon_prp": "-77.459944",
+            "station_name_current": "Dulles",
+            "special": "",
+            "name": null,
+            "national_id": "IAD"
+        },
+        {
+            "region": "OH",
+            "city": "Wilmington|McMahan's Mobile Home Park",
+            "icao": "KILN",
+            "wban": "13841",
+            "lat_prp": "39.427917",
+            "lon_prp": "-83.792111",
+            "station_name_current": "Airborne Airpark | Clinton County AFB",
+            "special": "",
+            "name": "Wilmington, OH",
+            "national_id": "ILN"
+        },
+        {
+            "region": "IL",
+            "city": "Lincoln, Il.",
+            "icao": "KILX",
+            "wban": null,
+            "lat_prp": "40.15166667",
+            "lon_prp": "-89.33833333",
+            "station_name_current": "Lincoln, Il.",
+            "special": "",
+            "name": "Central Illinois",
+            "national_id": "ILX"
+        },
+        {
+            "region": "MN",
+            "city": "International Falls|Crescent Drive Mobile Village",
+            "icao": "KINL",
+            "wban": "14918",
+            "lat_prp": "48.565583",
+            "lon_prp": "-93.402167",
+            "station_name_current": "",
+            "special": "",
+            "name": null,
+            "national_id": "INL"
+        },
+        {
+            "region": "MS",
+            "city": "Jackson|Wells",
+            "icao": "KJAN",
+            "wban": "3940",
+            "lat_prp": "32.311167",
+            "lon_prp": "-90.075889",
+            "station_name_current": "Allen C Thompson Field",
+            "special": "",
+            "name": "Jackson, Mississippi",
+            "national_id": "JAN"
+        },
+        {
+            "region": "FL",
+            "city": "Jacksonville|Beeghly Heights",
+            "icao": "KJAX",
+            "wban": "13889",
+            "lat_prp": "30.494056",
+            "lon_prp": "-81.687833",
+            "station_name_current": "International Airport",
+            "special": "",
+            "name": "Jacksonville, FL",
+            "national_id": "JAX"
+        },
+        {
+            "region": "NE",
+            "city": "North Platte|Beck",
+            "icao": "KLBF",
+            "wban": "24023",
+            "lat_prp": "41.126222",
+            "lon_prp": "-100.683667",
+            "station_name_current": "Lee Bird Field/NWSFO/ASO",
+            "special": "",
+            "name": "North Platte, NE",
+            "national_id": "LBF"
+        },
+        {
+            "region": "LA",
+            "city": "Lake Charles|Prairieland",
+            "icao": "KLCH",
+            "wban": "3937",
+            "lat_prp": "30.126097",
+            "lon_prp": "-93.223403",
+            "station_name_current": "Regional Airport [LCH WSFO]",
+            "special": "",
+            "name": "Lake Charles, LA",
+            "national_id": "LCH"
+        },
+        {
+            "region": "HI",
+            "city": "Kahului",
+            "icao": "KLIH",
+            "wban": null,
+            "lat_prp": "20.9",
+            "lon_prp": "-156.467",
+            "station_name_current": "",
+            "special": "",
+            "name": null,
+            "national_id": ""
+        },
+        {
+            "region": "LA",
+            "city": "Slidell|Amos",
+            "icao": "KLIX",
+            "wban": "53813",
+            "lat_prp": "30.33694444",
+            "lon_prp": "-89.825",
+            "station_name_current": "NWS",
+            "special": "",
+            "name": "New Orleans/Baton Rouge",
+            "national_id": "LIX"
+        },
+        {
+            "region": "NV",
+            "city": "Elko|Coin",
+            "icao": "KLKN",
+            "wban": null,
+            "lat_prp": "40.86",
+            "lon_prp": "-115.7422222",
+            "station_name_current": "WSFO",
+            "special": "NWS/LKN",
+            "name": "Elko, NV",
+            "national_id": "LKN"
+        },
+        {
+            "region": "AR",
+            "city": "North Little Rock|Sylvan Hills",
+            "icao": "KLZK",
+            "wban": "3952",
+            "lat_prp": "34.835",
+            "lon_prp": "-92.25944444",
+            "station_name_current": "North Little Rock NWSFO",
+            "special": "",
+            "name": "Little Rock, AR",
+            "national_id": "LZK"
+        },
+        {
+            "region": "TX",
+            "city": "Midland-Odessa|Warfield",
+            "icao": "KMAF",
+            "wban": "23023",
+            "lat_prp": "31.942528",
+            "lon_prp": "-102.201917",
+            "station_name_current": "Midland International Airport | Midland Air Terminal",
+            "special": "",
+            "name": "Midland/Odessa",
+            "national_id": "MAF"
+        },
+        {
+            "region": "FL",
+            "city": "Miami|Sweetwater",
+            "icao": "KMFL",
+            "wban": null,
+            "lat_prp": "25.75444444",
+            "lon_prp": "-80.38305556",
+            "station_name_current": "WFO",
+            "special": "",
+            "name": "Miami - South Florida",
+            "national_id": "MFL"
+        },
+        {
+            "region": "OR",
+            "city": "Medford|Four Corners",
+            "icao": "KMFR",
+            "wban": "24225",
+            "lat_prp": "42.374228",
+            "lon_prp": "-122.873497",
+            "station_name_current": "Jackson County",
+            "special": "",
+            "name": "Medford, OR",
+            "national_id": "MFR"
+        },
+        {
+            "region": "NC",
+            "city": "Morehead City|Newport",
+            "icao": "KMHX",
+            "wban": "93768",
+            "lat_prp": "34.77611111",
+            "lon_prp": "-76.87666667",
+            "station_name_current": "Newport",
+            "special": "",
+            "name": "Newport/Morehead City, NC",
+            "national_id": "MHX"
+        },
+        {
+            "region": "MN",
+            "city": "Minneapolis|Chanhassen",
+            "icao": "",
+            "wban": "94983",
+            "lat_prp": "44.84972222",
+            "lon_prp": "-93.56472222",
+            "station_name_current": "Chanhaussen/NEXRAD Site",
+            "special": "NEXRAD/KMPX/506",
+            "name": "Twin Cities, MN",
+            "national_id": ""
+        },
+        {
+            "region": "CA",
+            "city": "San Diego|Miramar",
+            "icao": "KNKX",
+            "wban": "93107",
+            "lat_prp": "32.868528",
+            "lon_prp": "-117.143189",
+            "station_name_current": "Mirimar MCAS",
+            "special": "",
+            "name": null,
+            "national_id": "NKX"
+        },
+        {
+            "region": "CA",
+            "city": "Oakland|Mulford",
+            "icao": "KOAK",
+            "wban": "23230",
+            "lat_prp": "37.72125",
+            "lon_prp": "-122.221139",
+            "station_name_current": "International Airport | Metropolitan Oakland International Airport | Oakland Airport",
+            "special": "",
+            "name": null,
+            "national_id": "OAK"
+        },
+        {
+            "region": "NE",
+            "city": "Omaha|Valley",
+            "icao": "",
+            "wban": "94980",
+            "lat_prp": "41.32",
+            "lon_prp": "-96.36694444",
+            "station_name_current": "Valley/NEXRAD Site",
+            "special": "NEXRAD/KOAX/519",
+            "name": "Omaha/Valley, NE",
+            "national_id": ""
+        },
+        {
+            "region": "TN",
+            "city": "Old Hickory|Greenlawn",
+            "icao": "",
+            "wban": "53833",
+            "lat_prp": "36.2472",
+            "lon_prp": "-86.5625",
+            "station_name_current": "Nashville NEXRAD Site",
+            "special": "NEXRAD/KOHX/512",
+            "name": "Nashville, TN",
+            "national_id": ""
+        },
+        {
+            "region": "NY",
+            "city": "New York City|Upton",
+            "icao": "KOKX",
+            "wban": "94703",
+            "lat_prp": "40.865",
+            "lon_prp": "-72.86277778",
+            "station_name_current": "Brookhaven",
+            "special": "NEXRAD/KOKX/515",
+            "name": "New York, NY",
+            "national_id": "OKX"
+        },
+        {
+            "region": "WA",
+            "city": "Spokane|Lyons",
+            "icao": "KOTX",
+            "wban": "4106",
+            "lat_prp": "47.68055556",
+            "lon_prp": "-117.6266667",
+            "station_name_current": "NWS",
+            "special": "",
+            "name": "Spokane, WA",
+            "national_id": "OTX"
+        },
+        {
+            "region": "OK",
+            "city": "Norman",
+            "icao": "KOUN",
+            "wban": "93908",
+            "lat_prp": "35.245556",
+            "lon_prp": "-97.472139",
+            "station_name_current": "Westheimer Field | Norman NAS",
+            "special": "",
+            "name": "Norman, OK",
+            "national_id": "OUN"
+        },
+        {
+            "region": "PA",
+            "city": "Pittsburgh|Carnot-Moon",
+            "icao": "",
+            "wban": "4832",
+            "lat_prp": "40.5317",
+            "lon_prp": "-80.2181",
+            "station_name_current": "Coraopolis/NEXRAD Site",
+            "special": "NEXRAD/KPBZ/526",
+            "name": "Pittsburgh, PA",
+            "national_id": ""
+        },
+        {
+            "region": "AS",
+            "city": "Pago Pago|T?funa",
+            "icao": "KPPG",
+            "wban": null,
+            "lat_prp": "-14.33166",
+            "lon_prp": "-170.7115031",
+            "station_name_current": "Pago Pago Intl",
+            "special": "",
+            "name": "WSO Pago Pago",
+            "national_id": "PPG"
+        },
+        {
+            "region": "NV",
+            "city": "Reno|Panther Valley",
+            "icao": "KREV",
+            "wban": null,
+            "lat_prp": "39.56805556",
+            "lon_prp": "-119.7966667",
+            "station_name_current": "WSFO",
+            "special": "NWS/REV",
+            "name": "Reno, NV",
+            "national_id": "REV"
+        },
+        {
+            "region": "WY",
+            "city": "Riverton",
+            "icao": "KRIW",
+            "wban": "24061",
+            "lat_prp": "43.06425",
+            "lon_prp": "-108.459833",
+            "station_name_current": "Municipal Airport",
+            "special": "",
+            "name": "Western and Central Wyoming",
+            "national_id": "RIW"
+        },
+        {
+            "region": "VA",
+            "city": "Roanoke|Ramble Ridge",
+            "icao": "KRNK",
+            "wban": null,
+            "lat_prp": "37.20388889",
+            "lon_prp": "-80.41416667",
+            "station_name_current": "Blacksburg/WFO",
+            "special": "",
+            "name": "Blacksburg, VA",
+            "national_id": "RNK"
+        },
+        {
+            "region": "MO",
+            "city": "Springfield|Ritter",
+            "icao": "KSGF",
+            "wban": "13995",
+            "lat_prp": "37.245667",
+            "lon_prp": "-93.388639",
+            "station_name_current": "Branson Regional Airport | Springfield New Airport",
+            "special": "",
+            "name": "Springfield, MO",
+            "national_id": "SGF"
+        },
+        {
+            "region": "LA",
+            "city": "Shreveport|Cut-off Junction",
+            "icao": "KSHV",
+            "wban": "13957",
+            "lat_prp": "32.446611",
+            "lon_prp": "-93.825611",
+            "station_name_current": "Regional Airport | Shreveport Airport",
+            "special": "",
+            "name": "Shreveport, LA",
+            "national_id": "SHV"
+        },
+        {
+            "region": "UT",
+            "city": "Salt Lake City|Buena Vista",
+            "icao": "KSLC",
+            "wban": "24127",
+            "lat_prp": "40.788394",
+            "lon_prp": "-111.977772",
+            "station_name_current": "International Airport | Salt Lake City Airport #1",
+            "special": "",
+            "name": "Salt Lake City, UT",
+            "national_id": "SLC"
+        },
+        {
+            "region": "OR",
+            "city": "Salem|Four Corners",
+            "icao": "KSLE",
+            "wban": "24232",
+            "lat_prp": "44.909528",
+            "lon_prp": "-123.0025",
+            "station_name_current": "McNary Field",
+            "special": "",
+            "name": null,
+            "national_id": "SLE"
+        },
+        {
+            "region": "FL",
+            "city": "Tallahassee|Lakeside",
+            "icao": "KTAE",
+            "wban": null,
+            "lat_prp": "30.3833",
+            "lon_prp": "-84.35",
+            "station_name_current": "WFO",
+            "special": "",
+            "name": "Tallahassee, FL",
+            "national_id": "TAE"
+        },
+        {
+            "region": "FL",
+            "city": "Tampa|Shooks Folly",
+            "icao": "KTBW",
+            "wban": "92801",
+            "lat_prp": "27.70527778",
+            "lon_prp": "-82.40055556",
+            "station_name_current": "Ruskin",
+            "special": "",
+            "name": "Tampa Bay Area, FL",
+            "national_id": "TBW"
+        },
+        {
+            "region": "MT",
+            "city": "Great Falls|Garrett Mobile Home Park",
+            "icao": "KTFX",
+            "wban": "4102",
+            "lat_prp": "47.46138889",
+            "lon_prp": "-111.3847222",
+            "station_name_current": "NWS",
+            "special": "",
+            "name": "Great Falls, MT",
+            "national_id": "TFX"
+        },
+        {
+            "region": "KS",
+            "city": "Topeka|Oakland",
+            "icao": "KTOP",
+            "wban": "13996",
+            "lat_prp": "39.068667",
+            "lon_prp": "-95.6225",
+            "station_name_current": "Phillip Billard Municipal Airport",
+            "special": "",
+            "name": "Topeka, KS",
+            "national_id": "TOP"
+        },
+        {
+            "region": "AZ",
+            "city": "Tucson|Polo Village",
+            "icao": "KTWC",
+            "wban": null,
+            "lat_prp": "32.2333",
+            "lon_prp": "-110.95",
+            "station_name_current": "WFO",
+            "special": "",
+            "name": "NWS Tucson Arizona",
+            "national_id": "TWC"
+        },
+        {
+            "region": "WA",
+            "city": "Quillayute",
+            "icao": "KUIL",
+            "wban": "94240",
+            "lat_prp": "47.936583",
+            "lon_prp": "-124.562633",
+            "station_name_current": "Airport | Quillayute State Airport",
+            "special": "",
+            "name": null,
+            "national_id": "UIL"
+        },
+        {
+            "region": "SD",
+            "city": "Rapid City",
+            "icao": "",
+            "wban": null,
+            "lat_prp": "44.0729",
+            "lon_prp": "-103.2111",
+            "station_name_current": "WSFO",
+            "special": "NWS/UNR",
+            "name": "Rapid City, SD",
+            "national_id": ""
+        },
+        {
+            "region": "NV",
+            "city": "Las Vegas|Boulder Junction",
+            "icao": "",
+            "wban": null,
+            "lat_prp": "36.0468",
+            "lon_prp": "-115.1843",
+            "station_name_current": "WFO",
+            "special": "NWS/VEF",
+            "name": "Las Vegas, NV",
+            "national_id": ""
+        },
+        {
+            "region": "VA",
+            "city": "Chincoteague|Wattsville",
+            "icao": "KWAL",
+            "wban": "93739",
+            "lat_prp": "37.940194",
+            "lon_prp": "-75.466389",
+            "station_name_current": "Wallops Flight Facility & Wallops Island | Chincoteague NAS",
+            "special": "",
+            "name": null,
+            "national_id": "WAL"
+        }
+    ]
+}

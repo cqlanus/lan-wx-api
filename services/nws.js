@@ -86,6 +86,7 @@ class NWS {
 
   getForecastOffice = async ({ lat, lon }) => {
     const points = await this.getPoints({ lat, lon })
+    console.log({ points })
     const { observationStations: stationsUrl } = points
     const { stationIdentifier, county: countyUrl } = await this.getNearestStation(stationsUrl)
     const data = await this.getData('forecastOffice', stationIdentifier, async () => {
