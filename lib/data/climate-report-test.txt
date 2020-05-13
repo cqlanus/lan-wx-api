@@ -1,0 +1,102 @@
+
+000
+CDUS43 KLOT 120633
+CLIORD
+
+
+CLIMATE REPORT
+NATIONAL WEATHER SERVICE CHICAGO IL                                  
+133 AM CDT TUE MAY 12 2020
+
+
+................................... 
+
+...THE CHICAGO-OHARE CLIMATE SUMMARY FOR MAY 11 2020...
+
+CLIMATE NORMAL PERIOD 1981 TO 2010
+CLIMATE RECORD PERIOD 1871 TO 2020
+
+
+WEATHER ITEM   OBSERVED TIME   RECORD YEAR NORMAL DEPARTURE LAST     
+                VALUE   (LST)  VALUE       VALUE  FROM      YEAR     
+                                                  NORMAL             
+..................................................................
+TEMPERATURE (F)                                                     
+ YESTERDAY                                                           
+  MAXIMUM         52    459 PM  89    1982  69    -17       53       
+  MINIMUM         41    631 AM  33    1981  47     -6       44       
+  AVERAGE         47                        58    -11       49      
+                                                                     
+PRECIPITATION (IN)                                                   
+  YESTERDAY        T             3.30 1966   0.11  -0.11     0.12    
+  MONTH TO DATE    0.29                      1.27  -0.98     3.12    
+  SINCE MAR 1      7.58                      7.15   0.43    11.23    
+  SINCE JAN 1     11.15                     10.67   0.48    16.00    
+                                                                     
+SNOWFALL (IN)                                                        
+  YESTERDAY        0.0           0.2  1966   0.0    0.0      0.0     
+  MONTH TO DATE    0.0                       0.0    0.0      0.0     
+  SINCE MAR 1      7.9                       6.8    1.1      8.2     
+  SINCE JUL 1     34.8                      36.3   -1.5     49.5     
+  SNOW DEPTH       0                                                 
+                                                                     
+DEGREE DAYS                                                          
+ HEATING                                                             
+  YESTERDAY       18                         8     10       16       
+  MONTH TO DATE  161                       106     55      142       
+  SINCE MAR 1   1333                      1439   -106     1540       
+  SINCE JUL 1   5719                      6173   -454     6331       
+                                                                     
+ COOLING                                                             
+  YESTERDAY        0                         1     -1        0       
+  MONTH TO DATE    3                         9     -6        0       
+  SINCE MAR 1      4                        19    -15        4       
+  SINCE JAN 1      4                        19    -15        4       
+..................................................................
+
+
+WIND (MPH)                                                           
+  HIGHEST WIND SPEED    16   HIGHEST WIND DIRECTION     N (360)      
+  HIGHEST GUST SPEED    22   HIGHEST GUST DIRECTION     N (350)      
+  AVERAGE WIND SPEED     7.4                                         
+
+                                                                     
+SKY COVER                                                            
+  POSSIBLE SUNSHINE  MM                                              
+  AVERAGE SKY COVER 0.8                                              
+
+                                                                     
+WEATHER CONDITIONS                                                  
+ THE FOLLOWING WEATHER WAS RECORDED YESTERDAY.                        
+  NO SIGNIFICANT WEATHER WAS OBSERVED.                               
+
+                                                                     
+RELATIVE HUMIDITY (PERCENT)                                          
+ HIGHEST    79          1200 AM                                     
+ LOWEST     39           600 PM                                     
+ AVERAGE    59                                                       
+
+..........................................................
+
+                                                                     
+THE CHICAGO-OHARE CLIMATE NORMALS FOR TODAY
+                         NORMAL    RECORD    YEAR                    
+ MAXIMUM TEMPERATURE (F)   69        92      1956                    
+ MINIMUM TEMPERATURE (F)   47        31      1981                    
+
+                                                                     
+SUNRISE AND SUNSET                                                   
+MAY 12 2020...........SUNRISE   534 AM CDT   SUNSET   803 PM CDT   
+MAY 13 2020...........SUNRISE   533 AM CDT   SUNSET   804 PM CDT   
+
+                                                                    
+-  INDICATES NEGATIVE NUMBERS.                                      
+R  INDICATES RECORD WAS SET OR TIED.                                
+MM INDICATES DATA IS MISSING.                                       
+T  INDICATES TRACE AMOUNT.                                          
+
+
+
+
+$$
+

@@ -1,4 +1,5 @@
 const express = require('express')
+const request = require('../utils/request')
 const nws = require('../services/nws')
 const location = require('../services/location')
 const ncei = require('../services/ncei')
@@ -118,6 +119,17 @@ router.get('/:zip/sounding/:date/:timeOfDay', geocodeMiddleware, async (req, res
   try {
     const { timeOfDay = 'morning', date } = req.params
     const data = await noaa.getSounding(req.coords, timeOfDay, date)
+    res.json(data)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(404).json({ message })
+  }
+})
+
+router.get('/:zip/climatereport', geocodeMiddleware, async (req, res) => {
+  try {
+    const data = await nws.getClimateReport(req.coords)
     res.json(data)
   } catch (err) {
     console.error(err)

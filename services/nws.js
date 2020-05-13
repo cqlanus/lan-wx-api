@@ -1,4 +1,5 @@
 const request = require('../utils/request')
+const parseClimateReport = require('../lib/parseClimateReport')
 
 const BASE = 'https://api.weather.gov/'
 const HEADERS = {
@@ -106,6 +107,20 @@ class NWS {
     const discussionUrl = firstItem['@id']
     const discussion = await nwsRequest(discussionUrl)
     return processDiscussion(discussion)
+  }
+
+  getClimateReport = async ({ lat, lon }) => {
+    const points = await this.getPoints({ lat, lon })
+    const { observationStations: stationsUrl } = points
+    const station = await this.getNearestStation(stationsUrl)
+    const { stationIdentifier } = station
+    const url = `https://api.weather.gov/products/types/CLI/locations/${stationIdentifier.slice(1)}`
+    const listOfReports = await nwsRequest(url)
+    const [ latestReportUrl ] = listOfReports['@graph']
+    const resp = await nwsRequest(latestReportUrl['@id'])
+    const { productText } = resp
+    const climateReport = parseClimateReport(productText)
+    return climateReport
   }
 }
 
