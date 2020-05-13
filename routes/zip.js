@@ -1,9 +1,10 @@
 const express = require('express')
-const request = require('../utils/request')
+const moment = require('moment')
 const nws = require('../services/nws')
 const location = require('../services/location')
 const ncei = require('../services/ncei')
 const noaa = require('../services/noaa')
+const astro = require('../services/astronomy')
 const geocodeMiddleware = require('../lib/geocode')
 const router = express.Router()
 
@@ -130,6 +131,45 @@ router.get('/:zip/sounding/:date/:timeOfDay', geocodeMiddleware, async (req, res
 router.get('/:zip/climatereport', geocodeMiddleware, async (req, res) => {
   try {
     const data = await nws.getClimateReport(req.coords)
+    res.json(data)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(404).json({ message })
+  }
+})
+
+router.get('/:zip/astronomy/times/:date/:type', geocodeMiddleware, async (req, res) => {
+  try {
+    const { date, type } = req.params
+    const dateParam = date ? moment(date) : moment()
+    const data = await astro.getTimes(req.coords, dateParam, type)
+    res.json(data)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(404).json({ message })
+  }
+})
+
+router.get('/:zip/astronomy/position/:date/:type', geocodeMiddleware, async (req, res) => {
+  try {
+    const { date, type } = req.params
+    const dateParam = date ? moment(date) : moment()
+    const data = await astro.getPositions(req.coords, dateParam, type)
+    res.json(data)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(404).json({ message })
+  }
+})
+
+router.get('/:zip/astronomy/moonphase/:date', async (req, res) => {
+  try {
+    const { date } = req.params
+    const dateParam = date ? moment(date) : moment()
+    const data = await astro.getMoonPhase(dateParam)
     res.json(data)
   } catch (err) {
     console.error(err)
