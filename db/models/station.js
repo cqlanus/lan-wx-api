@@ -2,9 +2,9 @@ const Sequelize = require('sequelize')
 const sequelize = require('../index')
 const Station = sequelize.define('station', {
   id: {
-    type: Sequelize.STRING,
     primaryKey: true,
-    autoIncrement: true,
+    type: Sequelize.UUID,
+    defaultValue: Sequelize.UUIDV1,
   },
   country3: Sequelize.STRING,
   country2: Sequelize.STRING,
@@ -29,8 +29,14 @@ const Station = sequelize.define('station', {
   special: Sequelize.STRING,
   lat_prp: Sequelize.FLOAT,
   lon_prp: Sequelize.FLOAT,
-  createdAt: Sequelize.DATE,
-  updatedAt: Sequelize.DATE,
-})
+  createdAt: {
+    type: Sequelize.DATE,
+    defaultValue: new Date(),
+  },
+  updatedAt: {
+    type: Sequelize.DATE,
+    defaultValue: new Date(),
+  }
+}, { freezeTableName: true })
 
 module.exports = Station

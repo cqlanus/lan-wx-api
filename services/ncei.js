@@ -6,6 +6,7 @@ const BASE = 'https://www.ncei.noaa.gov/access/services/data/v1'
 
 const nceiRequest = async ({ dataset, dataTypes, stations, startDate, endDate }) => {
   const url = `${BASE}?dataset=${dataset}&dataTypes=${dataTypes}&startDate=${startDate}&endDate=${endDate}&stations=${stations}&format=json`
+  console.log({ url })
   return await request(url)
 }
 
@@ -13,6 +14,7 @@ class NCEI {
 
   getNormals = async (coords, datatypes = ['DLY-GRDD-BASE45','DLY-TAVG-NORMAL'], retry = false) => {
     const wban = await this.getAssociatedStationId(coords, retry)
+    console.log({ wban })
     const query = {
       dataset: 'normals-daily',
       dataTypes: datatypes.join(),
@@ -20,7 +22,9 @@ class NCEI {
       startDate: '2010-01-01',
       endDate: '2010-12-31',
     }
+    console.log({ query })
     const norms = await nceiRequest(query)
+    console.log({ norms })
     if (norms.length === 0) {
       return this.getNormals(coords, datatypes, true)
     }

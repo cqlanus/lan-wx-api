@@ -39,7 +39,7 @@ router.get('/:zip/forecast', geocodeMiddleware, async (req, res) => {
 router.get('/:zip/forecast/grid', geocodeMiddleware, async (req, res) => {
   try {
     const data = await nws.getGriddedForecast(req.coords)
-    res.json(data)
+    res.json({ data})
   } catch (err) {
     console.error(err)
     const { message } = err
@@ -82,13 +82,14 @@ router.get('/:zip/current', geocodeMiddleware, async (req, res) => {
 
 router.get('/:zip/norms', geocodeMiddleware, async (req, res) => {
   try {
-    const { tag } = req.query
+    const { tag = 'all' } = req.query
     let types = tag.includes('all')
       ? []
       : tag.split(',').reduce((acc, t) => {
             const tags = normalsDailyDatatypes.tags[t] || []
             return [ ...acc, ...tags ]
           }, [])
+    console.log({ types })
     const data = await ncei.getNormals(req.coords, types.map(t => t.id))
     res.json(data)
   } catch (err) {

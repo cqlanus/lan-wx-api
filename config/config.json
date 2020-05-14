@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "clanus",
+    "password": null,
+    "database": "MLID",
+    "host": "postgres",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "clanus",
+    "password": null,
+    "database": "MLID",
+    "host": "postgres",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "clanus",
+    "password": null,
+    "database": "MLID",
+    "host": "postgres",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  }
+}
