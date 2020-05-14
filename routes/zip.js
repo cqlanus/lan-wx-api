@@ -89,7 +89,6 @@ router.get('/:zip/norms', geocodeMiddleware, async (req, res) => {
             const tags = normalsDailyDatatypes.tags[t] || []
             return [ ...acc, ...tags ]
           }, [])
-    console.log({ types })
     const data = await ncei.getNormals(req.coords, types.map(t => t.id))
     res.json(data)
   } catch (err) {

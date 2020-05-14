@@ -13,17 +13,21 @@ const MOON_PHASES = {
 
 class Astronomy {
   getTimes = ({ lat, lon }, date, type) => {
-    const args = [ date.toDate(), +lat, +lon ]
-    switch (type) {
-      case 'sun':
-        return suncalc.getTimes(...args)
-      case 'moon':
-        return this.getMoonTimes(...args)
-      default: {
-        const sun = suncalc.getTimes(...args)
-        const moon = this.getMoonTimes(...args)
-        return { ...sun, ...moon }
+    try {
+      const args = [date.toDate(), +lat, +lon]
+      switch (type) {
+        case 'sun':
+          return suncalc.getTimes(...args)
+        case 'moon':
+          return this.getMoonTimes(...args)
+        default: {
+          const sun = suncalc.getTimes(...args)
+          const moon = this.getMoonTimes(...args)
+          return { ...sun, ...moon }
+        }
       }
+    } catch (err) {
+      throw new Error(`ASTRO - GET TIMES ERROR: ${err.message}`)
     }
   }
 
@@ -37,9 +41,9 @@ class Astronomy {
   }
 
   getPhaseName = (phase) => {
-    return Object.entries(MOON_PHASES).reduce((name, [ key, val ]) => {
+    return Object.entries(MOON_PHASES).reduce((name, [key, val]) => {
       if (Array.isArray(val)) {
-        let [ lowerBound, upperBound ] = val
+        let [lowerBound, upperBound] = val
         if (phase > lowerBound && phase < upperBound) {
           return key
         }
@@ -51,32 +55,40 @@ class Astronomy {
   }
 
   getMoonPhase = (date) => {
-    const { phase, ...rest } = suncalc.getMoonIllumination(date.toDate())
-    return {
-      ...rest,
-      phase,
-      phaseName: this.getPhaseName(phase)
+    try {
+      const { phase, ...rest } = suncalc.getMoonIllumination(date.toDate())
+      return {
+        ...rest,
+        phase,
+        phaseName: this.getPhaseName(phase)
+      }
+    } catch (err) {
+      throw new Error(`ASTRO - GET MOON PHASE ERROR: ${err.message}`)
     }
   }
 
-  getPositions = ({ lat, lon }, date, type ) => {
-    const args = [ date.toDate(), +lat, +lon ]
-    switch (type) {
-      case 'sun':
-        return suncalc.getPosition(...args)
-      case 'moon':
-        return this.getMoonPosition(...args)
-      default: {
-        const sun = suncalc.getPosition(...args)
-        const moon = this.getMoonPosition(...args)
-        return { ...sun, ...moon }
+  getPositions = ({ lat, lon }, date, type) => {
+    try {
+      const args = [date.toDate(), +lat, +lon]
+      switch (type) {
+        case 'sun':
+          return suncalc.getPosition(...args)
+        case 'moon':
+          return this.getMoonPosition(...args)
+        default: {
+          const sun = suncalc.getPosition(...args)
+          const moon = this.getMoonPosition(...args)
+          return { ...sun, ...moon }
+        }
       }
+    } catch (err) {
+      throw new Error(`ASTRO - GET POSITION ERROR: ${err.message}`)
     }
   }
 
   getMoonPosition = (date, lat, lon) => {
     const moonPos = suncalc.getMoonPosition(date, +lat, +lon)
-    return Object.entries(moonPos).reduce((acc, [ key, val ]) => {
+    return Object.entries(moonPos).reduce((acc, [key, val]) => {
       return {
         ...acc,
         [`moon_${key}`]: val

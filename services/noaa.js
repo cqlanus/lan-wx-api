@@ -36,20 +36,27 @@ const getNearestStation = coords => list => {
 
 class NOAA {
   getUpperAirMap = async (isobar, timeOfDay) => {
-    const utcTime = timeOfDay === 'morning' ? '12' : '00'
-    const url = `${BASE}/obswx/maps/${isobar}_${utcTime}.gif`
-    return url
+    try {
+      const utcTime = timeOfDay === 'morning' ? '12' : '00'
+      const url = `${BASE}/obswx/maps/${isobar}_${utcTime}.gif`
+      return url
+    } catch (err) {
+      throw new Error(`NOAA - GET UPPER AIR MAP ERROR: ${err.message}`)
+    }
   }
 
   getSounding = async (coords, timeOfDay, date) => {
-    const utcTime = timeOfDay === 'morning' ? '12' : '00'
-    const station = getNearestStation(coords)(soundingStations.stations)
-    const desiredDate = moment(date)
-    // TODO: validate that desiredDate will have a sounding (aka - don't ask for today's evening sounding in the morning)
-    const formattedDate = desiredDate.format('YYMMDD')
-    const url = `${BASE}/exper/soundings/${formattedDate}${utcTime}_OBS/${station.national_id}.gif`
-    return url
-
+    try {
+      const utcTime = timeOfDay === 'morning' ? '12' : '00'
+      const station = getNearestStation(coords)(soundingStations.stations)
+      const desiredDate = moment(date)
+      // TODO: validate that desiredDate will have a sounding (aka - don't ask for today's evening sounding in the morning)
+      const formattedDate = desiredDate.format('YYMMDD')
+      const url = `${BASE}/exper/soundings/${formattedDate}${utcTime}_OBS/${station.national_id}.gif`
+      return url
+    } catch (err) {
+      throw new Error(`NOAA - GET SOUNDING ERROR: ${err.message}`)
+    }
   }
 
 }
