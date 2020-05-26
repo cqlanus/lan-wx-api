@@ -1,13 +1,13 @@
 const { Op } = require('sequelize')
 const Station = require('../db/models/station')
 
-const stationsMissingIcao = [ 
+const stationsMissingIcao = [
     {
         predicate: {
             where: {
                 stn_key: {
                     [Op.like]: '%ILX'
-                } 
+                }
             }
         },
         update: {

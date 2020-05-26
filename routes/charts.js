@@ -41,4 +41,17 @@ router.get('/sounding/:lat/:lon/:timeOfDay', async (req, res) => {
   }
 })
 
+router.get('/surface/:timeOfDay', async (req, res) => {
+  try {
+    const { timeOfDay } = req.params
+    const { fronts } = req.query
+    const image = await noaa.getSurfaceAnalysis(timeOfDay, fronts)
+    res.json(image)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(404).json({ message })
+  }
+})
+
 module.exports = router

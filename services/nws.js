@@ -170,10 +170,14 @@ const processDiscussion = ({ productText }) => {
         }
         return acc
       }, [])
-      const paragraphs = indexes.reduce((acc, curr, idx) => {
+      let paragraphs = indexes.reduce((acc, curr, idx) => {
         const part = updatedContent.slice(curr, indexes[idx + 1])
-        return [...acc, part.join('')]
+        return [...acc, part.join(' ')]
       }, [])
+      const endTokenIndex = paragraphs.findIndex(p => p === '$$')
+      if (endTokenIndex > -1) {
+        paragraphs = paragraphs.slice(0, endTokenIndex)
+      }
       return { ...acc, [updatedTitle]: paragraphs }
     }
     return acc

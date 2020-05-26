@@ -15,6 +15,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
@@ -25,7 +26,8 @@
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.7",
     "serve-static": "^1.14.1",
-    "suncalc": "^1.8.0"
+    "suncalc": "^1.8.0",
+    "uuid": "^8.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

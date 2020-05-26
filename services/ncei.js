@@ -64,6 +64,7 @@ class NCEI {
         }
       })
       // console.log({ found: { wban: stationRecord.wban, name: stationRecord.station_name_current, city: stationRecord.city } })
+      console.log({ station })
       return stationRecord.wban
     } catch (err) {
       throw new Error(`MLID - GET ASSOCIATED STATION ERROR: ${err.message}`)

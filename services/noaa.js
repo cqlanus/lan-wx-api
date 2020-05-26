@@ -2,6 +2,7 @@ const moment = require('moment')
 const soundingStations = require('../lib/data/sounding-stations.json')
 
 const BASE = 'https://www.spc.noaa.gov'
+const SURFACE_BASE = 'https://www.wpc.ncep.noaa.gov/sfc'
 
 function Deg2Rad(deg) {
   return Number(deg) * Math.PI / 180;
@@ -56,6 +57,22 @@ class NOAA {
       return url
     } catch (err) {
       throw new Error(`NOAA - GET SOUNDING ERROR: ${err.message}`)
+    }
+  }
+
+  getSurfaceAnalysis = async (utcTime, fronts) => {
+    try {
+      const country = fronts ? 'us' : 'namus'
+      const frontsOnly = fronts ? 'fnt' : ''
+      const timeOfDay = utcTime || ''
+      const color = 'wbg'
+
+      const mapParams = `${country}${frontsOnly}sfc${timeOfDay}${color}`
+
+      const url = `${SURFACE_BASE}/${mapParams}.gif`
+      return url
+    } catch (err) {
+      throw new Error(`NOAA - GET SURFACE ANALYSIS ERROR: ${err.message}`)
     }
   }
 
