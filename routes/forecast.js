@@ -32,7 +32,8 @@ router.get('/sevenday/:lat/:lon', async (req, res) => {
 router.get('/grid/:lat/:lon', async (req, res) => {
   try {
     const { lat, lon } = req.params
-    const data = await nws.getGriddedForecast({ lat, lon })
+    const { parse } = req.query
+    const data = await nws.getGriddedForecast({ lat, lon }, { shouldParse: parse })
     res.json(data)
   } catch (err) {
     console.error(err)

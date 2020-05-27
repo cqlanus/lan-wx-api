@@ -1,4 +1,5 @@
 const request = require('../utils/request')
+const moment = require('moment')
 const parseClimateReport = require('../lib/parseClimateReport')
 
 const BASE = 'https://api.weather.gov/'
@@ -71,11 +72,15 @@ class NWS {
     }
   }
 
-  getGriddedForecast = async ({ lat, lon }) => {
+  getGriddedForecast = async ({ lat, lon }, { shouldParse }) => {
     try {
       const points = await this.getPoints({ lat, lon })
       const { forecastGridData } = points
       const { properties } = await nwsRequest(forecastGridData)
+      if (shouldParse) {
+        const parsed = parseGriddedForecastByDay(properties)
+        return parsed
+      }
       return properties
     } catch (err) {
       throw new Error(`NWS - GET FORECAST GRID ERROR: ${err.message}`)
@@ -154,6 +159,41 @@ class NWS {
       throw new Error(`NWS - GET CLIMATE REPORT ERROR: ${err.message}`)
     }
   }
+}
+
+const gridKeys = [ 'temperature', 'dewpoint', 'maxTemperature', 'minTemperature', 'relativeHumidity', 'apparentTemperature', 'heatIndex', 'windChill', 'skyCover',
+                 'windDirection', 'windSpeed', 'windGust', 'weather', 'probabilityOfPrecipitation', 'quantitativePrecipitation', 'snowfallAmount', 'ceilingHeight',
+                 'visibility', 'transportWindSpeed', 'transportWindDirection', 'mixingHeight', 'lightningActivityLevel', 'pressure', 'davisStabilityIndex', 'atmosphericDispersionIndex',
+                 'stability', 'probabilityOfThunder']
+const parseGriddedForecastByDay = (grid) => {
+  return gridKeys.reduce((parsed, key) => {
+    const val = grid[key] || []
+    const {  sourceUnit, uom: unitCode, values } = val
+    const fullValues = values.map(v => ({ ...v, unitCode, sourceUnit }))
+    fullValues.forEach((v, idx) => {
+      const { validTime } = v
+      const [ ts, interval ] = validTime.split('/')
+      const duration = moment.duration(interval).hours()
+      const mom = moment(ts)
+      const increasingTime = Array.from({ length: duration }, (_, idx) => mom.clone().add(idx, 'hours').toISOString())
+      if (idx === 2 && key === 'dewpoint') {
+        console.log({ key, increasingTime })
+      }
+      increasingTime.forEach(time => {
+        const existing = parsed[time]
+        parsed = {
+          ...parsed,
+          [time]: {
+            ...existing,
+            time,
+            [key]: v
+
+          }
+        }
+      })
+    })
+    return parsed
+  }, {})
 }
 
 const processDiscussion = ({ productText }) => {

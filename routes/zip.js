@@ -38,8 +38,9 @@ router.get('/:zip/forecast', geocodeMiddleware, async (req, res) => {
 
 router.get('/:zip/forecast/grid', geocodeMiddleware, async (req, res) => {
   try {
-    const data = await nws.getGriddedForecast(req.coords)
-    res.json({ data})
+    const { parse } = req.query
+    const data = await nws.getGriddedForecast(req.coords, { shouldParse: parse })
+    res.json(data)
   } catch (err) {
     console.error(err)
     const { message } = err
