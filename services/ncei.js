@@ -1,6 +1,7 @@
 const request = require('../utils/request')
 const nws = require('./nws')
 const Station = require('../db/models/station')
+const normsUnitConfig = require('../lib/data/normals-daily-units')
 
 const BASE = 'https://www.ncei.noaa.gov/access/services/data/v1'
 
@@ -27,7 +28,8 @@ class NCEI {
       if (norms.length === 0) {
         return this.getNormals(coords, datatypes, true)
       }
-      return norms
+      const parsed = parseNorms(norms)
+      return parsed
     } catch (err) {
       throw new Error(`NCEI - GET NORMALS ERROR: ${err.message}`)
     }
@@ -70,6 +72,33 @@ class NCEI {
       throw new Error(`MLID - GET ASSOCIATED STATION ERROR: ${err.message}`)
     }
   }
+}
+
+const findMatchingConfig = (normKey) => Object.values(normsUnitConfig).find(config => {
+  const found = config.types.some(type => type.test(normKey.toLowerCase()))
+  return found
+})
+const parseSingleDay = (normDay, idx) => {
+  return Object.entries(normDay).reduce((parsed, [ normKey, val ]) => {
+    const config = findMatchingConfig(normKey, idx === 0)
+    if (config) {
+      const value = config.parse(val)
+      const returnObject = { value, unit: config.unit }
+      return {
+        ...parsed,
+        [normKey]: returnObject
+      }
+    }
+    return parsed
+  }, {})
+}
+
+const parseNorms = (norms) => {
+  const parsed = norms.map(({ STATION, DATE, ...norm }, idx) => {
+    const parsedDay = parseSingleDay(norm, idx)
+    return { STATION, DATE, ...parsedDay }
+  })
+  return parsed
 }
 
 const ncei = new NCEI()
