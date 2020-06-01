@@ -15,7 +15,7 @@ const forecastRouter = require('./routes/forecast')
 const zipRouter = require('./routes/zip')
 const normsRouter = require('./routes/norms')
 const chartsRouter = require('./routes/charts')
-const almanacRouter = require('./routes/alamanc')
+const almanacRouter = require('./routes/almanac')
 
 require('dotenv').config()
 
