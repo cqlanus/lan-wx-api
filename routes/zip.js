@@ -140,6 +140,23 @@ router.get('/:zip/climatereport', geocodeMiddleware, async (req, res) => {
   }
 })
 
+router.get('/:zip/astronomy', geocodeMiddleware, async (req, res) => {
+  try {
+    const { lat, lon } = req.coords
+    const dateParam = moment()
+    const type = 'all'
+    const times = await astro.getTimes({ lat, lon }, dateParam, type)
+    const position = await astro.getPositions({ lat, lon }, dateParam, type)
+    const moonphase = await astro.getMoonPhase(dateParam)
+    const data = { times, position, moonphase }
+    res.json(data)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(404).json({ message })
+  }
+})
+
 router.get('/:zip/astronomy/times/:date/:type', geocodeMiddleware, async (req, res) => {
   try {
     const { date, type } = req.params
