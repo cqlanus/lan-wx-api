@@ -27,7 +27,14 @@ router.get('/:lat/:lon', async (req, res) => {
     const times = await astro.getTimes({ lat, lon }, dateParam, type)
     const position = await astro.getPositions({ lat, lon }, dateParam, type)
     const moonphase = await astro.getMoonPhase(dateParam)
-    const data = { times, position, moonphase }
+
+    const dateTom = moment().add(1, 'day')
+    const tomTimes = await astro.getTimes({ lat, lon }, dateTom, type)
+    const tomPosition = await astro.getPositions({ lat, lon }, dateTom, type)
+    const tomMoonphase = await astro.getMoonPhase(dateTom)
+    const tomorrow = { times: tomTimes, position: tomPosition, moonphase: tomMoonphase }
+
+    const data = { times, position, moonphase, tomorrow }
     res.json(data)
   } catch (err) {
     console.error(err)
