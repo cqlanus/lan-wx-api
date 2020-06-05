@@ -1,20 +1,11 @@
 version: "3"
 services:
   api:
-    image: node:12
-    working_dir: /app
-    volumes:
-      - .:/app
+    image: cqlanus/lan-wx-api
     depends_on:
       - postgres
     ports:
       - "9001:9001"
-    environment:
-      - PORT=9001
-      - HTTPS=true
-      - POSTGRES_USER=clanus
-      - POSTGRES_DB=MLID
-
     restart: always
     command: sh ./scripts/bootstrap.sh
 
