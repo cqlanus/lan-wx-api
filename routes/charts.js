@@ -29,7 +29,7 @@ router.get('/upperair/:isobar/:timeOfDay', async (req, res) => {
   }
 })
 
-router.get('/sounding/:lat/:lon/:timeOfDay', async (req, res) => {
+router.get('/sounding/:lat/:lon/:date/:timeOfDay', async (req, res) => {
   try {
     const { date, lat, lon, timeOfDay } = req.params
     const image = await noaa.getSounding({ lat, lon }, timeOfDay, date)

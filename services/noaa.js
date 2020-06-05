@@ -48,9 +48,10 @@ class NOAA {
 
   getSounding = async (coords, timeOfDay, date) => {
     try {
-      const utcTime = timeOfDay === 'morning' ? '12' : '00'
+      const isEvening = timeOfDay === 'evening'
+      const utcTime = isEvening ? '00' : '12'
       const station = getNearestStation(coords)(soundingStations.stations)
-      const desiredDate = moment(date)
+      const desiredDate = isEvening ? moment(date).add(1, 'day') : moment(date)
       // TODO: validate that desiredDate will have a sounding (aka - don't ask for today's evening sounding in the morning)
       const formattedDate = desiredDate.format('YYMMDD')
       const url = `${BASE}/exper/soundings/${formattedDate}${utcTime}_OBS/${station.national_id}.gif`
