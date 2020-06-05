@@ -7,7 +7,7 @@ WORKDIR /app
 ENV PORT 9001
 ENV HTTPS true
 ENV POSTGRES_USER clanus
-ENV POSTGRES_BD MLID
+ENV POSTGRES_DB MLID
 
 COPY package.json ./
 COPY package-lock.json ./
@@ -16,5 +16,9 @@ RUN npm install --silent
 # add app
 COPY . ./
 
-# start app
-CMD ["sh", "scripts/bootstrap.sh"]
+## THE LIFE SAVER
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
+RUN chmod +x /wait
+
+## Launch the wait tool and then your application
+CMD /wait && sh scripts/bootstrap.sh
