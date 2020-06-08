@@ -1,0 +1,52 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "volumes": [
+    {
+      "name": "postgres-data",
+      "host": {
+        "sourcePath": "/var/lib/postgresql/data"
+      }
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "name": "rest-api",
+      "image": "cqlanus/lan-wx-api",
+      "memory": 128,
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 9001
+        }
+      ],
+      "environment": [
+        {
+          "name": "WAIT_HOSTS",
+          "value": "postgres:5432"
+        }
+      ],
+      "links": [
+        "postgres"
+      ]
+    },
+    {
+      "name": "postgres",
+      "image": "postgres:11.2-alpine",
+      "memory": 128,
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 5432,
+          "containerPort": 5432
+        }
+      ],
+      "mountPoints": [
+        {
+          "sourceVolume": "postgres-data",
+          "containerPath":  "/var/lib/postgresql/data"
+        }
+      ]
+    }
+  ]
+}
