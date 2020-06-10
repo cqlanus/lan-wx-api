@@ -41,6 +41,17 @@
           "containerPort": 5432
         }
       ],
+      "environment": [
+        {
+          "name": "POSTGRES_USER",
+          "value": "clanus"
+        },
+                {
+          "name": "POSTGRES_DB",
+          "value": "MLID"
+        }
+
+      ],
       "mountPoints": [
         {
           "sourceVolume": "postgres-data",
