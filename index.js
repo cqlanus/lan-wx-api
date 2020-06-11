@@ -1,6 +1,6 @@
 // const http = require('http')
 const fs = require('fs')
-// const https = require('https')
+const https = require('https')
 const http = require('http')
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -45,13 +45,21 @@ app.use('*', () => {
 // Error handler
 app.use(errorHandler)
 
-// const server = http.createServer(app)
-// const options = {
-//   key: fs.readFileSync( process.env.HTTPS_KEY ),
-//   cert: fs.readFileSync( process.env.HTTPS_CERT )
-// }
-// const server = https.createServer(options, app)
-const server = http.createServer(app)
+const makeServer = () => {
+  const isProd = process.env.NODE_ENV === 'production'
+  if (isProd) {
+    return http.createServer(app)
+  } else {
+    const options = {
+      key: fs.readFileSync( process.env.HTTPS_KEY ),
+      cert: fs.readFileSync( process.env.HTTPS_CERT )
+    }
+    return https.createServer(options, app)
+    
+  }
+}
+
+const server = makeServer()
 
 const { PORT = 9000 } = process.env
 server.listen(PORT, () => console.log(`Listening on ${PORT}`))

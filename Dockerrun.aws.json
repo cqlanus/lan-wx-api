@@ -24,6 +24,10 @@
         {
           "name": "WAIT_HOSTS",
           "value": "postgres:5432"
+        },
+        {
+          "name": "NODE_ENV",
+          "value": "production"
         }
       ],
       "links": [

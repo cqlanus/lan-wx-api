@@ -1,12 +1,14 @@
 version: "3"
 services:
   api:
-    image: cqlanus/lan-wx-api
+    build: .
     depends_on:
       - postgres
     ports:
       - "9001:9001"
     restart: always
+    volumes:
+      - .:/app
     environment:
       WAIT_HOSTS: postgres:5432
 
