@@ -8,6 +8,7 @@ ENV PORT 9001
 ENV HTTPS true
 ENV POSTGRES_USER clanus
 ENV POSTGRES_DB MLID
+ENV POSTGRES_PASSWORD password
 
 COPY package.json ./
 COPY package-lock.json ./

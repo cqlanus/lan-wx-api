@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx nodemon index.js",
     "db:create": "npx sequelize-cli db:migrate",
-    "db:seed": "npx sequelize-cli db:seed:all"
+    "db:seed": "npx sequelize-cli db:seed:all",
+    "up": "docker-compose up",
+    "down": "docker-compose down"
   },
   "keywords": [],
   "author": "",

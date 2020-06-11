@@ -50,7 +50,11 @@
           "name": "POSTGRES_USER",
           "value": "clanus"
         },
-                {
+        {
+          "name": "POSTGRES_PASSWORD",
+          "value": "password"
+        },
+        {
           "name": "POSTGRES_DB",
           "value": "MLID"
         }
