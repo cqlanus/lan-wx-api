@@ -1,6 +1,6 @@
 {
   "development": {
-    "username": "clanus",
+    "username": "postgres",
     "password": null,
     "database": "MLID",
     "host": "postgres",
@@ -8,7 +8,7 @@
     "operatorsAliases": false
   },
   "test": {
-    "username": "clanus",
+    "username": "postgres",
     "password": null,
     "database": "MLID",
     "host": "postgres",
@@ -16,7 +16,7 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "clanus",
+    "username": "postgres",
     "password": null,
     "database": "MLID",
     "host": "postgres",

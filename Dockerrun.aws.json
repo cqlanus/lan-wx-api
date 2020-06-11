@@ -48,7 +48,7 @@
       "environment": [
         {
           "name": "POSTGRES_USER",
-          "value": "clanus"
+          "value": "postgres"
         },
         {
           "name": "POSTGRES_PASSWORD",
