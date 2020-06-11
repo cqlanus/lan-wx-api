@@ -35,6 +35,13 @@ const getNearestStation = coords => list => {
   })
 }
 
+
+const isTooEarly = (hour) => {
+    const localHour = moment.utc().hours(hour).local().hour()
+    const currentHour = moment().hour()
+    return (currentHour < localHour)
+}
+
 class NOAA {
   getUpperAirMap = async (isobar, timeOfDay) => {
     try {
@@ -48,11 +55,11 @@ class NOAA {
 
   getSounding = async (coords, timeOfDay, date) => {
     try {
-      const isEvening = timeOfDay === 'evening'
-      const utcTime = isEvening ? '00' : '12'
+      const isMorning = timeOfDay === 'morning'
+      const utcTime = isMorning ? '12' : '00'
       const station = getNearestStation(coords)(soundingStations.stations)
-      const desiredDate = isEvening ? moment(date).add(1, 'day') : moment(date)
-      // TODO: validate that desiredDate will have a sounding (aka - don't ask for today's evening sounding in the morning)
+      const isEarly = isTooEarly(+utcTime)
+      const desiredDate = (isMorning || isEarly) ?  moment(date) : moment(date).add(1, 'day')
       const formattedDate = desiredDate.format('YYMMDD')
       const url = `${BASE}/exper/soundings/${formattedDate}${utcTime}_OBS/${station.national_id}.gif`
       return url
