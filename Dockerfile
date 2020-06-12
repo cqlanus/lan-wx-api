@@ -6,9 +6,9 @@ WORKDIR /app
 
 ENV PORT 9001
 ENV HTTPS true
-ENV POSTGRES_USER "postgres"
-ENV POSTGRES_DB "MLID"
-ENV POSTGRES_PASSWORD "password"
+ENV POSTGRES_USER postgres
+ENV POSTGRES_DB postgres
+ENV POSTGRES_PASSWORD password
 
 COPY package.json ./
 COPY package-lock.json ./

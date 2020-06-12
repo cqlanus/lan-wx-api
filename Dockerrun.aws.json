@@ -31,7 +31,7 @@
         }
       ],
       "links": [
-        "postgres"
+        "postgres:postgres"
       ]
     },
     {
@@ -56,7 +56,7 @@
         },
         {
           "name": "POSTGRES_DB",
-          "value": "MLID"
+          "value": "postgres"
         }
 
       ],

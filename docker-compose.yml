@@ -21,7 +21,7 @@ services:
       - postgres-data:/var/lib/postgresql/data/
     environment:
      POSTGRES_USER: "postgres"
-     POSTGRES_DB: "MLID"
+     POSTGRES_DB: "postgres"
 
 volumes:
   postgres-data:

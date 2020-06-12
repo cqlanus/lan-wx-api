@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": null,
-    "database": "MLID",
+    "database": "postgres",
     "host": "postgres",
     "dialect": "postgres",
     "operatorsAliases": false
@@ -10,7 +10,7 @@
   "test": {
     "username": "postgres",
     "password": null,
-    "database": "MLID",
+    "database": "postgres",
     "host": "postgres",
     "dialect": "postgres",
     "operatorsAliases": false
@@ -18,7 +18,7 @@
   "production": {
     "username": "postgres",
     "password": null,
-    "database": "MLID",
+    "database": "postgres",
     "host": "postgres",
     "dialect": "postgres",
     "operatorsAliases": false
