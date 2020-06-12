@@ -22,50 +22,27 @@
       ],
       "environment": [
         {
-          "name": "WAIT_HOSTS",
-          "value": "postgres:5432"
-        },
-        {
           "name": "NODE_ENV",
           "value": "production"
-        }
-      ],
-      "links": [
-        "postgres:postgres"
-      ]
-    },
-    {
-      "name": "postgres",
-      "image": "postgres:11.2-alpine",
-      "memory": 128,
-      "essential": true,
-      "portMappings": [
+        },
         {
-          "hostPort": 5432,
-          "containerPort": 5432
-        }
-      ],
-      "environment": [
+          "name": "POSTGRES_HOST",
+          "value": "lan-wx-db.chimlwu7ixbj.us-east-2.rds.amazonaws.com"
+        },
+        {
+          "name": "POSTGRES_DB",
+          "value": "mlid"
+        },
         {
           "name": "POSTGRES_USER",
-          "value": "postgres"
+          "value": "clanus"
         },
         {
           "name": "POSTGRES_PASSWORD",
           "value": "password"
-        },
-        {
-          "name": "POSTGRES_DB",
-          "value": "postgres"
-        }
-
-      ],
-      "mountPoints": [
-        {
-          "sourceVolume": "postgres-data",
-          "containerPath":  "/var/lib/postgresql/data"
         }
       ]
     }
+    
   ]
 }

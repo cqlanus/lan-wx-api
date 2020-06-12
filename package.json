@@ -9,7 +9,8 @@
     "db:create": "npx sequelize-cli db:migrate",
     "db:seed": "npx sequelize-cli db:seed:all",
     "up": "docker-compose up",
-    "down": "docker-compose down"
+    "down": "docker-compose down",
+    "patch": "sh scripts/patchStations.sh"
   },
   "keywords": [],
   "author": "",

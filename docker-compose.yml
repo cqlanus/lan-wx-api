@@ -11,6 +11,10 @@ services:
       - .:/app
     environment:
       WAIT_HOSTS: postgres:5432
+      POSTGRES_USER: "clanus"
+      POSTGRES_DB: "MLID"
+      POSTGRES_PASSWORD: "password"
+      POSTGRES_HOST: "postgres"
 
   postgres:
     image: postgres:11.2-alpine
@@ -20,8 +24,10 @@ services:
     volumes:
       - postgres-data:/var/lib/postgresql/data/
     environment:
-     POSTGRES_USER: "postgres"
-     POSTGRES_DB: "postgres"
+      POSTGRES_USER: "clanus"
+      POSTGRES_DB: "MLID"
+      POSTGRES_PASSWORD: "password"
+      POSTGRES_HOST: "postgres"
 
 volumes:
   postgres-data:

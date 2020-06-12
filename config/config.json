@@ -1,25 +1,25 @@
 {
   "development": {
-    "username": "postgres",
-    "password": null,
-    "database": "postgres",
-    "host": "postgres",
+    "username": "clanus",
+    "password": "password",
+    "database": "mlid",
+    "host": "lan-wx-db.chimlwu7ixbj.us-east-2.rds.amazonaws.com",
     "dialect": "postgres",
     "operatorsAliases": false
   },
   "test": {
-    "username": "postgres",
-    "password": null,
-    "database": "postgres",
+    "username": "clanus",
+    "password": "password",
+    "database": "mlid",
     "host": "postgres",
     "dialect": "postgres",
     "operatorsAliases": false
   },
   "production": {
-    "username": "postgres",
-    "password": null,
-    "database": "postgres",
-    "host": "postgres",
+    "username": "clanus",
+    "password": "password",
+    "database": "mlid",
+    "host": "lan-wx-db.chimlwu7ixbj.us-east-2.rds.amazonaws.com",
     "dialect": "postgres",
     "operatorsAliases": false
   }
