@@ -11,7 +11,7 @@
   "containerDefinitions": [
     {
       "name": "rest-api",
-      "image": "cqlanus/lan-wx-api",
+      "image": "cqlanus/lan-wx-api:latest",
       "memory": 128,
       "essential": true,
       "portMappings": [
