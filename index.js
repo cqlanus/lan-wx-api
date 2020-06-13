@@ -12,6 +12,7 @@ const errorHandler = require('./lib/errorHandler')
 const corsMiddleware = require('./lib/cors')
 
 const currentRouter = require('./routes/current')
+const recentRouter = require('./routes/recent')
 const forecastRouter = require('./routes/forecast')
 const zipRouter = require('./routes/zip')
 const normsRouter = require('./routes/norms')
@@ -31,6 +32,7 @@ app.use(corsMiddleware)
 
 // Routers
 app.use('/current', currentRouter)
+app.use('/recent', recentRouter)
 app.use('/forecast', forecastRouter)
 app.use('/norms', normsRouter)
 app.use('/zip', zipRouter)

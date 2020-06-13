@@ -21,4 +21,4 @@ RUN chmod +x /wait
 EXPOSE 9001
 
 ## Launch the wait tool and then your application
-CMD /wait && sh scripts/bootstrap.sh
+CMD /wait && npm run dev

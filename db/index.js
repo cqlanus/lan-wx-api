@@ -5,9 +5,6 @@ const connectionURI = `postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGR
 //   host: POSTGRES_HOST,
 //   dialect: 'postgres'
 // });
-console.log({ connectionURI })
 const sequelize = new Sequelize(connectionURI)
-
-console.log({ POSTGRES_DB, POSTGRES_USER, POSTGRES_HOST })
 
 module.exports = sequelize

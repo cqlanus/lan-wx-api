@@ -81,6 +81,18 @@ router.get('/:zip/current', geocodeMiddleware, async (req, res) => {
   }
 })
 
+router.get('/:zip/recent', geocodeMiddleware, async (req, res) => {
+  try {
+    const { limit } = req.query
+    const data = await nws.getRecentConditions(req.coords, limit)
+    res.json(data)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(404).json({ message })
+  }
+})
+
 router.get('/:zip/norms', geocodeMiddleware, async (req, res) => {
   try {
     const { tag = 'all' } = req.query

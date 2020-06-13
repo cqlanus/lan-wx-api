@@ -112,6 +112,19 @@ class NWS {
     }
   }
 
+  getRecentConditions = async ({ lat, lon }, limit = undefined) => {
+    try {
+      const points = await this.getPoints({ lat, lon })
+      const { observationStations: stationsUrl } = points
+      const station = await this.getNearestStation(stationsUrl)
+      const url = `${station['@id']}/observations`
+      const { features } = await nwsRequest(url)
+      return +limit ? features.slice(0, +limit) : features
+    } catch (err) {
+      throw new Error(`NWS - GET RECENT CONDITIONS ERROR: ${err.message}`)
+    }
+  }
+
   getForecastOffice = async ({ lat, lon }) => {
     try {
       const points = await this.getPoints({ lat, lon })
