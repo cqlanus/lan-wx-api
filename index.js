@@ -19,6 +19,7 @@ const normsRouter = require('./routes/norms')
 const chartsRouter = require('./routes/charts')
 const almanacRouter = require('./routes/almanac')
 const astroRouter = require('./routes/astronomy')
+const locationRouter = require('./routes/location')
 
 require('dotenv').config()
 
@@ -39,6 +40,7 @@ app.use('/zip', zipRouter)
 app.use('/charts', chartsRouter)
 app.use('/almanac', almanacRouter)
 app.use('/astronomy', astroRouter)
+app.use('/location', locationRouter)
 app.use('*', () => {
   throw new Error('wrong')
 })
