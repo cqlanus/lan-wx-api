@@ -104,9 +104,8 @@ class NWS {
       const { observationStations: stationsUrl } = points
       const station = await this.getNearestStation(stationsUrl)
       const url = `${station['@id']}/observations/latest`
-      console.log({ url })
       const { properties } = await nwsRequest(url)
-      return properties
+      return { ...properties, station }
     } catch (err) {
       throw new Error(`NWS - GET CONDITIONS ERROR: ${err.message}`)
     }

@@ -1,6 +1,5 @@
 const express = require('express')
 const location = require('../services/location')
-const nws = require('../services/nws')
 const router = express.Router()
 
 router.get('/', async (req, res) => {
