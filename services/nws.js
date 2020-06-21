@@ -103,9 +103,16 @@ class NWS {
       const points = await this.getPoints({ lat, lon })
       const { observationStations: stationsUrl } = points
       const station = await this.getNearestStation(stationsUrl)
-      const url = `${station['@id']}/observations/latest`
-      const { properties } = await nwsRequest(url)
-      return { ...properties, station }
+      const originalUrl = `${station['@id']}/observations/latest`
+      const url = `${station['@id']}/observations`
+      const { features } = await nwsRequest(url)
+      if (features[0]) {
+        const { properties } = features[0]
+        return { ...properties, station }
+      } else {
+        const { properties } = await nwsRequest(originalUrl)
+        return { ...properties, station }
+      }
     } catch (err) {
       throw new Error(`NWS - GET CONDITIONS ERROR: ${err.message}`)
     }
@@ -174,18 +181,18 @@ class NWS {
   }
 }
 
-const gridKeys = [ 'temperature', 'dewpoint', 'maxTemperature', 'minTemperature', 'relativeHumidity', 'apparentTemperature', 'heatIndex', 'windChill', 'skyCover',
-                 'windDirection', 'windSpeed', 'windGust', 'weather', 'probabilityOfPrecipitation', 'quantitativePrecipitation', 'snowfallAmount', 'ceilingHeight',
-                 'visibility', 'transportWindSpeed', 'transportWindDirection', 'mixingHeight', 'lightningActivityLevel', 'pressure', 'davisStabilityIndex', 'atmosphericDispersionIndex',
-                 'stability', 'probabilityOfThunder']
+const gridKeys = ['temperature', 'dewpoint', 'maxTemperature', 'minTemperature', 'relativeHumidity', 'apparentTemperature', 'heatIndex', 'windChill', 'skyCover',
+  'windDirection', 'windSpeed', 'windGust', 'weather', 'probabilityOfPrecipitation', 'quantitativePrecipitation', 'snowfallAmount', 'ceilingHeight',
+  'visibility', 'transportWindSpeed', 'transportWindDirection', 'mixingHeight', 'lightningActivityLevel', 'pressure', 'davisStabilityIndex', 'atmosphericDispersionIndex',
+  'stability', 'probabilityOfThunder']
 const parseGriddedForecastByDay = (grid) => {
   return gridKeys.reduce((parsed, key) => {
     const val = grid[key] || []
-    const {  sourceUnit, uom: unitCode, values } = val
+    const { sourceUnit, uom: unitCode, values } = val
     const fullValues = values.map(v => ({ ...v, unitCode, sourceUnit }))
     fullValues.forEach((v, idx) => {
       const { validTime } = v
-      const [ ts, interval ] = validTime.split('/')
+      const [ts, interval] = validTime.split('/')
       const duration = moment.duration(interval).hours()
       const mom = moment(ts)
       const increasingTime = Array.from({ length: duration }, (_, idx) => mom.clone().add(idx, 'hours').toISOString())
