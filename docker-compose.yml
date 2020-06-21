@@ -16,6 +16,7 @@ services:
       POSTGRES_DB: "MLID"
       POSTGRES_PASSWORD: "password"
       POSTGRES_HOST: "postgres"
+      AMBIENT_WEATHER_APP_KEY: "efac4ef679294e309cda3938aeaf0fde5a047dbdb0ca4a70ab869dbafb0cd506"
 
   postgres:
     image: postgres:11.2-alpine

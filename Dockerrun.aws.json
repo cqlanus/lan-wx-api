@@ -40,6 +40,10 @@
         {
           "name": "POSTGRES_PASSWORD",
           "value": "password"
+        },
+        {
+          "name": "AMBIENT_WEATHER_APP_KEY",
+          "value": "efac4ef679294e309cda3938aeaf0fde5a047dbdb0ca4a70ab869dbafb0cd506"
         }
       ]
     }
