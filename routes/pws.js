@@ -30,4 +30,17 @@ router.get('/:macAddress', async (req, res) => {
   }
 })
 
+router.get('/info/:macAddress', async (req, res) => {
+  try {
+      const { apiKey } = req.query
+      const { macAddress } = req.params
+      const data = await pws.getDeviceInfo(macAddress, apiKey)
+      res.json(data)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(404).json({ message })
+  }
+})
+
 module.exports = router

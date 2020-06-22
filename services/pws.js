@@ -10,6 +10,13 @@ class PWS {
         const data = await request(url)
         return data
     }
+
+    getDeviceInfo = async (macAddress, apiKey) => {
+        const { AMBIENT_WEATHER_APP_KEY } = process.env
+        const url = `${BASE}?apiKey=${apiKey}&applicationKey=${AMBIENT_WEATHER_APP_KEY}`
+        const data = await request(url)
+        return data.find(dev => dev.macAddress.toLowerCase() === macAddress.toLowerCase())
+    }
 }
 
 const pws = new PWS()
