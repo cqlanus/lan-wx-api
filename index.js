@@ -21,6 +21,8 @@ const almanacRouter = require('./routes/almanac')
 const astroRouter = require('./routes/astronomy')
 const locationRouter = require('./routes/location')
 const pwsRouter = require('./routes/pws')
+const userRouter = require('./routes/user')
+const stationRouter = require('./routes/station')
 
 require('dotenv').config()
 
@@ -43,6 +45,8 @@ app.use('/almanac', almanacRouter)
 app.use('/astronomy', astroRouter)
 app.use('/location', locationRouter)
 app.use('/pws', pwsRouter)
+app.use('/user', userRouter)
+app.use('/station', stationRouter)
 app.use('*', () => {
   throw new Error('wrong')
 })

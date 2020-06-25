@@ -4,8 +4,11 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('station', {
       id: {
-        type: Sequelize.UUID,
+        allowNull: false,
         defaultValue: Sequelize.UUIDV1,
+        primaryKey: true,
+        type: Sequelize.UUID
+
       },
       country3: Sequelize.STRING,
       country2: Sequelize.STRING,
