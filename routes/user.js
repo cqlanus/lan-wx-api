@@ -57,6 +57,18 @@ router.post('/:username/favorites', async (req, res) => {
         res.status(500).json({ message })
     }
 })
+        
 
+router.delete('/:username/favorites', async (req, res) => {
+    try {
+        const { stationId } = req.body
+        const resp = await user.removeFavoriteStation(stationId)
+        res.json(resp)
+    } catch (err) {
+        console.log({ err })
+        const { message } = err
+        res.status(500).json({ message })
+    } 
+})
 
 module.exports = router

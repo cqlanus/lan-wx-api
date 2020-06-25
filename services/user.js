@@ -24,6 +24,11 @@ class UserService {
         const favorited = await UsersStation.create({ userId, stationId })
         return favorited
     }
+
+    removeFavoriteStation = async (stationId) => {
+        await UserStation.destroy({ where: { stationId } })
+        return { success: true }
+    }
 }
 
 const user = new UserService()

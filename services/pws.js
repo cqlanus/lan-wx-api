@@ -13,6 +13,11 @@ class PWSService {
         const created = await PWS.create(device)
         return created
     }
+
+    removeDevice = async (id) => {
+        await PWS.destroy({ where: { id } })
+        return { success: true }
+    }
     
     getData = async (macAddress, apiKey) => {
         const { AMBIENT_WEATHER_APP_KEY } = process.env

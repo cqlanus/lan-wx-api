@@ -24,6 +24,17 @@ router.post('/', async (req, res) => {
     }
 })
 
+router.delete('/', async (req, res) => {
+    try {
+        const resp = await pws.removeDevice(req.body)
+        res.json(resp)
+    } catch (err) {
+        console.log({ err })
+        const { message } = err
+        res.status(500).json({ message })
+    }
+})
+
 router.get('/:macAddress', async (req, res) => {
     try {
         const { apiKey } = req.query
