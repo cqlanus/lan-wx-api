@@ -14,7 +14,7 @@ class PWSService {
         return created
     }
 
-    removeDevice = async (id) => {
+    removeDevice = async ({ id }) => {
         await PWS.destroy({ where: { id } })
         return { success: true }
     }
