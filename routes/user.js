@@ -29,7 +29,7 @@ router.get('/:username', async (req, res) => {
         if (res.user) {
             res.json(res.user)
         } else {
-            throw new Error(`Username ${req.params.username} could not be found`)
+            res.json(false)
         }
     } catch (err) {
         console.log({ err })
