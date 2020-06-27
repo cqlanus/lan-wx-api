@@ -61,6 +61,16 @@ class NWS {
     }
   }
 
+  getStation = async (icao) => {
+    try {
+      const url = `${BASE}/stations/${icao.toUpperCase()}`
+      const { properties } = await nwsRequest(url)
+      return properties
+    } catch (err) {
+      throw new Error(`NWS - GET STATION BY ID ERROR: ${err.message}`)
+    }
+  }
+
   getSevenDayForecast = async ({ lat, lon }) => {
     try {
       const points = await this.getPoints({ lat, lon })

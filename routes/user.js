@@ -26,7 +26,11 @@ router.use('/:username', async (req, res, next) => {
 
 router.get('/:username', async (req, res) => {
     try {
-        res.json(res.user)
+        if (res.user) {
+            res.json(res.user)
+        } else {
+            throw new Error(`Username ${req.params.username} could not be found`)
+        }
     } catch (err) {
         console.log({ err })
         const { message } = err
@@ -57,7 +61,7 @@ router.post('/:username/favorites', async (req, res) => {
         res.status(500).json({ message })
     }
 })
-        
+
 
 router.delete('/:username/favorites', async (req, res) => {
     try {
@@ -68,7 +72,7 @@ router.delete('/:username/favorites', async (req, res) => {
         console.log({ err })
         const { message } = err
         res.status(500).json({ message })
-    } 
+    }
 })
 
 module.exports = router
