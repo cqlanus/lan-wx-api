@@ -7,7 +7,10 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: DataTypes.UUIDV1,
       unique: true,
     },
-    username: DataTypes.STRING,
+    username: {
+      type: DataTypes.STRING,
+      unique: true,
+    },
     createdAt: {
       type: DataTypes.DATE,
       defaultValue: new Date(),

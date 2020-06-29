@@ -65,8 +65,8 @@ router.post('/:username/favorites', async (req, res) => {
 
 router.delete('/:username/favorites', async (req, res) => {
     try {
-        const { stationId } = req.body
-        const resp = await user.removeFavoriteStation(stationId)
+        const { id } = req.body
+        const resp = await user.removeFavoriteStation(id)
         res.json(resp)
     } catch (err) {
         console.log({ err })

@@ -25,8 +25,8 @@ class UserService {
         return favorited
     }
 
-    removeFavoriteStation = async (stationId) => {
-        await UsersStation.destroy({ where: { stationId } })
+    removeFavoriteStation = async (id) => {
+        await UsersStation.destroy({ where: { id } })
         return { success: true }
     }
 }
