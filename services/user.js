@@ -4,7 +4,7 @@ const { User, UsersStation } = require('../models')
 class UserService {
     create = async (username) => {
         const user = await User.create({ username })
-        return user
+        return await this.getUser(username)
     }
     getUser = async (username) => {
         const user = await User.findOne({
