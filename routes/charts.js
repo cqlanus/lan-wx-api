@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
   } catch (err) {
     console.error(err)
     const { message } = err
-    res.status(404).json({ message })
+    res.status(500).json({ message })
   }
 })
 
@@ -25,7 +25,7 @@ router.get('/upperair/:isobar/:timeOfDay', async (req, res) => {
   } catch (err) {
     console.error(err)
     const { message } = err
-    res.status(404).json({ message })
+    res.status(500).json({ message })
   }
 })
 
@@ -37,7 +37,7 @@ router.get('/sounding/:lat/:lon/:date/:timeOfDay', async (req, res) => {
   } catch (err) {
     console.error(err)
     const { message } = err
-    res.status(404).json({ message })
+    res.status(500).json({ message })
   }
 })
 
@@ -50,8 +50,21 @@ router.get('/surface/:timeOfDay', async (req, res) => {
   } catch (err) {
     console.error(err)
     const { message } = err
-    res.status(404).json({ message })
+    res.status(500).json({ message })
   }
+})
+
+router.get('/model/:model/:forecastHour/:product', async (req, res) => {
+  try {
+    const { model, product, forecastHour } = req.params
+    const { currentTime } = req.query
+    const image = await noaa.getModelChart(model, product, forecastHour, currentTime)
+    res.json(image)
+  } catch (err) {
+    console.error(err)
+    const { message } = err
+    res.status(500).json({ message })
+  } 
 })
 
 module.exports = router

@@ -37,9 +37,9 @@ const getNearestStation = coords => list => {
 
 
 const isTooEarly = (hour) => {
-    const localHour = moment.utc().hours(hour).local().hour()
-    const currentHour = moment().hour()
-    return (currentHour < localHour)
+  const localHour = moment.utc().hours(hour).local().hour()
+  const currentHour = moment().hour()
+  return (currentHour < localHour)
 }
 
 class NOAA {
@@ -59,7 +59,7 @@ class NOAA {
       const utcTime = isMorning ? '12' : '00'
       const station = getNearestStation(coords)(soundingStations.stations)
       const isEarly = isTooEarly(+utcTime)
-      const desiredDate = (isMorning || isEarly) ?  moment(date) : moment(date).add(1, 'day')
+      const desiredDate = (isMorning || isEarly) ? moment(date) : moment(date).add(1, 'day')
       const formattedDate = desiredDate.format('YYMMDD')
       const url = `${BASE}/exper/soundings/${formattedDate}${utcTime}_OBS/${station.national_id}.gif`
       return url
@@ -84,6 +84,31 @@ class NOAA {
     }
   }
 
+  getModelChart = async (model, product, forecastHour, currentTime) => {
+    try {
+      const base = 'https://mag.ncep.noaa.gov/data'
+      const area = 'conus'
+      const imageName = `${model}_${area}_${forecastHour}_${product}.gif`
+      const modelRun = getMostRecentForecastRun(currentTime)
+      if (model === 'gfs') {
+        const url = `${base}/${model}/${modelRun}/${area}/${product}/${imageName}`
+        return url
+      } else {
+        const url = `${base}/${model}/${modelRun}/${imageName}`
+        return url
+      }
+
+    } catch (err) {
+      throw new Error(`NOAA - GET MODEL CHART ERROR: ${err.message}`)
+    }
+  }
+
+}
+
+const getMostRecentForecastRun = (currentTime) => {
+  const modelRuns = [18, 12, 6, 0]
+  const currentUtcHour = moment(currentTime).utc().hour()
+  return modelRuns.find(run => run <= currentUtcHour)
 }
 
 const noaa = new NOAA()
