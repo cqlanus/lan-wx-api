@@ -47,25 +47,13 @@
         },
         {
           "name": "REDIS_HOST",
-          "value": "0.0.0.0"
+          "value": "lan-wx-cache.ucr4vy.ng.0001.use2.cache.amazonaws.com"
         },
         {
           "name": "REDIS_PORT",
           "value": 6379
         }
       ]
-    },
-    {
-      "name": "redis",
-      "image": "redis:latest",
-      "memory": 128,
-      "portMappings": [
-        {
-          "hostPort": 6379,
-          "containerPort": 6379
-        }
-      ]
     }
-    
   ]
 }
