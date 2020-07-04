@@ -7,6 +7,10 @@ const bodyParser = require('body-parser')
 const compress = require('compression')
 const cors = require('cors')
 
+const app = express(cors())
+
+require('dotenv').config()
+
 const logger = require('./lib/logger')
 const errorHandler = require('./lib/errorHandler')
 const corsMiddleware = require('./lib/cors')
@@ -23,10 +27,6 @@ const locationRouter = require('./routes/location')
 const pwsRouter = require('./routes/pws')
 const userRouter = require('./routes/user')
 const stationRouter = require('./routes/station')
-
-require('dotenv').config()
-
-const app = express(cors())
 
 // Global middlewares
 app.use(logger)

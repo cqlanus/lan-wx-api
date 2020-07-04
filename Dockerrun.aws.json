@@ -44,6 +44,25 @@
         {
           "name": "AMBIENT_WEATHER_APP_KEY",
           "value": "efac4ef679294e309cda3938aeaf0fde5a047dbdb0ca4a70ab869dbafb0cd506"
+        },
+        {
+          "name": "REDIS_HOST",
+          "value": "redis"
+        },
+        {
+          "name": "REDIS_PORT",
+          "value": 6379
+        }
+      ]
+    },
+    {
+      "name": "redis",
+      "image": "redis:latest",
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 6379,
+          "containerPort": 6379
         }
       ]
     }

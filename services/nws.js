@@ -1,6 +1,8 @@
 const request = require('../utils/request')
 const moment = require('moment')
 const parseClimateReport = require('../lib/parseClimateReport')
+const { redisGet, redisSet } = require('../lib/redis')
+const latLonKey = require('../utils/latLonKey')
 
 const BASE = 'https://api.weather.gov/'
 const HEADERS = {
@@ -11,26 +13,21 @@ const nwsRequest = async (url, opts, sendJSON = true) => await request(url, { he
 
 class NWS {
 
-  points = {}
-  stations = {}
-  nearbyStation = {}
-  latestConditions = {}
-  forecast = {}
-  forecastOffice = {}
-
   async getData(cacheType, cacheKey, cb) {
-    const existing = this[cacheType][cacheKey]
-    if (existing) {
-      return existing
+    const key = `${cacheType}|${cacheKey}`
+    const cached = await redisGet(key)
+    if (cached) {
+      return JSON.parse(cached)
     }
+
     const data = await cb()
-    this[cacheType][cacheKey] = data
+    await redisSet(key, JSON.stringify(data))
     return data
   }
 
   getPoints = async ({ lat, lon }) => {
     try {
-      const coords = `${lat}|${lon}`
+      const coords = latLonKey({ lat, lon })
       const data = await this.getData('points', coords, async () => {
         const url = `${BASE}/points/${lat},${lon}`
         const { properties } = await nwsRequest(url)
@@ -63,21 +60,31 @@ class NWS {
 
   getStation = async (icao) => {
     try {
-      const url = `${BASE}/stations/${icao.toUpperCase()}`
-      const { properties } = await nwsRequest(url)
-      return properties
+      const data = this.getData('stations', icao, async () => {
+        const url = `${BASE}/stations/${icao.toUpperCase()}`
+        const { properties } = await nwsRequest(url)
+        return properties
+      })
+      return data
     } catch (err) {
       throw new Error(`NWS - GET STATION BY ID ERROR: ${err.message}`)
     }
   }
 
   getSevenDayForecast = async ({ lat, lon }) => {
+    const key = `sevenday|${latLonKey({ lat, lon })}`
     try {
       const points = await this.getPoints({ lat, lon })
       const { forecast } = points
       const { properties } = await nwsRequest(forecast)
+      await redisSet(key, JSON.stringify(properties))
       return properties
     } catch (err) {
+      const cached = await redisGet(key)
+      if (cached) {
+        console.log({ err })
+        return JSON.parse(cached)
+      }
       throw new Error(`NWS - GET FORECAST ERROR: ${err.message}`)
     }
   }
@@ -109,6 +116,7 @@ class NWS {
   }
 
   getConditions = async ({ lat, lon }) => {
+    const key = `conditions|${latLonKey({ lat, lon })}`
     try {
       const points = await this.getPoints({ lat, lon })
       const { observationStations: stationsUrl } = points
@@ -118,12 +126,21 @@ class NWS {
       const { features } = await nwsRequest(url)
       if (features[0]) {
         const { properties } = features[0]
-        return { ...properties, station }
+        const data = { ...properties, station }
+        await redisSet(key, JSON.stringify(data))
+        return data
       } else {
         const { properties } = await nwsRequest(originalUrl)
-        return { ...properties, station }
+        const data = { ...properties, station }
+        await redisSet(key, JSON.stringify(data))
+        return data
       }
     } catch (err) {
+      const cached = await redisGet(key)
+      if (cached) {
+        console.log({ err })
+        return JSON.parse(cached)
+      }
       throw new Error(`NWS - GET CONDITIONS ERROR: ${err.message}`)
     }
   }

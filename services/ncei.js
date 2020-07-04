@@ -2,13 +2,20 @@ const request = require('../utils/request')
 const nws = require('./nws')
 const Station = require('../db/models/station')
 const normsUnitConfig = require('../lib/data/normals-daily-units')
+const { redisGet, redisSet } = require('../lib/redis')
 
 const BASE = 'https://www.ncei.noaa.gov/access/services/data/v1'
 
 const nceiRequest = async ({ dataset, dataTypes, stations, startDate, endDate }) => {
   const url = `${BASE}?dataset=${dataset}&dataTypes=${dataTypes}&startDate=${startDate}&endDate=${endDate}&stations=${stations}&format=json`
-  console.log({ url })
-  return await request(url)
+  const cachedResult = await redisGet(url)
+  if (cachedResult) {
+    console.log({ cached: 1 })
+    return JSON.parse(cachedResult)
+  }
+  const data = await request(url)
+  await redisSet(url, JSON.stringify(data))
+  return data
 }
 
 class NCEI {
