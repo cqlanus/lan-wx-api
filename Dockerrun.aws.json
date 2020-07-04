@@ -47,7 +47,7 @@
         },
         {
           "name": "REDIS_HOST",
-          "value": "redis"
+          "value": "0.0.0.0"
         },
         {
           "name": "REDIS_PORT",
