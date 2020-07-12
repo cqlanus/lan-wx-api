@@ -93,12 +93,12 @@ class NWS {
     try {
       const points = await this.getPoints({ lat, lon })
       const { forecastGridData } = points
-      const { properties } = await nwsRequest(forecastGridData)
+      const resp = await nwsRequest(forecastGridData)
       if (shouldParse) {
-        const parsed = parseGriddedForecastByDay(properties)
+        const parsed = parseGriddedForecastByDay(resp.properties)
         return parsed
       }
-      return properties
+      return resp.properties
     } catch (err) {
       throw new Error(`NWS - GET FORECAST GRID ERROR: ${err.message}`)
     }

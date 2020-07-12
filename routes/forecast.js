@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
   } catch (err) {
     console.error(err)
     const { message } = err
-    res.status(404).json({ message })
+    res.status(err.status || 500).json({ message })
   }
 })
 
@@ -25,7 +25,7 @@ router.get('/sevenday/:lat/:lon', async (req, res) => {
   } catch (err) {
     console.error(err)
     const { message } = err
-    res.status(404).json({ message })
+    res.status(err.status || 500).json({ message })
   }
 })
 
@@ -38,7 +38,7 @@ router.get('/grid/:lat/:lon', async (req, res) => {
   } catch (err) {
     console.error(err)
     const { message } = err
-    res.status(404).json({ message })
+    res.status(err.status || 500).json({ message })
   }
 })
 
@@ -50,7 +50,7 @@ router.get('/hourly/:lat/:lon', async (req, res) => {
   } catch (err) {
     console.error(err)
     const { message } = err
-    res.status(404).json({ message })
+    res.status(err.status || 500).json({ message })
   }
 })
 
@@ -62,7 +62,7 @@ router.get('/discussion/:lat/:lon', async (req, res) => {
   } catch (err) {
     console.error(err)
     const { message } = err
-    res.status(404).json({ message })
+    res.status(err.status || 500).json({ message })
   }
 })
 
