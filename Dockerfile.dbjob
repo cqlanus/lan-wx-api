@@ -1,0 +1,13 @@
+FROM node:12
+MAINTAINER Chris Lanus <cqlanus@gmail.com>
+
+# set working directory
+WORKDIR /app
+
+RUN npm install sequelize-cli pg pg-hstore sequelize
+
+COPY config/ migrations/ seeders/ models/ db/ scripts/ ./
+
+EXPOSE 8000
+
+CMD sh scripts/bootstrap.sh
