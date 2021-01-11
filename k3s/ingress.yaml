@@ -13,7 +13,7 @@ spec:
   tls:
   - hosts:
     - "weather-api.chrislanus.com" # Host to access nextcloud
-    secretName: "nextcloud-prod-tls" # Name of the certifciate (see kubectl get certificate -A)
+    secretName: "lan-wx-api-prod-tls" # Name of the certifciate (see kubectl get certificate -A)
   rules:
   - host: "weather-api.chrislanus.com" # Host to access nextcloud
     http:

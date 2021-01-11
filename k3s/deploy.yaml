@@ -18,6 +18,9 @@ spec:
       containers:
         - name: lan-wx-api
           image: cqlanus/lan-wx-api:arm64
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9001
           env:
             - name: POSTGRES_USER
               value: clanus
@@ -29,10 +32,10 @@ spec:
               value: lan-wx-db
             - name: AMBIENT_WEATHER_APP_KEY
               value: efac4ef679294e309cda3938aeaf0fde5a047dbdb0ca4a70ab869dbafb0cd506
-            - name: REDIS_HOST
-              value: lan-wx-redis
             - name: REDIS_PORT
               value: "6379"
+            - name: REDIS_HOST
+              value: lan-wx-redis
 ---
 apiVersion: v1
 kind: Service
@@ -47,4 +50,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
+      targetPort: 9001
     

@@ -35,6 +35,9 @@ app.use(bodyParser.json())
 app.use(corsMiddleware)
 
 // Routers
+app.get('/', (req, res) => {
+  res.json({ success: 1 })
+})
 app.use('/current', currentRouter)
 app.use('/recent', recentRouter)
 app.use('/forecast', forecastRouter)
