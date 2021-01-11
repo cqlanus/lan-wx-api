@@ -75,4 +75,4 @@ const makeServer = () => {
 const server = makeServer()
 
 const { PORT = 9000 } = process.env
-server.listen(PORT, () => console.log(`Listening on ${PORT}`))
+server.listen(+PORT, () => console.log(`Listening on ${PORT}`))

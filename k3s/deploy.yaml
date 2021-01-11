@@ -20,8 +20,10 @@ spec:
           image: cqlanus/lan-wx-api:arm64
           imagePullPolicy: Always
           ports:
-            - containerPort: 9001
+          - containerPort: 9001
           env:
+            - name: PORT
+              value: "9001"
             - name: POSTGRES_USER
               value: clanus
             - name: POSTGRES_DB
