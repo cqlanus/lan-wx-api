@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lan-wx-redis
+  namespace: lan-wx
+  labels:
+    app: lan-wx-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      pod-label: lan-wx-redis-pod
+  template:
+    metadata:
+      labels:
+        pod-label: lan-wx-redis-pod
+    spec:
+      containers:
+        - name: redis
+          image: redis:alpine
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lan-wx-redis
+  namespace: lan-wx
+  labels:
+    app: lan-wx-api
+spec:
+  selector:
+    pod-label: lan-wx-redis-pod
+  ports:
+    - protocol: TCP
+      port: 6379
+    

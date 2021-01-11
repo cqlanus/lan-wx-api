@@ -1,0 +1,17 @@
+## lan-wx-api/pv.yaml
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: lan-wx-api-ssd
+  labels:
+    type: "local"
+spec:
+  storageClassName: "manual"
+  capacity:
+    storage: "5Gi"
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/ssd/lan-wx-api"
+---

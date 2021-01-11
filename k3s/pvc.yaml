@@ -1,0 +1,15 @@
+## lan-wx-api/pvc.yaml
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: lan-wx
+  name: lan-wx-api-ssd-claim
+spec:
+  storageClassName: "manual"
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: "5Gi"
+---

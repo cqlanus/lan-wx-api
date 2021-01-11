@@ -15,10 +15,12 @@ RUN npm install --silent
 COPY . ./
 
 ## THE LIFE SAVER
-ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
-RUN chmod +x /wait
+# ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
+# RUN chmod +x /wait
 
 EXPOSE 9001
 
 ## Launch the wait tool and then your application
-CMD /wait && npm run dev
+# CMD /wait && npm run dev
+
+CMD npm run dev

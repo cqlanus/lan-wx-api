@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lan-wx-api
+  namespace: lan-wx
+  labels:
+    app: lan-wx-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      pod-label: lan-wx-api-pod
+  template:
+    metadata:
+      labels:
+        pod-label: lan-wx-api-pod
+    spec:
+      containers:
+        - name: lan-wx-api
+          image: cqlanus/lan-wx-api:arm64
+          env:
+            - name: POSTGRES_USER
+              value: clanus
+            - name: POSTGRES_DB
+              value: mlid
+            - name: POSTGRES_PASSWORD
+              value: mlid
+            - name: POSTGRES_HOST
+              value: lan-wx-db
+            - name: AMBIENT_WEATHER_APP_KEY
+              value: efac4ef679294e309cda3938aeaf0fde5a047dbdb0ca4a70ab869dbafb0cd506
+            - name: REDIS_HOST
+              value: lan-wx-redis
+            - name: REDIS_PORT
+              value: "6379"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lan-wx-api
+  namespace: lan-wx
+  labels:
+    app: lan-wx-api
+spec:
+  selector:
+    pod-label: lan-wx-api-pod
+  ports:
+    - protocol: TCP
+      port: 80
+    
