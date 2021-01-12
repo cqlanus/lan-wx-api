@@ -12,6 +12,10 @@ spec:
         env:
           - name: NODE_ENV
             value: production
+          - name: REDIS_PORT
+            value: "6379"
+          - name: REDIS_HOST
+            value: lan-wx-redis
         command: [ "sh", "scripts/bootstrap.sh" ]
       restartPolicy: Never
   backoffLimit: 4

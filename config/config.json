@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "clanus",
-    "password": "password",
+    "password": "mlid",
     "database": "MLID",
     "host": "postgres",
     "dialect": "postgres",
@@ -9,7 +9,7 @@
   },
   "test": {
     "username": "clanus",
-    "password": "password",
+    "password": "mlid",
     "database": "mlid",
     "host": "postgres",
     "dialect": "postgres",
@@ -17,7 +17,7 @@
   },
   "production": {
     "username": "clanus",
-    "password": "password",
+    "password": "mlid",
     "database": "mlid",
     "host": "lan-wx-db",
     "dialect": "postgres",
