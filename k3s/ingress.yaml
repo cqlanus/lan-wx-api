@@ -9,13 +9,17 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
     cert-manager.io/cluster-issuer: "letsencrypt-prod" # Encrypt using the ClusterIssuer deployed while setting up Cert-Manager
     nginx.ingress.kubernetes.io/proxy-body-size:  "50m" # Increase the size of the maximum allowed size of the client request body
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/cors-allow-methods: "PUT, GET, POST, OPTIONS"
+    nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+    nginx.ingress.kubernetes.io/cors-allow-credentials: "true"
 spec:
   tls:
   - hosts:
-    - "weather-api.chrislanus.com" # Host to access nextcloud
+    - "lan-wx-api.chrislanus.com" # Host to access nextcloud
     secretName: "lan-wx-api-prod-tls" # Name of the certifciate (see kubectl get certificate -A)
   rules:
-  - host: "weather-api.chrislanus.com" # Host to access nextcloud
+  - host: "lan-wx-api.chrislanus.com" # Host to access nextcloud
     http:
       paths:
         - path: /  # We will access NextCloud via the URL https://nextcloud.<domain.com>/
