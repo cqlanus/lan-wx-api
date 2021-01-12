@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: lan-wx-db-job
+  namespace: lan-wx
+spec:
+  template:
+    spec:
+      containers:
+      - name: lan-wx-db-job
+        image: cqlanus/lan-wx-db:latest
+        env:
+          - name: NODE_ENV
+            value: production
+        command: [ "sh", "scripts/bootstrap.sh" ]
+      restartPolicy: Never
+  backoffLimit: 4

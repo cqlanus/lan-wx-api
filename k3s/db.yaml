@@ -26,7 +26,7 @@ spec:
             - name: POSTGRES_DB
               value: mlid
             - name: POSTGRES_PASSWORD
-              value: mlid
+              value: password
             - name: POSTGRES_HOST
               value: lan-wx-db
           volumeMounts:

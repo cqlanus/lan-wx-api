@@ -19,7 +19,7 @@
     "username": "clanus",
     "password": "password",
     "database": "mlid",
-    "host": "lan-wx-db.chimlwu7ixbj.us-east-2.rds.amazonaws.com",
+    "host": "lan-wx-db",
     "dialect": "postgres",
     "operatorsAliases": false
   }

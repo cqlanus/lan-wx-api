@@ -6,7 +6,13 @@ WORKDIR /app
 
 RUN npm install sequelize-cli pg pg-hstore sequelize
 
-COPY config/ migrations/ seeders/ models/ db/ scripts/ ./
+COPY package.json ./
+COPY config/ ./config
+COPY migrations/ ./migrations
+COPY seeders/ ./seeders
+COPY models/ ./models
+COPY db/ ./db
+COPY scripts/ ./scriptseders/ models/ db/ scripts/ ./
 
 EXPOSE 8000
 
