@@ -1,4 +1,6 @@
 const suncalc = require('suncalc')
+const Astro = require('astronomy-engine')
+const { addDays } = require('date-fns')
 
 const MOON_PHASES = {
   new: 0,
@@ -12,9 +14,9 @@ const MOON_PHASES = {
 }
 
 class Astronomy {
-  getTimes = ({ lat, lon }, date, type) => {
+  getTimes = (date, lat, lon, type) => {
     try {
-      const args = [date.toDate(), +lat, +lon]
+      const args = [date, +lat, +lon]
       switch (type) {
         case 'sun':
           return suncalc.getTimes(...args)
@@ -56,7 +58,7 @@ class Astronomy {
 
   getMoonPhase = (date) => {
     try {
-      const { phase, ...rest } = suncalc.getMoonIllumination(date.toDate())
+      const { phase, ...rest } = suncalc.getMoonIllumination(date)
       return {
         ...rest,
         phase,
@@ -67,9 +69,9 @@ class Astronomy {
     }
   }
 
-  getPositions = ({ lat, lon }, date, type) => {
+  getPositions = (date, lat, lon, type) => {
     try {
-      const args = [date.toDate(), +lat, +lon]
+      const args = [date, +lat, +lon]
       switch (type) {
         case 'sun':
           return suncalc.getPosition(...args)
@@ -94,6 +96,79 @@ class Astronomy {
         [`moon_${key}`]: val
       }
     }, {})
+  }
+
+  getAllPositions = (date, lat, lon) => {
+    const observer = new Astro.Observer(+lat, +lon, 0)
+    const bodies = ['Sun', 'Moon', 'Mercury', 'Venus', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto']
+    return bodies.reduce((acc, body) => {
+      let equ_2000 = Astro.Equator(body, date, observer, false, true);
+      let equ_ofdate = Astro.Equator(body, date, observer, true, true);
+      let hor = Astro.Horizon(date, observer, equ_ofdate.ra, equ_ofdate.dec, 'normal');
+      return {
+        ...acc,
+        [body.toLowerCase()]: {
+          ra: equ_2000.ra,
+          dec: equ_2000.dec,
+          alt: hor.altitude,
+          az: hor.azimuth,
+        }
+      }
+    }, { date })
+  }
+
+  getAllTimes = (dateParam, lat, lon) => {
+    const observer = new Astro.Observer(+lat, +lon, 0)
+    const date = dateParam
+    const bodies = ['Sun', 'Moon', 'Mercury', 'Venus', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto']
+    return bodies.reduce((acc, body) => {
+      const rise = Astro.SearchRiseSet(Astro.Body[body], observer, +1, date, 300);
+      const set = Astro.SearchRiseSet(Astro.Body[body], observer, -1, date, 300);
+      const culm = Astro.SearchHourAngle(Astro.Body[body], observer, 0, date);
+      
+      return {
+        ...acc,
+        [body.toLowerCase()]: {
+          rise: rise.date,
+          set: set.date,
+          culm: {
+            time: culm.time.date,
+            coords: culm.hor
+          },
+        }
+      }
+    }, {})
+  }
+
+  getSummary = async (date, lat, lon) => {
+    const type = 'all'
+    const times = await this.getTimes(date, lat, lon, type)
+    const position = await this.getPositions(date, lat, lon, type)
+    const moonphase = await this.getMoonPhase(date)
+    const bodies = await this.getAllPositions(date, +lat, +lon)
+
+    return { times, position, moonphase, bodies, }
+  }
+
+  getSummaryReport = async (date, lat, lon) => {
+    const summary = await this.getSummary(date, lat, lon)
+    const tomorrow = await this.getSummary(addDays(date, 1), lat, lon)
+    return { ...summary, tomorrow }
+  }
+
+
+  getNextMoonPhases = (date, numDays) => {
+    const arr = Array.from({ length: numDays }, (_, i) => i)
+    return arr.reduce((acc, idx) => {
+      if (idx === 0) { return [ Astro.SearchMoonQuarter(date) ] }
+      return [ ...acc, Astro.NextMoonQuarter(acc[idx - 1]) ]
+    }, []).map(({ quarter, time: { date: qtrDate } }) => ({ quarter, date: qtrDate }))
+  }
+
+  getMoonPhases = async (date) => {
+    const currentPhase = Astro.MoonPhase(date)
+    const nextQuarters = this.getNextMoonPhases(date, 10)
+    return { date, currentPhase, nextQuarters }
   }
 }
 

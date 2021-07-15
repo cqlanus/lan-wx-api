@@ -1,5 +1,4 @@
 const express = require('express')
-const moment = require('moment')
 const location = require('../services/location')
 const astro = require('../services/astronomy')
 
@@ -19,60 +18,26 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.get('/:lat/:lon', async (req, res) => {
+const ASTRO_METHODS = {
+  summary: astro.getSummaryReport,
+  times: astro.getAllTimes,
+  moonphase: astro.getMoonPhases,
+  positions: astro.getAllPositions,
+}
+
+router.get('/:type', async (req, res) => {
   try {
-    const { lat, lon } = req.params
-    const dateParam = moment()
-    const type = 'all'
-    const times = await astro.getTimes({ lat, lon }, dateParam, type)
-    const position = await astro.getPositions({ lat, lon }, dateParam, type)
-    const moonphase = await astro.getMoonPhase(dateParam)
-
-    const dateTom = moment().add(1, 'day')
-    const tomTimes = await astro.getTimes({ lat, lon }, dateTom, type)
-    const tomPosition = await astro.getPositions({ lat, lon }, dateTom, type)
-    const tomMoonphase = await astro.getMoonPhase(dateTom)
-    const tomorrow = { times: tomTimes, position: tomPosition, moonphase: tomMoonphase }
-
-    const data = { times, position, moonphase, tomorrow }
+    const { type } = req.params
+    const { lat, lon, date } = req.query
+    const dateObj = date ? new Date(date) : new Date()
+    const func = ASTRO_METHODS[type]
+    if (!func) { throw new Error(`No resource type: ${type}`) }
+    const data = await func(dateObj, lat, lon)
     res.json(data)
   } catch (err) {
     console.error(err)
     const { message } = err
-    res.status(404).json({ message })
-  }
-})
-
-router.get('/:lat/:lon/:date', async (req, res) => {
-  try {
-    const { lat, lon, date } = req.params
-    const dateParam = moment(date)
-    const type = 'all'
-    const times = await astro.getTimes({ lat, lon }, dateParam, type)
-    const position = await astro.getPositions({ lat, lon }, dateParam, type)
-    const moonphase = await astro.getMoonPhase(dateParam)
-    const data = { times, position, moonphase }
-    res.json(data)
-  } catch (err) {
-    console.error(err)
-    const { message } = err
-    res.status(404).json({ message })
-  }
-})
-
-router.get('/:lat/:lon/:date/:type', async (req, res) => {
-  try {
-    const { lat, lon, date, type } = req.params
-    const dateParam = moment(date)
-    const times = await astro.getTimes({ lat, lon }, dateParam, type)
-    const position = await astro.getPositions({ lat, lon }, dateParam, type)
-    const moonphase = await astro.getMoonPhase(dateParam)
-    const data = { times, position, moonphase }
-    res.json(data)
-  } catch (err) {
-    console.error(err)
-    const { message } = err
-    res.status(404).json({ message })
+    res.status(500).json({ message })
   }
 })
 

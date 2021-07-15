@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: lan-wx-api
-          image: cqlanus/lan-wx-api:arm64
+          image: cqlanus/lan-wx-api:latest
           imagePullPolicy: Always
           ports:
           - containerPort: 9001
