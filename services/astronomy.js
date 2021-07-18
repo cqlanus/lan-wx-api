@@ -1,6 +1,6 @@
 const suncalc = require('suncalc')
 const Astro = require('astronomy-engine')
-const { addDays } = require('date-fns')
+const { addDays, subDays } = require('date-fns')
 
 const MOON_PHASES = {
   new: 0,
@@ -12,6 +12,9 @@ const MOON_PHASES = {
   lastQuarterr: 0.75,
   waningCrescent: [0.75, 1.0]
 }
+
+const msInDay = 1000 * 60 * 60 * 24
+const realDiff = (diff) => msInDay - diff
 
 class Astronomy {
   getTimes = (date, lat, lon, type) => {
@@ -125,7 +128,7 @@ class Astronomy {
       const rise = Astro.SearchRiseSet(Astro.Body[body], observer, +1, date, 300);
       const set = Astro.SearchRiseSet(Astro.Body[body], observer, -1, date, 300);
       const culm = Astro.SearchHourAngle(Astro.Body[body], observer, 0, date);
-      
+
       return {
         ...acc,
         [body.toLowerCase()]: {
@@ -150,6 +153,71 @@ class Astronomy {
     return { times, position, moonphase, bodies, }
   }
 
+  getTimeDuration = ms => {
+    const hours = Math.floor(ms / 3.6e6)
+    const minutes = Math.floor((ms % 3.6e6) / 6e4)
+    const seconds = Math.floor((ms % 6e4) / 1000)
+    return { hours, minutes, seconds }
+  }
+
+  compareDayLength = (d1, d2, dayNight = 'day') => {
+    const mapping = {
+      day: { startEnd: ['sunrise', 'sunset'] },
+      night: { startEnd: ['night', 'nightEnd'] },
+      nautical: { startEnd: ['nauticalDawn', 'nauticalDusk'] },
+      civil: { startEnd: ['dawn', 'dusk'] },
+    }
+    const [start, end] = mapping[dayNight].startEnd
+    const lengthOfDay1 = d1[end] - d1[start]
+    const lengthOfDay2 = d2[end] - d2[start]
+    const compared = lengthOfDay1 > lengthOfDay2 ? 'longer' : 'shorter'
+    const diff = Math.abs(lengthOfDay1 - lengthOfDay2)
+    const { hours, minutes, seconds } = this.getTimeDuration(diff)
+    return { hours, minutes, seconds, compared }
+  }
+
+  getSunSummary = async (date, lat, lon) => {
+    const times = await this.getTimes(date, lat, lon, 'sun')
+    const allPositions = await this.getAllPositions(date, lat, lon)
+    const { sun: position } = allPositions
+
+    const yesterdayTimes = await this.getTimes(subDays(date, 1), lat, lon, 'sun')
+    const tomorrowTimes = await this.getTimes(addDays(date, 1), lat, lon, 'sun')
+
+    const diffWithTomorrow = this.compareDayLength(times, tomorrowTimes, 'day')
+    const diffWithYesterday = this.compareDayLength(times, yesterdayTimes, 'day')
+
+    const day = this.getTimeDuration(times.sunset - times.sunrise)
+    const civil = this.getTimeDuration(realDiff(times.dusk - times.dawn))
+    const lengths = { day, civil }
+    const compared = {
+      tomorrow: diffWithTomorrow,
+      yesterday: diffWithYesterday,
+    }
+    return { times, position, compared, lengths }
+  }
+
+  getMoonSummary = async (date, lat, lon) => {
+    const times = await this.getTimes(date, lat, lon, 'all')
+    const allPositions = await this.getAllPositions(date, lat, lon)
+    const { moon: position } = allPositions
+
+    const yesterdayTimes = await this.getTimes(subDays(date, 1), lat, lon, 'all')
+    const tomorrowTimes = await this.getTimes(addDays(date, 1), lat, lon, 'all')
+
+    const diffWithTomorrow = this.compareDayLength(times, tomorrowTimes, 'night')
+    const diffWithYesterday = this.compareDayLength(times, yesterdayTimes, 'night')
+
+    const night = this.getTimeDuration(realDiff(times.night - times.nightEnd))
+    const nautical = this.getTimeDuration(realDiff(times.nauticalDusk - times.nauticalDawn))
+    const lengths = { night, nautical }
+    const compared = {
+      tomorrow: diffWithTomorrow,
+      yesterday: diffWithYesterday,
+    }
+    return { times, position, compared, lengths }
+  }
+
   getSummaryReport = async (date, lat, lon) => {
     const summary = await this.getSummary(date, lat, lon)
     const tomorrow = await this.getSummary(addDays(date, 1), lat, lon)
@@ -160,8 +228,8 @@ class Astronomy {
   getNextMoonPhases = (date, numDays) => {
     const arr = Array.from({ length: numDays }, (_, i) => i)
     return arr.reduce((acc, idx) => {
-      if (idx === 0) { return [ Astro.SearchMoonQuarter(date) ] }
-      return [ ...acc, Astro.NextMoonQuarter(acc[idx - 1]) ]
+      if (idx === 0) { return [Astro.SearchMoonQuarter(date)] }
+      return [...acc, Astro.NextMoonQuarter(acc[idx - 1])]
     }, []).map(({ quarter, time: { date: qtrDate } }) => ({ quarter, date: qtrDate }))
   }
 

@@ -20,6 +20,8 @@ router.get('/', async (req, res) => {
 
 const ASTRO_METHODS = {
   summary: astro.getSummaryReport,
+  sun: astro.getSunSummary,
+  moon: astro.getMoonSummary,
   times: astro.getAllTimes,
   moonphase: astro.getMoonPhases,
   positions: astro.getAllPositions,
