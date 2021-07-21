@@ -13,6 +13,17 @@ const MOON_PHASES = {
   waningCrescent: [0.75, 1.0]
 }
 
+const MOON_PHASES_DEG = {
+  new: 0,
+  waxingCrescent: [0, 90],
+  firstQuarter: 90,
+  waxingGibbous: [90, 180],
+  full: 180,
+  waningGibbous: [180, 270],
+  lastQuarterr: 270,
+  waningCrescent: [270, 360]
+}
+
 const msInDay = 1000 * 60 * 60 * 24
 const realDiff = (diff) => msInDay - diff
 
@@ -45,8 +56,9 @@ class Astronomy {
     }
   }
 
-  getPhaseName = (phase) => {
-    return Object.entries(MOON_PHASES).reduce((name, [key, val]) => {
+  getPhaseName = (phase, isRadians = true) => {
+    const phases = isRadians ? MOON_PHASES : MOON_PHASES_DEG
+    return Object.entries(phases).reduce((name, [key, val]) => {
       if (Array.isArray(val)) {
         let [lowerBound, upperBound] = val
         if (phase > lowerBound && phase < upperBound) {
@@ -236,7 +248,11 @@ class Astronomy {
   getMoonPhases = async (date) => {
     const currentPhase = Astro.MoonPhase(date)
     const nextQuarters = this.getNextMoonPhases(date, 10)
-    return { date, currentPhase, nextQuarters }
+    return {
+      date,
+      phase: { value: currentPhase, name: this.getPhaseName(currentPhase, false) },
+      nextQuarters
+    }
   }
 }
 
