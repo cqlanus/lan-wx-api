@@ -1,4 +1,3 @@
-const request = require('../utils/request')
 const Station = require('../db/models/station')
 
 class StationService {

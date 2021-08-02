@@ -1,7 +1,8 @@
 version: "3"
 services:
   postgres:
-    image: postgres:11.2-alpine
+    # image: postgres:11.2-alpine
+    image: duvel/postgis:12-2.5
     ports:
       - "5432:5432"
     restart: always

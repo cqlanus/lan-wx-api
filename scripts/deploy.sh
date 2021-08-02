@@ -5,5 +5,5 @@ docker buildx build \
     --push \
     -t cqlanus/lan-wx-api:latest .
 
-sudo kubectl apply -f k3s/deploy.yaml
+kubectl apply -f k3s/deploy.yaml
 

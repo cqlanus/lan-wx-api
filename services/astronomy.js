@@ -1,6 +1,15 @@
 const suncalc = require('suncalc')
 const Astro = require('astronomy-engine')
-const { addDays, subDays } = require('date-fns')
+const {
+  addDays,
+  subDays,
+  addMinutes,
+  eachDayOfInterval,
+  eachHourOfInterval,
+  compareAsc,
+} = require('date-fns')
+const nws = require('./nws')
+const air = require('./air')
 
 const MOON_PHASES = {
   new: 0,
@@ -248,10 +257,60 @@ class Astronomy {
   getMoonPhases = async (date) => {
     const currentPhase = Astro.MoonPhase(date)
     const nextQuarters = this.getNextMoonPhases(date, 10)
+    const { fraction } = suncalc.getMoonIllumination(date)
     return {
       date,
-      phase: { value: currentPhase, name: this.getPhaseName(currentPhase, false) },
+      phase: {
+        value: currentPhase,
+        name: this.getPhaseName(currentPhase, false),
+        illumination: fraction,
+
+      },
       nextQuarters
+    }
+  }
+
+  getTimesForInterval = (start, end, lat, lon) => {
+    const dates = eachDayOfInterval({ start, end })
+    return dates.map(date => ({ date, times: this.getTimes(date, lat, lon) }))
+  }
+
+  getPositionsForInterval = (start, end, lat, lon) => {
+    const hours = eachHourOfInterval({ start, end })
+    return hours.flatMap(date => ([date, addMinutes(date, 15), addMinutes(date, 30), addMinutes(date, 45)]))
+      .map(date => ({ date, bodies: this.getAllPositions(date, lat, lon) }))
+  }
+
+  getCurrentConditions = async (date, lat, lon) => {
+    try {
+      const { cloudLayers, dewpoint } = await nws.getConditions({ lat, lon })
+
+      const times = await this.getTimes(date, lat, lon)
+      const { nauticalDusk, nauticalDawn, night, nightEnd } = times
+      const isAfterNightStart = compareAsc(date, new Date(night)) > 0
+      const isBeforeNightEnd = compareAsc(new Date(nightEnd), date) > 0
+      const isNight = isAfterNightStart && isBeforeNightEnd
+      const isAfterNauticalStart = compareAsc(date, new Date(nauticalDusk)) > 0
+      const isBeforeNauticalEnd = compareAsc(new Date(nauticalDawn), date) > 0
+      const isNauticalTwilight = isAfterNauticalStart && isBeforeNauticalEnd && !isNight
+
+      const allPositions = await this.getAllPositions(date, lat, lon)
+      const { moon: position } = allPositions
+      const { phase: moonPhase } = this.getMoonPhases(date, lat, lon)
+
+      const aqi = await air.getCurrent(lat, lon)
+
+      return {
+        cloudLayers,
+        dewpoint,
+        isNight,
+        isNauticalTwilight,
+        moonPosition: position,
+        moonPhase,
+        aqi,
+      }
+    } catch (err) {
+      throw new Error(`ASTRO - GET CURRENT CONDITIONS ERROR: ${err.message}`)
     }
   }
 }
