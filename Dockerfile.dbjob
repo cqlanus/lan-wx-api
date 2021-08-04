@@ -12,8 +12,10 @@ COPY migrations/ ./migrations
 COPY seeders/ ./seeders
 COPY models/ ./models
 COPY db/ ./db
-COPY scripts/ ./scriptseders/ models/ db/ scripts/ ./
+COPY scripts/ ./scripts
+COPY lib/ ./lib
+COPY station_mlid.json ./
 
 EXPOSE 8000
 
-CMD sh scripts/bootstrap.sh
+CMD /bin/sh ./scripts/run_db_job.sh

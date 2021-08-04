@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: postgres:alpine
+          image: duvel/postgis:10-alpine
           env:
             - name: POSTGRES_DB
               value: mlid

@@ -16,6 +16,6 @@ spec:
             value: "6379"
           - name: REDIS_HOST
             value: lan-wx-redis
-        command: [ "sh", "scripts/bootstrap.sh" ]
+        command: [ "/bin/sh", "./scripts/run_db_job.sh" ]
       restartPolicy: Never
   backoffLimit: 4

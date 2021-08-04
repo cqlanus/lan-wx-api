@@ -17,7 +17,7 @@
   },
   "production": {
     "username": "clanus",
-    "password": "mlid",
+    "password": "password",
     "database": "mlid",
     "host": "lan-wx-db",
     "dialect": "postgres",
