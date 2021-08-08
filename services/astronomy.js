@@ -288,10 +288,12 @@ class Astronomy {
       const times = await this.getTimes(date, lat, lon)
       const { nauticalDusk, nauticalDawn, night, nightEnd } = times
       const isAfterNightStart = compareAsc(date, new Date(night)) > 0
-      const isBeforeNightEnd = compareAsc(new Date(nightEnd), date) > 0
+      const endNight = addDays(new Date(nightEnd), 1)
+      const isBeforeNightEnd = compareAsc(endNight, date) > 0
       const isNight = isAfterNightStart && isBeforeNightEnd
       const isAfterNauticalStart = compareAsc(date, new Date(nauticalDusk)) > 0
-      const isBeforeNauticalEnd = compareAsc(new Date(nauticalDawn), date) > 0
+      const nautDawn = addDays(new Date(nauticalDawn), 1)
+      const isBeforeNauticalEnd = compareAsc(nautDawn, date) > 0
       const isNauticalTwilight = isAfterNauticalStart && isBeforeNauticalEnd && !isNight
 
       const allPositions = await this.getAllPositions(date, lat, lon)
