@@ -303,8 +303,7 @@ class Astronomy {
       return {
         cloudLayers,
         dewpoint,
-        isNight,
-        isNauticalTwilight,
+        darkness: { isNight, isNauticalTwilight },
         moonPosition: position,
         moonPhase,
         aqi,
