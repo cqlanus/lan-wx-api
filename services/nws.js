@@ -206,6 +206,16 @@ class NWS {
       throw new Error(`NWS - GET CLIMATE REPORT ERROR: ${err.message}`)
     }
   }
+
+  getAlerts = async(zoneId) => {
+    try {
+      const url = `https://api.weather.gov/alerts/active/zone/${zoneId.toUpperCase()}`
+      const resp = await nwsRequest(url)
+      return resp.features
+    } catch (err) {
+      throw new Error(`NWS - GET ALERTS ERR: ${err.message}`)
+    }
+  }
 }
 
 const gridKeys = ['temperature', 'dewpoint', 'maxTemperature', 'minTemperature', 'relativeHumidity', 'apparentTemperature', 'heatIndex', 'windChill', 'skyCover',

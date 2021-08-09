@@ -27,6 +27,7 @@ const locationRouter = require('./routes/location')
 const pwsRouter = require('./routes/pws')
 const userRouter = require('./routes/user')
 const stationRouter = require('./routes/station')
+const alertsRouter = require('./routes/alerts')
 
 // Global middlewares
 app.use(logger)
@@ -50,6 +51,7 @@ app.use('/location', locationRouter)
 app.use('/pws', pwsRouter)
 app.use('/user', userRouter)
 app.use('/station', stationRouter)
+app.use('/alerts', alertsRouter)
 app.use('*', () => {
   throw new Error('wrong')
 })
