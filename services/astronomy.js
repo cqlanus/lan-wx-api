@@ -1,7 +1,9 @@
 const suncalc = require('suncalc')
 const Astro = require('astronomy-engine')
 const {
+  parse,
   addDays,
+  addHours,
   subDays,
   addMinutes,
   eachDayOfInterval,
@@ -10,6 +12,7 @@ const {
 } = require('date-fns')
 const nws = require('./nws')
 const air = require('./air')
+const request = require('../utils/request')
 
 const MOON_PHASES = {
   new: 0,
@@ -314,6 +317,30 @@ class Astronomy {
       throw new Error(`ASTRO - GET CURRENT CONDITIONS ERROR: ${err.message}`)
     }
   }
+
+  getForecast = async (date, lat, lon) => {
+    try {
+      const url = `http://www.7timer.info/bin/api.pl?lon=${lon}&lat=${lat}&product=astro&output=json`
+      const data = await request(url)
+      const { init, dataseries } = data
+      const date = parseInitToDate(init)
+      return {...data, date, dataseries: parseDataSeries(date)(dataseries), }
+    } catch (err) {
+      throw new Error(`ASTRO - GET FORECAST ERROR: ${err.message}`)
+    }
+  }
+}
+
+const parseDataSeries = date => dataseries => dataseries.map(({ timepoint, ...d }) => {
+  return { ...d, timepoint, date: addHours(date, timepoint) }
+})
+
+const parseInitToDate = init => {
+  const year = init.slice(0, 4)
+  const month = init.slice(4, 6)
+  const day = init.slice(6, 8)
+  const hour = init.slice(8)
+  return parse(`${year}-${month}-${day} ${hour}:00`, 'yyyy-MM-dd HH:mm', new Date())
 }
 
 const astro = new Astronomy()

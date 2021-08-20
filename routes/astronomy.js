@@ -27,6 +27,7 @@ const ASTRO_METHODS = {
   moonphase: astro.getMoonPhases,
   positions: astro.getAllPositions,
   current: astro.getCurrentConditions,
+  forecast: astro.getForecast,
 }
 
 const AIR_METHODS = {
