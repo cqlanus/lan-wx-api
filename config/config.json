@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "clanus",
-    "password": "mlid",
+    "password": "password",
     "database": "MLID",
     "host": "postgres",
     "dialect": "postgres",
